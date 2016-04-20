@@ -1,0 +1,22 @@
+Tables
+-Users
+ -Id
+ -Username
+ -Password
+
+-Userprofile
+ -Name
+ -Email
+ -Employee Level/Designation
+ -employee id
+ -NIC/IQAMA (unique)
+ -Date of birth
+ -Section
+ -Reports to
+ -Employee Number
+ -Address
+ -Contact
+ -Created At
+ -Updated At
+ -Status
+ -profile picture
