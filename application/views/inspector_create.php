@@ -30,58 +30,58 @@
                             <div class="card-panel">
                                 <h4 class="header2">Create New Inspector</h4>
                                 <div class="row">
-                                    <form class="col s12">
+                                    <form class="col s12" method="post" action="<?php echo base_url();?>index.php/inspector/insert">
                                         <!-- Inspector ID -->
                                         <div class="row">
                                             <div class="input-field col s12">
-                                                <input id="inspector_id" type="text">
+                                                <input id="inspector_id" name='employee_id' type="text">
                                                 <label for="inspector_id">Inspector ID</label>
                                             </div>
                                         </div>
                                         <!-- National Identification No/Iqama Number -->
                                         <div class="row">
                                             <div class="input-field col s12">
-                                                <input id="iqama_number" type="text">
+                                                <input id="iqama_number" name='nic' type="text">
                                                 <label for="iqama_number">National Identification No/Iqama Number</label>
                                             </div>
                                         </div>
                                         <!-- Inspector Name -->
                                         <div class="row">
                                             <div class="input-field col s12">
-                                                <input id="inspector_name" type="text">
+                                                <input id="inspector_name" name='name' type="text">
                                                 <label for="inspector_name">Inspector Name</label>
                                             </div>
                                         </div>
                                         <!-- Email -->
                                         <div class="row">
                                             <div class="input-field col s12">
-                                                <input id="email" type="email">
+                                                <input id="email" type="email" name='email'>
                                                 <label for="email">Email</label>
                                             </div>
                                         </div>
                                         <!-- Inspector Login ID -->
                                         <div class="row">
                                             <div class="input-field col s12">
-                                                <input id="inspector_login_id" type="text">
+                                                <input id="inspector_login_id" name='username' type="text">
                                                 <label for="inspector_login_id">Inspector Login ID</label>
                                             </div>
                                         </div>
                                         <!-- Login Password -->
                                         <div class="row">
                                             <div class="input-field col s12">
-                                                <input id="inspector_password" type="password">
+                                                <input id="inspector_password" name='password' type="password">
                                                 <label for="inspector_password">Password</label>
                                             </div>
                                         </div>
                                         <!-- DOB -->
                                         <div class="row">
                                             <div class="input-field col s4">
-                                                <input type="date" class="datepicker">
+                                                <input type="date" name='dob' class="datepicker">
                                                 <label for="dob" class="active">Date Of Birth</label>
                                             </div>
                                             <!-- Section -->
                                             <div class="input-field col s8">
-                                                <select>
+                                                <select name='section'>
                                                     <option value="" disabled selected>Select a Section</option>
                                                     <option value="1">Housing Inspection</option>
                                                     <option value="2">Environmental & Health Inspections</option>
@@ -93,7 +93,7 @@
                                         <!-- Designation -->
                                         <div class="row">
                                             <div class="input-field col s12">
-                                                <select>
+                                                <select name='designation'>
                                                     <option value="" disabled selected>Select A Level</option>
                                                     <option value="1">Administrator</option>
                                                     <option value="2">Inspector</option>
@@ -108,7 +108,7 @@
                                         <!-- Reports to -->
                                         <div class="row">
                                             <div class="input-field col s12">
-                                                <select>
+                                                <select name='reports_to'>
                                                     <option value="" disabled selected="selected">Choose an option</option>
                                                     <option value="11">عبدالعزيز وهاس</option>
                                                     <option value="33">عادل شحاته بخيت</option>
@@ -150,21 +150,21 @@
                                         <!-- Contact Information -->
                                         <div class="row">
                                             <div class="input-field col s12">
-                                                <input id="inspector_contact_info" type="text">
+                                                <input id="inspector_contact_info" name='contact' type="text">
                                                 <label for="inspector_contact_info">Contact Information</label>
                                             </div>
                                         </div>
                                         <!-- Address -->
                                         <div class="row">
                                             <div class="input-field col s12">
-                                                <input id="inspector_address" type="text">
+                                                <input id="inspector_address" name='address' type="text">
                                                 <label for="inspector_address">Address</label>
                                             </div>
                                         </div>
                                         <!-- Status -->
                                         <div class="row">
                                             <div class="input-field col s12">
-                                                <select>
+                                                <select name='status'>
                                                     <option value="1" selected>Active</option>
                                                     <option value="2">Blocked</option>
                                                 </select>
@@ -173,13 +173,13 @@
                                         </div>
                                         <!-- file selection -->
                                         <div class="row">
-                                            <div class="file-field input-field">
+                                            <div class="file-field input-field" >
                                                 <div class="btn">
                                                     <span>Browse</span>
                                                     <input type="file">
                                                 </div>
                                                 <div class="file-path-wrapper">
-                                                    <input class="file-path validate" type="text">
+                                                    <input class="file-path validate" name='image' type="text">
                                                 </div>
                                             </div>
                                         </div>
@@ -187,6 +187,7 @@
                                         <div class="row">
                                             <button class="btn" onclick="reset_signature()" type="button">Reset Signature</button>
                                             <div id="signature"></div>
+                                            <input class="file-path validate" style="display: none;" name='sign' type="text">
                                         </div>
                                         <div class="row">
                                             <button class="btn waves-effect waves-light " type="submit" name="action">Create</button>
@@ -199,4 +200,3 @@
                 </div>
             </section>
             <!-- END CONTENT -->
-      

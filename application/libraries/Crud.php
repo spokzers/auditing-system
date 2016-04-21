@@ -30,9 +30,9 @@ class Crud{
 
 
 	public function insert($tablename, $data){
-		$this->load->database();
-		$this->load->model('Crud_model');
-		$status = $this->Crud_model->record_insert($tablename, $data);
+		$CI =& get_instance();
+		$CI->load->model('Crud_model');
+		$status = $CI->Crud_model->record_insert($tablename, $data);
 		return $status;
 	}
 
@@ -44,17 +44,19 @@ class Crud{
 	}
 
 	public function delete(){
-
 	}
 
-	public function get_post_data($tablename){
-		$this->load->model('Crud_model');
-		$fields = $this->Crud_model->get_fields($tablename);
-		foreach ($fields as $field) {
-			$data[$field] = $this->input->post($field);
-		}
+	public function get_table_data($tablename){
+		$CI =& get_instance();
+		$CI->load->model('Crud_model');
+		$data = $CI->Crud_model->get_all_records($tablename);
 		return $data;
 	}
+
+	public function test(){
+		return "Hello World";
+	}
+
 
 
 }

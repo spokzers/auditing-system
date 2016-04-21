@@ -21,14 +21,19 @@ class Inspector extends CI_Controller {
 	 function __construct()
  {
 		 parent::__construct();
-		 $this->load->database();
 		 $this->load->library("Crud");
+		 $this->load->helper('ams_helper');
  }
 
 	public function index()
 	{
 		$this->load->view('base');
-		$this->load->view('inspector_view');
+		$profiles = $this->crud->get_table_data('userprofiles');
+		$data = array(
+			'profiles' => $profiles,
+			'designation' => get_designation(),
+		);
+		$this->load->view('inspector_view', $data);
 		$this->load->view('footer');
 	}
 
@@ -38,6 +43,14 @@ class Inspector extends CI_Controller {
 		$this->load->view('footer');
 		$this->load->view('signature');
 	}
+
+	public function insert(){
+		$data = get_post_data('userprofiles', $this);
+		$this->crud->insert('userprofiles', $data);
+		redirect('/inspector');
+	}
+
+
 
 
 
