@@ -3,12 +3,12 @@ Tables
  -Id
  -Username
  -Password
-
--Userprofile
+ -Employee Level/Designation
  -Name
  -Email
- -Employee Level/Designation
- -employee id
+
+-Userprofile
+ -Employee Id
  -NIC/IQAMA (unique)
  -Date of birth
  -Section
@@ -19,3 +19,18 @@ Tables
  -Updated At
  -Status
  -profile picture
+ -sign
+
+Employee Designation Code:
+1- Administrator
+2- Inspector
+3- Supervisor
+4- Manager
+5- Director
+6- Data Entry Workers
+
+Status Code:
+1- Active
+2- Blocked
+
+
