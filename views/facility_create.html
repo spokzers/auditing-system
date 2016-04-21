@@ -14,7 +14,7 @@
     <meta name="msapplication-tap-highlight" content="no">
     <meta name="description" content="Materialize is a Material Design Admin Template,It's modern, responsive and based on Material Design by Google. ">
     <meta name="keywords" content="materialize, admin template, dashboard template, flat admin template, responsive admin template,">
-    <title>Forms Layouts | Materialize - Material Design Admin Template</title>
+    <title>Facility Create</title>
     <!-- Favicons-->
     <link rel="icon" href="images/favicon/favicon-32x32.png" sizes="32x32">
     <!-- Favicons-->
@@ -189,7 +189,7 @@
             <!-- START CONTENT -->
             <section id="content">
                 <!--breadcrumbs start-->
-                <!--<div id="breadcrumbs-wrapper" class=" grey lighten-3">
+                <!-- <div id="breadcrumbs-wrapper" class=" grey lighten-3">
                     <div class="container">
                         <div class="row">
                             <div class="col s12 m12 l12">
@@ -204,40 +204,126 @@
                             </div>
                         </div>
                     </div>
-                </div>-->
+                </div> -->
                 <!--breadcrumbs end-->
                 <!--start container-->
                 <div class="container">
                     <div class="section">
                         <!-- <p class="caption">Create New Inspector</p>
-                            <div class="divider"></div> -->
+
+            <div class="divider"></div> -->
                     </div>
                     <!--Form Advance-->
                     <div class="row">
                         <div class="col s12 m12 l12">
                             <div class="card-panel">
-                                <h4 class="header2">Create New Inspector</h4>
+                                <h4 class="header2">Create Facility</h4>
                                 <div class="row">
                                     <form class="col s12">
-                                        <!-- Inspector ID -->
+                                        <!-- Facility Name -->
                                         <div class="row">
                                             <div class="input-field col s12">
-                                                <input id="inspector_id" type="text">
-                                                <label for="inspector_id">Inspector ID</label>
+                                                <input id="facility_name" type="text">
+                                                <label for="facility_name">Facility Name</label>
                                             </div>
                                         </div>
-                                        <!-- National Identification No/Iqama Number -->
+                                        <!-- License Number -->
                                         <div class="row">
                                             <div class="input-field col s12">
-                                                <input id="iqama_number" type="text">
-                                                <label for="iqama_number">National Identification No/Iqama Number</label>
+                                                <input id="license_number" type="text">
+                                                <label for="license_number">License Number</label>
                                             </div>
                                         </div>
-                                        <!-- Inspector Name -->
+                                        <!-- Owner Name -->
                                         <div class="row">
                                             <div class="input-field col s12">
-                                                <input id="inspector_name" type="text">
-                                                <label for="inspector_name">Inspector Name</label>
+                                                <input id="owner_name" type="text">
+                                                <label for="owner_name">Owner Name</label>
+                                            </div>
+                                        </div>
+                                        <!-- National Identification Number -->
+                                        <div class="row">
+                                            <div class="input-field col s12">
+                                                <input id="nid_number" type="text">
+                                                <label for="nid_number">National Identification Number</label>
+                                            </div>
+                                        </div>
+                                        <!-- Commercial Registration Number -->
+                                        <div class="row">
+                                            <div class="input-field col s12">
+                                                <input id="cr_number" type="text">
+                                                <label for="cr_number">Commercial Registration Number</label>
+                                            </div>
+                                        </div>
+                                        <!-- Business Activity -->
+                                        <div class="input-field">
+                                            <select>
+                                                <option value="" selected disabled>Select an Activity</option>
+                                                <option value="0">Not Given</option>
+                                                <option value="1">Agriculture</option>
+                                                <option value="2">Cleaning Services</option>
+                                                <option value="3">Community Services</option>
+                                                <option value="4">Construction</option>
+                                                <option value="5">Contracting</option>
+                                                <option value="6">Government Entities</option>
+                                                <option value="7">Armed Forces</option>
+                                                <option value="8">Emergency Services</option>
+                                                <option value="9">Financial Services</option>
+                                                <option value="10">Food &amp; Hospitality</option>
+                                            </select>
+                                            <label>Business Activity</label>
+                                        </div>
+                                        <div class="row">
+                                            <!-- Date Of Issue -->
+                                            <div class="input-field col s3">
+                                                <input type="date" class="datepicker">
+                                                <label for="doi" class="active">Date Of Issue</label>
+                                            </div>
+                                            <!-- Validity -->
+                                            <div class="input-field col s3">
+                                                <input type="date" class="datepicker">
+                                                <label for="validity" class="active">Validity</label>
+                                            </div>
+                                            <!-- Location -->
+                                            <div class="input-field col s6">
+                                                <input id="location" type="text">
+                                                <label for="location">Location</label>
+                                            </div>
+                                        </div>
+                                        <!-- GPS Coordinates -->
+                                        <div class="row">
+                                            <div class="input-field col s12">
+                                                <input id="gps" type="text">
+                                                <label for="gps">GPS Coordinates</label>
+                                            </div>
+                                        </div>
+                                        <!-- Contract Number -->
+                                        <div class="row">
+                                            <div class="input-field col s12">
+                                                <input id="contract_number" type="text">
+                                                <label for="contract_number">Contract Number</label>
+                                            </div>
+                                        </div>
+                                        <!-- Commercial Centers -->
+                                        <div class="input-field">
+                                            <select>
+                                                <option value="" selected="selected">None</option>
+                                                <option value="1">أسواق حمد الذبياني</option>
+                                            </select>
+                                            <label>Commercial Centers</label>
+                                        </div>
+                                        <!-- Telephone Number -->
+                                        <div class="row">
+                                            <div class="input-field col s12">
+                                                <input id="telephone_number" type="text">
+                                                <label for="telephone_number">Telephone Number</label>
+                                            </div>
+                                        </div>
+                                        <!-- Fax Number -->
+                                        <div class="row">
+                                            <div class="input-field col s12">
+                                                <input id="fax_number" type="text">
+                                                <label for="fax_number">FAX Number</label>
                                             </div>
                                         </div>
                                         <!-- Email -->
@@ -247,134 +333,71 @@
                                                 <label for="email">Email</label>
                                             </div>
                                         </div>
-                                        <!-- Inspector Login ID -->
+                                        <!-- Cell Number -->
                                         <div class="row">
                                             <div class="input-field col s12">
-                                                <input id="inspector_login_id" type="text">
-                                                <label for="inspector_login_id">Inspector Login ID</label>
+                                                <input id="cell_number" type="text">
+                                                <label for="cell_number">Cell Number</label>
                                             </div>
                                         </div>
-                                        <!-- Login Password -->
+                                        <!-- Manager Name -->
                                         <div class="row">
                                             <div class="input-field col s12">
-                                                <input id="inspector_password" type="password">
-                                                <label for="inspector_password">Password</label>
+                                                <input id="manager_name" type="text">
+                                                <label for="manager_name">Manager Name</label>
                                             </div>
                                         </div>
-                                        <!-- DOB -->
-                                        <div class="row">
-                                            <div class="input-field col s4">
-                                                <input type="date" class="datepicker">
-                                                <label for="dob" class="active">Date Of Birth</label>
-                                            </div>
-                                            <!-- Section -->
-                                            <div class="input-field col s8">
-                                                <select>
-                                                    <option value="" disabled selected>Select a Section</option>
-                                                    <option value="1">Housing Inspection</option>
-                                                    <option value="2">Environmental & Health Inspections</option>
-                                                    <option value="3">Market Control Inspection</option>
-                                                </select>
-                                                <label>Section</label>
-                                            </div>
-                                        </div>
-                                        <!-- Designation -->
+                                        <!-- Manager ID -->
                                         <div class="row">
                                             <div class="input-field col s12">
-                                                <select>
-                                                    <option value="" disabled selected>Select A Level</option>
-                                                    <option value="1">Administrator</option>
-                                                    <option value="2">Inspector</option>
-                                                    <option value="3">Supervisor</option>
-                                                    <option value="4">Manager</option>
-                                                    <option value="5">Director</option>
-                                                    <option value="6">Data Entry (workers)</option>
-                                                </select>
-                                                <label>Designation</label>
+                                                <input id="manager_id" type="text">
+                                                <label for="manager_id">Manager ID</label>
                                             </div>
                                         </div>
-                                        <!-- Reports to -->
+                                        <!-- Manager Cell -->
                                         <div class="row">
                                             <div class="input-field col s12">
-                                                <select>
-                                                    <option value="" disabled selected="selected">Choose an option</option>
-                                                    <option value="11">عبدالعزيز وهاس</option>
-                                                    <option value="33">عادل شحاته بخيت</option>
-                                                    <option value="34">زكي سليم المحمادي</option>
-                                                    <option value="35">مسفر محسن الغامدي</option>
-                                                    <option value="36">عبدالعزيز طارق سندي</option>
-                                                    <option value="37">نواف عبدالله الغيثي</option>
-                                                    <option value="38">عبدالله منصور الاحمدي</option>
-                                                    <option value="39">ياسر احمد سبيه</option>
-                                                    <option value="40">حسن محمد عسيري</option>
-                                                    <option value="41">عمار عيد الجهني</option>
-                                                    <option value="42">المهندس / صلاح بن مصلح المحمدي</option>
-                                                    <option value="43">المهندس/ موسى بن عيسى المالكي</option>
-                                                    <option value="44">مروان يوسف كعكي</option>
-                                                    <option value="45">عبدالله علي الزهراني</option>
-                                                    <option value="46">احمد سلوم العوفي</option>
-                                                    <option value="47">علي بن محمد النهدي</option>
-                                                    <option value="48">محمد بن عبيد الصريصري</option>
-                                                    <option value="49">محمد بن سليمان البلوي</option>
-                                                    <option value="50">Data Entry Worker</option>
-                                                    <option value="51">رائد عبدالمجيد الفاخري</option>
-                                                    <option value="53">عبدالله محمد الخربوش</option>
-                                                    <option value="54">عطية عطيان الرفاعي</option>
-                                                    <option value="56">احمد ناصر البلوي</option>
-                                                    <option value="57">مساعد أحمد الأحمدي</option>
-                                                    <option value="58">محمد حسين بطيش</option>
-                                                    <option value="59">احمد الجهيني</option>
-                                                    <option value="60">احمد الشهابي</option>
-                                                    <option value="61">عبدالله المحياوي</option>
-                                                    <option value="62">محمد ناجي الإدريسي</option>
-                                                    <option value="63">Sayed Bukhari </option>
-                                                    <option value="64">عبدالله سليمان الصبحي</option>
-                                                    <option value="65">عبدالعزيز زارع </option>
-                                                    <option value="66">عبد الرحمن القرشي</option>
-                                                </select>
-                                                <label>Reports to</label>
+                                                <input id="manager_cell_number" type="text">
+                                                <label for="manager_cell_number">Manager Cell Number</label>
                                             </div>
                                         </div>
-                                        <!-- Contact Information -->
+                                        <!-- Number of Audits per Month -->
                                         <div class="row">
                                             <div class="input-field col s12">
-                                                <input id="inspector_contact_info" type="text">
-                                                <label for="inspector_contact_info">Contact Information</label>
+                                                <input id="auditspm" type="number">
+                                                <label for="auditspm">Number of Audits per Month</label>
                                             </div>
                                         </div>
-                                        <!-- Address -->
+                                        <!-- Street -->
                                         <div class="row">
                                             <div class="input-field col s12">
-                                                <input id="inspector_address" type="text">
-                                                <label for="inspector_address">Address</label>
+                                                <input id="street" type="text">
+                                                <label for="street">Street</label>
                                             </div>
                                         </div>
-                                        <!-- Status -->
+                                        <!-- Space -->
+                                        <div class="row">
+                                            <div class="input-field col s12">
+                                                <input id="space" type="text">
+                                                <label for="space">Space</label>
+                                            </div>
+                                        </div>
+                                        <!-- Shop Number -->
+                                        <div class="row">
+                                            <div class="input-field col s12">
+                                                <input id="shop_number" type="text">
+                                                <label for="shop_number">Shop Number</label>
+                                            </div>
+                                        </div>
+                                        <!-- Department -->
                                         <div class="row">
                                             <div class="input-field col s12">
                                                 <select>
-                                                    <option value="1" selected>Active</option>
-                                                    <option value="2">Blocked</option>
+                                                    <option value="1" selected>General</option>
+                                                    <option value="2">Environmental Health</option>
                                                 </select>
                                                 <label>Status</label>
                                             </div>
-                                        </div>
-                                        <!-- file selection -->
-                                        <div class="row">
-                                            <div class="file-field input-field">
-                                                <div class="btn">
-                                                    <span>Browse</span>
-                                                    <input type="file">
-                                                </div>
-                                                <div class="file-path-wrapper">
-                                                    <input class="file-path validate" type="text">
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="row"></div>
-                                        <div class="row">
-                                            <button class="btn" onclick="reset_signature()" type="button">Reset Signature</button>
-                                            <div id="signature"></div>
                                         </div>
                                         <div class="row">
                                             <button class="btn waves-effect waves-light " type="submit" name="action">Create</button>
@@ -560,6 +583,7 @@
     <script>
     $(document).ready(function() {
         $("#signature").jSignature()
+
     });
 
 
@@ -570,7 +594,6 @@
     function check_signature() {
         return true;
     }
-    </script>
     </script>
 </body>
 
