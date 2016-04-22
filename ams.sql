@@ -18,53 +18,26 @@ USE `ams`;
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
--- Table structure for table `profiles`
+-- Table structure for table `userprofiles`
 --
 
-DROP TABLE IF EXISTS `profiles`;
+DROP TABLE IF EXISTS `userprofiles`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `profiles` (
+CREATE TABLE `userprofiles` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `user_id` int(11) NOT NULL,
   `employee_id` varchar(45) NOT NULL,
   `nic` varchar(45) NOT NULL,
-  `dob` date NOT NULL,
-  `section` varchar(45) NOT NULL,
-  `reports_to` int(11) NOT NULL,
   `address` varchar(45) DEFAULT NULL,
+  `dob` date NOT NULL,
+  `section` int(11) NOT NULL,
+  `reports_to` int(11) DEFAULT NULL,
   `contact` varchar(45) DEFAULT NULL,
   `created_at` datetime DEFAULT NULL,
   `updated_at` datetime DEFAULT NULL,
   `status` int(11) NOT NULL,
-  `image` varchar(45) NOT NULL,
-  `sign` varchar(45) NOT NULL,
-  PRIMARY KEY (`id`),
-  UNIQUE KEY `id_UNIQUE` (`id`),
-  UNIQUE KEY `user_id_UNIQUE` (`user_id`),
-  UNIQUE KEY `employee_id_UNIQUE` (`employee_id`),
-  UNIQUE KEY `nic_UNIQUE` (`nic`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-/*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `profiles`
---
-
-LOCK TABLES `profiles` WRITE;
-/*!40000 ALTER TABLE `profiles` DISABLE KEYS */;
-/*!40000 ALTER TABLE `profiles` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
--- Table structure for table `users`
---
-
-DROP TABLE IF EXISTS `users`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `users` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `image` varchar(45) DEFAULT NULL,
+  `sign` varchar(45) DEFAULT NULL,
   `username` varchar(45) NOT NULL,
   `password` varchar(45) NOT NULL,
   `designation` int(11) NOT NULL,
@@ -72,18 +45,21 @@ CREATE TABLE `users` (
   `email` varchar(45) NOT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `id_UNIQUE` (`id`),
+  UNIQUE KEY `employee_id_UNIQUE` (`employee_id`),
+  UNIQUE KEY `nic_UNIQUE` (`nic`),
   UNIQUE KEY `username_UNIQUE` (`username`),
   UNIQUE KEY `email_UNIQUE` (`email`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `users`
+-- Dumping data for table `userprofiles`
 --
 
-LOCK TABLES `users` WRITE;
-/*!40000 ALTER TABLE `users` DISABLE KEYS */;
-/*!40000 ALTER TABLE `users` ENABLE KEYS */;
+LOCK TABLES `userprofiles` WRITE;
+/*!40000 ALTER TABLE `userprofiles` DISABLE KEYS */;
+INSERT INTO `userprofiles` VALUES (1,'sad','h','4546465645','0000-00-00',1,11,'1231354',NULL,NULL,1,'dsadasd.xo','','kh','',2,'jh','jh@f.com'),(2,'jkjkl','jk','jkjlj','0000-00-00',2,11,'kllklk',NULL,NULL,1,'','','dasdsa','lkj',1,'jlk','klj@g.com');
+/*!40000 ALTER TABLE `userprofiles` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
@@ -95,4 +71,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2016-04-22  0:37:48
+-- Dump completed on 2016-04-23  0:32:40
