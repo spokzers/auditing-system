@@ -44,6 +44,7 @@ class Crud_model extends CI_Model {
            $this->db->select('*');
            $this->db->from($tablename);
            $this->db->where($key, $val);
+           unset($data[$key]);
            $this->db->update($tablename, $data);
          }
 
@@ -66,17 +67,17 @@ class Crud_model extends CI_Model {
            return $query->result();
          }
 
+         public function get_columns($tablename, $columns){
+           $this->db->select($columns);
+           $this->db->from($tablename);
+           $query = $this->db->get();
+           return $query->result();
+         }
+
          public function get_fields($tablename){
             return $this->db->list_fields($tablename);
          }
-         //
-        //  public function get_all_overtimes(){
-        //    $this->db->select('*');
-        //    $this->db->from('employee_overtime');
-        //    $this->db->join('employeeprofile', 'employeeprofile.id = employee_overtime.employee_id');
-        //    $query = $this->db->get();
-        //    return $query->result();
-        //  }
+
 
 
 

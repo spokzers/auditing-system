@@ -42,6 +42,7 @@ Scripts
 <!--plugins.js - Some Specific JS codes for Plugin Settings-->
 <script type="text/javascript" src="<?php echo base_url(); ?>static/js/plugins.js"></script>
 <!-- Toast Notification -->
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
 </body>
 
 </html>

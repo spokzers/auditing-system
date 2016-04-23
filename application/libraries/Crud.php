@@ -36,10 +36,17 @@ class Crud{
 		return $status;
 	}
 
+	public function get($tablename, $key, $val){
+		$CI =& get_instance();
+		$CI->load->model('Crud_model');
+		$data = $CI->Crud_model->record_get($tablename, $key, $val);
+		return $data;
+	}
+
 	public function update($tablename, $key, $val, $data){
-		$this->load->database();
-		$this->load->model('Crud_model');
-		$status = $this->Crud_model->record_update($tablename,$key,$val, $data);
+		$CI =& get_instance();
+		$CI->load->model('Crud_model');
+		$status = $CI->Crud_model->record_update($tablename,$key,$val, $data);
 		return $status;
 	}
 
@@ -53,9 +60,13 @@ class Crud{
 		return $data;
 	}
 
-	public function test(){
-		return "Hello World";
+	public function get_columns($tablename, $columns){
+		$CI =& get_instance();
+		$CI->load->model('Crud_model');
+		$data = $CI->Crud_model->get_columns($tablename, $columns);
+		return $data;
 	}
+
 
 
 

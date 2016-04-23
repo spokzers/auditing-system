@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Inspector extends CI_Controller {
+class Facility extends CI_Controller {
 
 	/**
 	 * Index Page for this controller.
@@ -21,6 +21,8 @@ class Inspector extends CI_Controller {
 	 function __construct()
  {
 		 parent::__construct();
+		 $this->load->library("Crud");
+		 $this->load->helper('ams_helper');
  }
 
 	public function index()
@@ -31,24 +33,13 @@ class Inspector extends CI_Controller {
 			'profiles' => $profiles,
 			'designation' => get_designation(),
 		);
-		$this->load->view('inspector_view', $data);
+		$this->load->view('facility_view', $data);
 		$this->load->view('footer');
 	}
 
 	public function create(){
-		$heading = 'Create New Inspector';
-		$url = 'insert';
-		$submit = 'Create';
-		$reports = $this->crud->get_columns('userprofiles', 'id, name');
-		$data = array(
-			'profile' => get_empty_model('userprofiles'),
-			'reports' => $reports,
-			'heading' => $heading,
-			'url' => $url,
-			'submit' => $submit
-		);
 		$this->load->view('base');
-		$this->load->view('inspector_create', $data);
+		$this->load->view('inspector_create');
 		$this->load->view('footer');
 		$this->load->view('signature');
 	}
@@ -60,19 +51,10 @@ class Inspector extends CI_Controller {
 	}
 
 	public function edit($id){
-		$heading = 'Update This Inspector';
-		$url = "update/$id";
 		$profile = $this->crud->get('userprofiles', 'id', $id);
-		$submit = 'Update';
-		$reports = $this->crud->get_columns('userprofiles', 'id, name');
 		$data = array(
-			'profile' => $profile,
-			'reports' => $reports,
-			'heading' => $heading,
-			'url' => $url,
-			'submit' => $submit
+			'profile' => $profile
 		);
-		// echo $profile[0]->status;
 		$this->load->view('base');
 		$this->load->view('inspector_create', $data);
 		$this->load->view('footer');
@@ -80,9 +62,7 @@ class Inspector extends CI_Controller {
 	}
 
 	public function update($id){
-		$data = get_post_data('userprofiles', $this);
-		$status = $this->crud->update('userprofiles', 'id', $id, $data);
-		redirect('/inspector');
+
 	}
 
 

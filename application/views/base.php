@@ -123,7 +123,7 @@
                                     <ul>
                                         <li><a href="ui-buttons.html">Create New</a>
                                         </li>
-                                        <li><a href="ui-badges.html">View All</a>
+                                        <li><a href="<?php echo base_url();?>index.php/facility/">View All</a>
                                         </li>
                                         <li><a href="ui-cards.html">Commercial Centres</a>
                                         </li>

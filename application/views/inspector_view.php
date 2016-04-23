@@ -22,18 +22,20 @@
 
                                         <tbody>
                                           <?php
-                                          foreach ($profiles as $profile) {
 
+                                          foreach ($profiles as $profile) {
                                             echo "<tr>";
                                             echo "<td>$profile->id</td>";
                                             echo "<td>$profile->name</td>";
                                             echo "<td>$profile->username</td>";
-                                            echo "<td>M$profile->email&nbsp;</td>";
+                                            echo "<td>$profile->email&nbsp;</td>";
                                             $position = $designation[$profile->designation];
                                             echo "<td>$position</td>";
                                             echo "<td>";
-                                            echo "<a class='btn green' href='#!'>View</a>
-                                            <a class='btn blue' href='#!'>Edit</a>
+                                            $url_view = base_url() . "index.php/inspector/view/$profile->id";
+                                            $url_edit = base_url() . "index.php/inspector/edit/$profile->id";
+                                            echo "<a class='btn green' href='$url_view'>View</a>
+                                            <a class='btn blue' href='$url_edit'>Edit</a>
                                             </td>";
                                             echo "</tr>";
                                           }

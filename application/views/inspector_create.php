@@ -28,146 +28,115 @@
                     <div class="row">
                         <div class="col s12 m12 l12">
                             <div class="card-panel">
-                                <h4 class="header2">Create New Inspector</h4>
+                                <h4 class="header2"><?php echo $heading; ?></h4>
                                 <div class="row">
-                                    <form class="col s12" method="post" action="<?php echo base_url();?>index.php/inspector/insert">
+                                    <form class="col s12" method="post" action="<?php echo base_url();?>index.php/inspector/<?php echo $url; ?>">
                                         <!-- Inspector ID -->
                                         <div class="row">
                                             <div class="input-field col s12">
-                                                <input id="inspector_id" name='employee_id' type="text">
+                                                <input id="inspector_id" name='employee_id' value='<?php echo $profile[0]->employee_id;?>' type="text">
                                                 <label for="inspector_id">Inspector ID</label>
                                             </div>
                                         </div>
                                         <!-- National Identification No/Iqama Number -->
                                         <div class="row">
                                             <div class="input-field col s12">
-                                                <input id="iqama_number" name='nic' type="text">
+                                                <input id="iqama_number" name='nic' value='<?php echo $profile[0]->nic;?>' type="text">
                                                 <label for="iqama_number">National Identification No/Iqama Number</label>
                                             </div>
                                         </div>
                                         <!-- Inspector Name -->
                                         <div class="row">
                                             <div class="input-field col s12">
-                                                <input id="inspector_name" name='name' type="text">
+                                                <input id="inspector_name" name='name' value='<?php echo $profile[0]->name;?>' type="text">
                                                 <label for="inspector_name">Inspector Name</label>
                                             </div>
                                         </div>
                                         <!-- Email -->
                                         <div class="row">
                                             <div class="input-field col s12">
-                                                <input id="email" type="email" name='email'>
+                                                <input id="email" type="email" value='<?php echo $profile[0]->email;?>' name='email'>
                                                 <label for="email">Email</label>
                                             </div>
                                         </div>
                                         <!-- Inspector Login ID -->
                                         <div class="row">
                                             <div class="input-field col s12">
-                                                <input id="inspector_login_id" name='username' type="text">
+                                                <input id="inspector_login_id" name='username' value='<?php echo $profile[0]->username;?>' type="text">
                                                 <label for="inspector_login_id">Inspector Login ID</label>
                                             </div>
                                         </div>
                                         <!-- Login Password -->
                                         <div class="row">
                                             <div class="input-field col s12">
-                                                <input id="inspector_password" name='password' type="password">
+                                                <input id="inspector_password" name='password' value='<?php echo $profile[0]->password;?>' type="password">
                                                 <label for="inspector_password">Password</label>
                                             </div>
                                         </div>
                                         <!-- DOB -->
                                         <div class="row">
                                             <div class="input-field col s4">
-                                                <input type="date" name='dob' class="datepicker">
+                                                <input type="date" name='dob' value='<?php echo $profile[0]->dob;?>' class="datepicker">
                                                 <label for="dob" class="active">Date Of Birth</label>
                                             </div>
                                             <!-- Section -->
                                             <div class="input-field col s8">
-                                                <select name='section'>
-                                                    <option value="" disabled selected>Select a Section</option>
-                                                    <option value="1">Housing Inspection</option>
-                                                    <option value="2">Environmental & Health Inspections</option>
-                                                    <option value="3">Market Control Inspection</option>
-                                                </select>
+                                              <?php
+                                                print_select('section', $profile[0]->section, get_section());
+                                              ?>
+
                                                 <label>Section</label>
                                             </div>
                                         </div>
                                         <!-- Designation -->
                                         <div class="row">
                                             <div class="input-field col s12">
-                                                <select name='designation'>
-                                                    <option value="" disabled selected>Select A Level</option>
-                                                    <option value="1">Administrator</option>
-                                                    <option value="2">Inspector</option>
-                                                    <option value="3">Supervisor</option>
-                                                    <option value="4">Manager</option>
-                                                    <option value="5">Director</option>
-                                                    <option value="6">Data Entry (workers)</option>
-                                                </select>
+                                              <?php
+                                                print_select('designation', $profile[0]->designation, get_designation());
+                                              ?>
+
                                                 <label>Designation</label>
                                             </div>
                                         </div>
                                         <!-- Reports to -->
                                         <div class="row">
                                             <div class="input-field col s12">
-                                                <select name='reports_to'>
-                                                    <option value="" disabled selected="selected">Choose an option</option>
-                                                    <option value="11">عبدالعزيز وهاس</option>
-                                                    <option value="33">عادل شحاته بخيت</option>
-                                                    <option value="34">زكي سليم المحمادي</option>
-                                                    <option value="35">مسفر محسن الغامدي</option>
-                                                    <option value="36">عبدالعزيز طارق سندي</option>
-                                                    <option value="37">نواف عبدالله الغيثي</option>
-                                                    <option value="38">عبدالله منصور الاحمدي</option>
-                                                    <option value="39">ياسر احمد سبيه</option>
-                                                    <option value="40">حسن محمد عسيري</option>
-                                                    <option value="41">عمار عيد الجهني</option>
-                                                    <option value="42">المهندس / صلاح بن مصلح المحمدي</option>
-                                                    <option value="43">المهندس/ موسى بن عيسى المالكي</option>
-                                                    <option value="44">مروان يوسف كعكي</option>
-                                                    <option value="45">عبدالله علي الزهراني</option>
-                                                    <option value="46">احمد سلوم العوفي</option>
-                                                    <option value="47">علي بن محمد النهدي</option>
-                                                    <option value="48">محمد بن عبيد الصريصري</option>
-                                                    <option value="49">محمد بن سليمان البلوي</option>
-                                                    <option value="50">Data Entry Worker</option>
-                                                    <option value="51">رائد عبدالمجيد الفاخري</option>
-                                                    <option value="53">عبدالله محمد الخربوش</option>
-                                                    <option value="54">عطية عطيان الرفاعي</option>
-                                                    <option value="56">احمد ناصر البلوي</option>
-                                                    <option value="57">مساعد أحمد الأحمدي</option>
-                                                    <option value="58">محمد حسين بطيش</option>
-                                                    <option value="59">احمد الجهيني</option>
-                                                    <option value="60">احمد الشهابي</option>
-                                                    <option value="61">عبدالله المحياوي</option>
-                                                    <option value="62">محمد ناجي الإدريسي</option>
-                                                    <option value="63">Sayed Bukhari </option>
-                                                    <option value="64">عبدالله سليمان الصبحي</option>
-                                                    <option value="65">عبدالعزيز زارع </option>
-                                                    <option value="66">عبد الرحمن القرشي</option>
-                                                </select>
+
+                                              <?php
+                                              $options = array();
+                                              foreach ($reports as $report) {
+                                                $options[$report->id] = $report->name;
+                                              }
+                                              print_select('reports_to', $profile[0]->reports_to, $options);
+                                              ?>
+
                                                 <label>Reports to</label>
                                             </div>
                                         </div>
                                         <!-- Contact Information -->
                                         <div class="row">
                                             <div class="input-field col s12">
-                                                <input id="inspector_contact_info" name='contact' type="text">
+                                                <input id="inspector_contact_info" value='<?php echo $profile[0]->contact;?>' name='contact' type="text">
                                                 <label for="inspector_contact_info">Contact Information</label>
                                             </div>
                                         </div>
                                         <!-- Address -->
                                         <div class="row">
                                             <div class="input-field col s12">
-                                                <input id="inspector_address" name='address' type="text">
+                                                <input id="inspector_address" value='<?php echo $profile[0]->address;?>' name='address' type="text">
                                                 <label for="inspector_address">Address</label>
                                             </div>
                                         </div>
                                         <!-- Status -->
                                         <div class="row">
                                             <div class="input-field col s12">
-                                                <select name='status'>
-                                                    <option value="1" selected>Active</option>
-                                                    <option value="2">Blocked</option>
-                                                </select>
+
+                                                  <?php
+                                                  $option['1'] = "Active";
+                                                  $option['2'] = "Blocked";
+                                                  print_select('status', $profile[0]->status, $option);
+                                                  ?>
+
                                                 <label>Status</label>
                                             </div>
                                         </div>
@@ -179,7 +148,7 @@
                                                     <input type="file">
                                                 </div>
                                                 <div class="file-path-wrapper">
-                                                    <input class="file-path validate" name='image' type="text">
+                                                    <input class="file-path validate" name='image' value='<?php echo $profile[0]->image;?>' type="text">
                                                 </div>
                                             </div>
                                         </div>
@@ -190,7 +159,7 @@
                                             <input class="file-path validate" style="display: none;" name='sign' type="text">
                                         </div>
                                         <div class="row">
-                                            <button class="btn waves-effect waves-light " type="submit" name="action">Create</button>
+                                            <button class="btn waves-effect waves-light " type="submit" name="action"><?php echo $submit; ?></button>
                                         </div>
                                     </form>
                                 </div>
