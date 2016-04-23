@@ -111,9 +111,9 @@
                             <li class="bold"><a class="collapsible-header waves-effect waves-cyan"><i class="mdi-social-person"></i> Inspectors</a>
                                 <div class="collapsible-body">
                                     <ul>
-                                        <li><a href="<?php echo base_url();?>/index.php/inspector/create">Create New</a>
+                                        <li><a href="<?php echo base_url();?>index.php/inspector/create">Create New</a>
                                         </li>
-                                        <li><a href="<?php echo base_url();?>/index.php/inspector/">View All</a>
+                                        <li><a href="<?php echo base_url();?>index.php/inspector/">View All</a>
                                         </li>
                                     </ul>
                                 </div>
@@ -123,7 +123,7 @@
                                     <ul>
                                         <li><a href="ui-buttons.html">Create New</a>
                                         </li>
-                                        <li><a href="ui-badges.html">View All</a>
+                                        <li><a href="<?php echo base_url();?>index.php/facility/">View All</a>
                                         </li>
                                         <li><a href="ui-cards.html">Commercial Centres</a>
                                         </li>
