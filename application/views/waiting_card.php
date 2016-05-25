@@ -63,7 +63,6 @@
             <div class="left">
                     <img style="margin-top: 15px;padding: 0px" src="<?php echo base_url(); ?>static/images/pdf_imgs/Signature.png" width="75px">
                     <p style="padding: 0px;margin:0px;color:black;">Signature</p>
-                
             </div>
         </div>
         <div style="width:150px;text-align:center;height:225px;float:right;">
@@ -71,10 +70,6 @@
                 <div style="border:1px solid black;width:140px;height:100;padding:5px">
                     <img src="<?php echo base_url(); ?>uploads/worker/<?php echo $worker->picture; ?>" width="120px">
                 </div>
-                <h6 style="padding: 0px;margin:0px;color:black;font-weight: bold;">حالة التدريب</h6>
-                <h6 style="padding: 0px;margin:0px;font-weight: bold;color:black;">متدرب</h6>
-                <h6 style="padding: 0px;margin:0px;font-weight: bold;color:black;">معد الشهادة</h6>
-                <h6 style="padding: 0px;margin:0px;font-weight: bold;color:black;">محمد مقبل الرفاعي</h6>
             </center>
         </div>
     </div>

@@ -55,7 +55,7 @@
       <form class="login-form" method="post" action="<?php echo base_url(); ?>index.php/login/get_in"> 
         <div class="row">
           <div class="input-field col s12 center">
-            <img src="<?php echo base_url(); ?>static/images/login-logo.png" alt="" class="circle responsive-img valign profile-image-login">
+            <img style="" src="<?php echo base_url(); ?>static/images/logo.png" alt="" class="circle responsive-img valign">
             <p class="center login-form-text">EPIC Auditing System</p>
           </div>
         </div>
@@ -63,20 +63,14 @@
           <div class="input-field col s12">
             <i class="mdi-social-person-outline prefix"></i>
             <input id="username" name="username" type="text">
-            <label for="username"  class="center-align">Username</label>
+            <label for="username"  class="active center-align">Username</label>
           </div>
         </div>
         <div class="row margin">
           <div class="input-field col s12">
             <i class="mdi-action-lock-outline prefix"></i>
             <input id="password" name="password" type="password">
-            <label for="password">Password</label>
-          </div>
-        </div>
-        <div class="row">          
-          <div class="input-field col s12 m12 l12  login-text">
-              <input type="checkbox" id="remember-me" />
-              <label for="remember-me">Remember me</label>
+            <label for="password" class="active">Password</label>
           </div>
         </div>
         <div class="row">
@@ -84,15 +78,6 @@
             <button type='submit' class="btn waves-effect waves-light col s12">Login</button>
           </div>
         </div>
-        <div class="row">
-          <div class="input-field col s6 m6 l6">
-            <p class="margin medium-small"><a href="page-register.html">Register Now!</a></p>
-          </div>
-          <div class="input-field col s6 m6 l6">
-              <p class="margin right-align medium-small"><a href="page-forgot-password.html">Forgot password ?</a></p>
-          </div>          
-        </div>
-
       </form>
     </div>
   </div>
