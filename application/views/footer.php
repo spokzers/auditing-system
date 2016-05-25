@@ -10,8 +10,8 @@
 </div>
 <div class="footer-copyright">
   <div class="container">
-      Copyright © 2015 - All rights reserved.
-      <span class="right"> Design and Developed by <a class="grey-text text-lighten-4">Dayem Siddiqui</a></span>
+      EPIC - Copyright © 2015 - All rights reserved.
+      <!-- <span class="right"> Design and Developed by <a class="grey-text text-lighten-4">Dayem Siddiqui & Shamikh Shabbir</a></span> -->
   </div>
 </div>
 </footer>
@@ -21,6 +21,9 @@ Scripts
 ================================================ -->
 <!-- jQuery Library -->
 <script type="text/javascript" src="<?php echo base_url(); ?>static/js/jquery-1.11.2.min.js"></script>
+<!-- jQuery Translate Library -->
+<script type="text/javascript" src="<?php echo base_url(); ?>static/js/jquery.translate.js"></script>
+<script type="text/javascript" src="<?php echo base_url(); ?>static/js/translate_main.js"></script>
 <!--materialize js-->
 <script type="text/javascript" src="<?php echo base_url(); ?>static/js/materialize.min.js"></script>
 <!--scrollbar-->
@@ -39,10 +42,33 @@ Scripts
 <script type="text/javascript" src="<?php echo base_url(); ?>static/js/plugins/jvectormap/vectormap-script.js"></script>
 <script src="http://cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"></script>
 <script src="http://cdn.oesmith.co.uk/morris-0.4.1.min.js"></script>
+
 <!--plugins.js - Some Specific JS codes for Plugin Settings-->
 <script type="text/javascript" src="<?php echo base_url(); ?>static/js/plugins.js"></script>
 <!-- Toast Notification -->
 <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+<script type="text/javascript">
+  var input = $('.datepicker').pickadate({
+    formatSubmit: 'yyyy/mm/dd',
+      hiddenName: true
+    });
+
+  
+//getting the current date
+/*
+var currentDate = new Date();
+var twoDigitMonth = ((currentDate.getMonth() + 1) >= 10) ? (currentDate.getMonth() + 1) : '0' + (currentDate.getMonth() + 1);
+var twoDigitDate = ((currentDate.getDate()) >= 10) ? (currentDate.getDate()) : '0' + (currentDate.getDate());
+var createdDateTo = currentDate.getFullYear() + "-" + twoDigitMonth + "-" + twoDigitDate;
+*/
+// alert(createdDateTo);
+// $("#start_date").val(createdDateTo);
+
+$("#start_date_training").val('<?php echo date("Y-m-d", strtotime('next monday')); ?>');
+
+</script>
+
+
 </body>
 
 </html>

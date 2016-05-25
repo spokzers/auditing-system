@@ -30,7 +30,7 @@
                             <div class="card-panel">
                                 <h4 class="header2"><?php echo $heading; ?></h4>
                                 <div class="row">
-                                    <form class="col s12" method="post" action="<?php echo base_url();?>index.php/inspector/<?php echo $url; ?>">
+                                    <form class="col s12" method="post" action="<?php echo base_url();?>index.php/inspector/<?php echo $url; ?>" enctype="multipart/form-data">
                                         <!-- Inspector ID -->
                                         <div class="row">
                                             <div class="input-field col s12">
@@ -82,7 +82,7 @@
                                             <!-- Section -->
                                             <div class="input-field col s8">
                                               <?php
-                                                print_select('section', $profile[0]->section, get_section());
+                                                print_select('section', $profile[0]->section, get_section(), "");
                                               ?>
 
                                                 <label>Section</label>
@@ -92,10 +92,24 @@
                                         <div class="row">
                                             <div class="input-field col s12">
                                               <?php
-                                                print_select('designation', $profile[0]->designation, get_designation());
+                                                print_select('designation', $profile[0]->designation, get_designation(), "designation");
                                               ?>
-
+                                                
                                                 <label>Designation</label>
+                                            </div>
+                                        </div>
+
+                                          <div class="row" id='facility'>
+                                            <div class="input-field col s12">
+                                              <?php
+                                              $options = [];
+                                              foreach ($facilities as $facility) {
+                                                  $options[$facility->id] = $facility->name;
+                                              }
+                                                print_select('id_facility', -1, $options, "id_facility");
+                                              ?>
+                                                
+                                                <label>Facility</label>
                                             </div>
                                         </div>
                                         <!-- Reports to -->
@@ -107,7 +121,7 @@
                                               foreach ($reports as $report) {
                                                 $options[$report->id] = $report->name;
                                               }
-                                              print_select('reports_to', $profile[0]->reports_to, $options);
+                                              print_select('reports_to', $profile[0]->reports_to, $options, "");
                                               ?>
 
                                                 <label>Reports to</label>
@@ -134,7 +148,7 @@
                                                   <?php
                                                   $option['1'] = "Active";
                                                   $option['2'] = "Blocked";
-                                                  print_select('status', $profile[0]->status, $option);
+                                                  print_select('status', $profile[0]->status, $option, "");
                                                   ?>
 
                                                 <label>Status</label>
@@ -145,7 +159,7 @@
                                             <div class="file-field input-field" >
                                                 <div class="btn">
                                                     <span>Browse</span>
-                                                    <input type="file">
+                                                    <input type="file" name='dp'>
                                                 </div>
                                                 <div class="file-path-wrapper">
                                                     <input class="file-path validate" name='image' value='<?php echo $profile[0]->image;?>' type="text">
@@ -169,3 +183,4 @@
                 </div>
             </section>
             <!-- END CONTENT -->
+

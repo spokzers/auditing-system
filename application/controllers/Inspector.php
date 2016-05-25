@@ -21,27 +21,40 @@ class Inspector extends CI_Controller {
 	 function __construct()
  {
 		 parent::__construct();
+		 auth_check($this);
+		
  }
 
 	public function index()
 	{
 		$this->load->view('base');
-		$profiles = $this->crud->get_table_data('userprofiles');
+		 if($this->crud->session_designation() == 2){
+                
+               $profiles = $this->crud->get_row_by_parameter('userprofiles', 'id', $this->session->userdata('id'));
+                
+           }else{
+			$profiles = $this->crud->get_table_data('userprofiles');
+           	
+           }
 		$data = array(
 			'profiles' => $profiles,
 			'designation' => get_designation(),
 		);
-		$this->load->view('inspector_view', $data);
+		$this->load->view('inspector', $data);
 		$this->load->view('footer');
 	}
 
 	public function create(){
+		auth_restrict($this, 5);
+		auth_restrict($this, 3);
 		$heading = 'Create New Inspector';
 		$url = 'insert';
 		$submit = 'Create';
 		$reports = $this->crud->get_columns('userprofiles', 'id, name');
+		$facilities = $this->crud->get_columns('facilities', 'id, name');
 		$data = array(
 			'profile' => get_empty_model('userprofiles'),
+			'facilities' => $facilities,
 			'reports' => $reports,
 			'heading' => $heading,
 			'url' => $url,
@@ -51,28 +64,39 @@ class Inspector extends CI_Controller {
 		$this->load->view('inspector_create', $data);
 		$this->load->view('footer');
 		$this->load->view('signature');
+		// $this->load->view('inspector_create_js');
 	}
 
 	public function insert(){
+		auth_restrict($this, 5);
+		auth_restrict($this, 3);
 		$data = get_post_data('userprofiles', $this);
+		$data['password'] = sha1($data['password']);
+		if($data['designation'] != 6){
+			$data['id_facility'] = -1;
+		}
 		$this->crud->insert('userprofiles', $data);
-		redirect('/inspector');
+		$this->do_upload();
 	}
 
 	public function edit($id){
+		auth_restrict($this, 5);
+		auth_restrict($this, 3);
 		$heading = 'Update This Inspector';
 		$url = "update/$id";
 		$profile = $this->crud->get('userprofiles', 'id', $id);
 		$submit = 'Update';
 		$reports = $this->crud->get_columns('userprofiles', 'id, name');
+		$facilities = $this->crud->get_columns('facilities', 'id, name');
 		$data = array(
 			'profile' => $profile,
 			'reports' => $reports,
+			'facilities' => $facilities,
 			'heading' => $heading,
 			'url' => $url,
 			'submit' => $submit
 		);
-		// echo $profile[0]->status;
+		
 		$this->load->view('base');
 		$this->load->view('inspector_create', $data);
 		$this->load->view('footer');
@@ -80,17 +104,49 @@ class Inspector extends CI_Controller {
 	}
 
 	public function update($id){
+		auth_restrict($this, 5);
+		auth_restrict($this, 3);
 		$data = get_post_data('userprofiles', $this);
+		if($data['designation'] != 6){
+			$data['id_facility'] = -1;
+		}
 		$status = $this->crud->update('userprofiles', 'id', $id, $data);
-		redirect('/inspector');
+		$this->do_upload();
 	}
 
 
+	public function do_upload()
+			 {
+							 $config['upload_path']          = './uploads/profile/';
+							 $config['allowed_types']        = 'gif|jpg|png|jpeg';
 
 
+							 $this->load->library('upload', $config);
+
+							 if ( ! $this->upload->do_upload('dp'))
+							 {
+											 $error = array('error' => $this->upload->display_errors());
+											 redirect('/inspector');
+							 }
+							 else
+							 {
+											 $data = array('upload_data' => $this->upload->data());
+											 redirect('/inspector');
+							 }
+			 }
 
 
-
+	public function view($id){
+		$profile = $this->crud->get('userprofiles', 'id', $id);
+		$report = $this->crud->get_row_by_parameter('userprofiles','id',$profile[0]->reports_to);
+		$data = array(
+			'profile' => $profile,
+			'report' => $report
+		);
+		$this->load->view('base');
+		$this->load->view('inspector_view', $data);
+		$this->load->view('footer');
+	}
 
 
 

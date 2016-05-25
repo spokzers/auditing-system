@@ -23,6 +23,32 @@
 body {
     background-color: #fcfcfc;
 }
+.round{
+   border-radius: 50%;
+   line-height: 100px;
+}
+.type1 {
+    width: 100px;
+    height: 100px;
+    background: yellow;
+}
+.type2 {
+    width: 100px;
+    height: 100px;
+    background: #ccc;
+    text-align: center;
+    color: white;
+}
+
+.type2:hover{
+ background: #00BCD4;
+}
+
+.type3 {
+    width: 500px;
+    height: 500px;
+    background: aqua;
+}
 
 #main,
 footer {

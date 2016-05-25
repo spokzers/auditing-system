@@ -1,0 +1,19 @@
+---audits
+-id
+-id_template
+-id_facility
+-section
+-doa (Date of audit)
+-started_at
+-ended_at
+-disposals
+-id_penalty
+-reason (Complain, Routine, Licence Checking)
+-pass
+-remarks
+
+---audits_inspectors
+-id
+-id_inspector
+-id_audit
+

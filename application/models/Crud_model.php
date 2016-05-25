@@ -24,6 +24,52 @@ class Crud_model extends CI_Model {
 
          }
 
+         public function get_star(){
+          $this->db->select('*');
+          $this->db->from('audits');
+          $this->db->order_by('ended_at','DESC');
+          $this->db->limit(3);
+          $query = $this->db->get();
+          return $query->result();
+         }
+
+          public function get_recent_audit_where($key, $val, $limit){
+          $this->db->select('*');
+          $this->db->from('audits');
+          $this->db->where($key, $val);
+          $this->db->order_by('ended_at','DESC');
+          $this->db->limit($limit);
+          $query = $this->db->get();
+          return $query->result();
+         }
+
+      
+
+         public function get_row_count_by_parameter($tablename,$key, $val){
+            $this->db->select('*');
+            $this->db->from($tablename);
+            $this->db->where($key, $val);
+            $query = $this->db->get();
+            return $query->num_rows();
+         }
+
+         public function record_by_parameter($tablename,$key, $val){
+           $this->db->select('*');
+           $this->db->from($tablename);
+           $this->db->where($key, $val);
+           $query = $this->db->get();
+           return $query->result();
+         }
+
+         public function record_by_two_parameter($tablename,$key1, $val1, $key2, $val2){
+           $this->db->select('*');
+           $this->db->from($tablename);
+           $this->db->where($key1, $val1);
+           $this->db->where($key2, $val2);
+           $query = $this->db->get();
+           return $query->result();
+         }
+
          public function check_record($tablename,$key, $val){
            $this->db->select('*');
            $this->db->from($tablename);
@@ -78,7 +124,105 @@ class Crud_model extends CI_Model {
             return $this->db->list_fields($tablename);
          }
 
+         public function delete_record($tablename, $id){
+            $this->db->where('id',$id);
+            $this->db->delete($tablename);
+         }
 
+         public function get_last_id(){
+            return $insert_id = $this->db->insert_id();
+         }
+
+         public function record_insert_v2($tablename, $data){
+            $this->db->insert($tablename, $data);
+            return $insert_id = $this->db->insert_id();
+         }
+
+         public function delete_by_parameter($tablename, $column, $id)
+         {
+           $this->db->where($column, $id);
+           $this->db->delete($tablename);
+         }
+
+         public function get_count_by_equality($tablename, $col1, $col2){
+            $this->db->select('*');
+            $this->db->from($tablename);
+            $str = "" . $col1 . " " . "=" . " " . $col2;
+            $this->db->where("doa = started_at");
+            $query = $this->db->get();
+            return $query->num_rows();
+         }
+
+         public function get_count_by_equality_where($tablename, $col1, $col2, $key, $val){
+            $this->db->select('*');
+            $this->db->from($tablename);
+            $str = "" . $col1 . " " . "=" . " " . $col2;
+            $this->db->where("doa = started_at");
+            $this->db->where($key, $val);
+            $query = $this->db->get();
+            return $query->num_rows();
+         }
+
+
+         public function field_increment($tablename,$id, $field){
+          $this->db->select('*');
+          $this->db->from($tablename);
+          $this->db->where('id', $id);
+          $str = $field . '+1'; 
+          $this->db->set($field, $str, FALSE);
+          $this->db->update($tablename);
+         }
+
+        public function get_sum_by_parameter($tablename,$key, $val, $col){
+            $this->db->select('*');
+            $this->db->from($tablename);
+            $this->db->where($key, $val);
+            $this->db->select_sum($col, 'sum');
+            $query = $this->db->get();
+            $result = $query->result();
+            return $result[0]->sum;
+         }
+
+         public function get_sum_by_two_parameter($tablename, $tablename2, $join, $key, $val,$key2, $val2, $col){
+            $this->db->select('*');
+            $this->db->from($tablename);
+            $this->db->join ( $tablename2, $join);
+            $this->db->where($key, $val);
+            $this->db->where($key2, $val2);
+            $this->db->select_sum($col, 'sum');
+            $query = $this->db->get();
+            $result = $query->result();
+            if(!$result[0]->sum){
+              $result[0]->sum = 0;
+            }
+            return $result[0]->sum;
+         }
+
+         public function get_row_by_double_where($tablename, $key1, $val1, $key2, $val2){
+               $this->db->select('*');
+               $this->db->from($tablename);
+               $this->db->where($key1, $val1);
+               $this->db->where($key2, $val2);
+               $query = $this->db->get();
+
+               return $query->result();
+         } 
+
+          public function get_count_by_double_where($tablename, $key1, $val1, $key2, $val2){
+               $this->db->select('*');
+               $this->db->from($tablename);
+               $this->db->where($key1, $val1);
+               $this->db->where($key2, $val2);
+               $query = $this->db->get();
+
+               return $query->num_rows();
+         }  
+
+        
+
+         //-----------------------------------------------------------------------//
+         //                         Seatching Query                               //
+         //-----------------------------------------------------------------------//
 
 
 }
