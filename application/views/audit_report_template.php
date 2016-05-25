@@ -11,40 +11,40 @@
         border-collapse: collapse;
         table-layout: fixed;
     }
-    
+
     th,
     td {
         padding: 5px;
     }
-    
+
     .bg-orange {
         background-color: orange;
     }
-    
+
     .bg-grey {
         background-color: #bbb;
     }
-    
+
     .color-brown {
         color: #762C00;
     }
-    
+
     #cell1 {
         width: 5%;
     }
-    
+
     #cell2 {
         width: 53%;
     }
-    
+
     #cell3 {
         width: 5%;
     }
-    
+
     #cell4 {
         width: 7%;
     }
-    
+
     #cell5 {
         width: 30%;
     }
@@ -53,16 +53,16 @@
                   font-style: normal;
                   font-weight: normal;
             }*/
-    
+
     body {
         font-family: DejaVu Sans;
         font-size: 10px;
     }
-    
+
     @page {
         margin: 120px 50px;
     }
-    
+
     #header {
         position: fixed;
         left: 0px;
@@ -72,16 +72,16 @@
         /*background-color: orange;*/
         /*text-align: center;*/
     }
-    
+
     #footer {
         position: fixed;
         /*left: 0px;*/
         bottom: -110px;
         /*right: 0px;*/
-        height: 140px;
+        height: 50px;
         /*background-color: lightblue;*/
     }
-    
+
     #footer .page:after {
         /*content: counter(page, upper-roman);*/
     }
@@ -93,32 +93,14 @@
         <img width="120px" style="float: left;" src="<?php echo base_url(); ?>static/images/logo.png">
         <img width="350px" style="float: right" src="<?php echo base_url(); ?>static/images/pdf_imgs/header.jpg">
     </div>
-    <!-- <div id="footer">
-        <table style="border:none" width="100%">
+    <div id="footer">
+        <table style="width:100%;text-align: center">
             <tr>
-                <td style="border:none">‫الاحمدي‬ ‫منصور‬ ‫عبداالله‬</td>
-                <td style="border:none;text-align: right" colspan="2"><img width="70px" src="<?php echo base_url(); ?>static/images/pdf_imgs/Signature.png"></td>
-            </tr>
-            <tr>
-                <td style="border:none">Inspector's Signature</td>
-                <td style="border:none;text-align: right" colspan="2">Signature</td>
+                <td class="bg-orange">EPIC Address</td>
+                <td colspan="3">Salah uddin Ayubi Road, Malaz, Riyadh, Kingdom of Saudi Arabia.</td>
             </tr>
         </table>
-        <table style="width:100%;text-align: right">
-            <tr>
-                <td>‫رقم‪:‬‬ ‫وثيقة‬ RCJY/FRM/H/1829 </td>
-                <td colspan="2">‫بينبع‬ ‫الملكية‬ ‫بالهيئة‬ ‫الاملاك‬ ‫ادارة‬ ‫–‬ ‫الميدانية‬ ‫للرقابة‬ ‫الالكتروني‬ ‫®‬ ‫راصد‬ ‫برنامج‬ ‫من‬ ‫اليا‬ ‫تصدر‬ ‫رسمية‬ ‫وثيقة‬ ‫التفتيش‬ ‫تقرير‬</td>
-            </tr>
-            <tr>
-                <td>‫‪الطباعة‬ ‫اريخ‬ 2016-May-23 </td>
-                <td>
-                    <div style="text-align: left;display:inline;">ISO: Y04-01-03-03/01</div>
-                    <div style="text-align: right;display:inline;">1.0 :‬ الاصدار</div>
-                </td>
-                <td>‫‪2‬‬ ‫من‬ ‫‪2‬‬ ‫‪:‬‬ ‫الصفحة‬ ‫رقم‬</td>
-            </tr>
-        </table>
-    </div> -->
+    </div>
     <table style="width:100%">
         <tr>
             <td class="bg-orange">
