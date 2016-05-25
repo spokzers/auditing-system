@@ -231,7 +231,30 @@
                                 $report_url = base_url()."index.php/pdfdom/audit_report/".$audit->id;
                                 echo "<td>";
                                 if($audit->status == 2){
-                                    echo"<a href='$report_url'><button class='btn btn-floating small green'><i class='mdi-action-assignment'></i>View Report</button></a>";
+                                    //$report_url
+                                    echo"<a href='#$audit->id' class='modal-trigger'><button class='btn btn-floating small green'><i class='mdi-action-assignment'></i>View Report</button></a>";
+                                    // <!-- Modal Structure -->
+                                     echo "<div id='$audit->id' class='modal modal-fixed-footer'>
+                                         <div class='modal-content'>
+                                                <div>
+                                                    <div><div id='withImg' class='btn waves-effect orange'>With Images</div></div> <br>
+                                                    <div><div id='withoutImg' class='btn waves-effect yellow'>Without Images</div></div><br>
+                                                </div>
+                                                  <div>
+                                                    <div><div id='withVio' class='btn waves-effect teal'>Violations Only</div></div><br>
+                                                    <div><div id='withoutVio' class='btn waves-effect purple'>Complete</div></div><br>
+                                                </div>
+                                                <div>
+                                                    <p>Send Email To Client</p>
+                                                    <div><div id='withCli' class='btn waves-effect red'>Yes</div></div><br>
+                                                    <div><div id='withoutCli' class='btn waves-effect pink'>No</div></div><br>
+                                                </div>
+                                         </div>
+                                         <div class='modal-footer'>
+                                             <a href='$report_url' class='waves-effect waves-green btn-flat modal-action modal-close'>Submit</a>
+                                             <a href='#' class='waves-effect waves-green btn-flat modal-action modal-close'>Close</a>
+                                         </div>
+                                       </div>";
                                 }else{
                                 echo"<a href='$temp_url'><button class='btn btn-floating small amber'><i class='mdi-action-assignment'></i>Launch</button></a>";
                                 }
@@ -262,3 +285,4 @@
 </section>
 <!-- END CONTENT -->
 <!-- //////////////////////////////////////////////////////////////////////////// -->
+
