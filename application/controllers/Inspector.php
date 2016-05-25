@@ -133,8 +133,8 @@ class Inspector extends CI_Controller {
 							 if ( ! $this->upload->do_upload('dp'))
 							 {
 											 $error = array('error' => $this->upload->display_errors());
-											 // redirect('/inspector');
-											 var_dump($error);
+											 redirect('/inspector');
+											 // var_dump($error);
 							 }
 							 else
 							 {
