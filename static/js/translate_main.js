@@ -43,7 +43,30 @@ $(function() {
 		"EMPLOYEES": {"ar": "\u0627\u0644\u0645\u0648\u0638\u0641\u064A\u0646"},
     };
 
-	var _t = $('body').translate({lang: "en", t: t});
+    var language = checkCookie("lang_persist");
+    console.log("Language Cookie: "+ language);
+    var sel = "";
+    if (language == "") {
+    	sel = "en";
+	    console.log("sel: "+ sel);
+		$(".lang-selector").html('<i class="mdi-action-language"></i> العربية');
+		$(".lang-selector").attr("data-value","ar");
+    }
+    else {
+    	sel = language;
+	    console.log("sel in else: "+ sel);
+    	if ( sel == "en" ){
+			$(".lang-selector").html('<i class="mdi-action-language"></i> العربية');
+			$(".lang-selector").attr("data-value","ar");
+		} else {
+			$(".lang-selector").html("<i class='mdi-action-language'></i> English");
+			$(".lang-selector").attr("data-value","en");
+		}
+    }
+
+	setCookie("lang_persist", sel);
+
+	var _t = $('body').translate({lang: sel, t: t});
 
 	var str = _t.g("translate");
 	console.log(str);
@@ -63,7 +86,38 @@ $(function() {
 			$(this).html("<i class='mdi-action-language'></i> English");
 			$(this).attr("data-value","en");
 		}
+		setCookie("lang_persist", lang, 30);
+
 	});
 
 
 });
+
+
+function setCookie(cname,cvalue) {
+    document.cookie = cname+"="+cvalue+"; path=/audit/index.php/;";
+}
+
+function getCookie(cname) {
+    var name = cname + "=";
+    var ca = document.cookie.split(';');
+    for(var i=0; i<ca.length; i++) {
+        var c = ca[i];
+        while (c.charAt(0)==' ') {
+            c = c.substring(1);
+        }
+        if (c.indexOf(name) == 0) {
+            return c.substring(name.length, c.length);
+        }
+    }
+    return "";
+}
+
+function checkCookie(cname) {
+    var lang_persist=getCookie(cname);
+    if (lang_persist != "") {
+       return lang_persist;
+    } else {
+       return "";
+    }
+}
