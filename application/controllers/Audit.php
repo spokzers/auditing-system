@@ -282,6 +282,7 @@ class Audit extends CI_Controller {
 		$data['attachment'] = '1';
 		$wids = $data['id_workers'];
 		unset($data['id_workers']);
+		unset($data['id']);
 		$wids = explode(",", $wids);
 		$img = $this->crud->insert_v2('violations', $data);
 		for ($i=0 ; $i < count($wids)-1 ; $i++ ) { 
