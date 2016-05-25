@@ -430,7 +430,31 @@
                             echo "<td><a href='$audit_launch_url' class='amber white-text' style='padding:10px;'>Launch</a></td>";
                         }
                         elseif ($audit->status == 2) {
-                            echo "<td><a href='$report_url' class='blue white-text' style='padding:10px;'>Report</a></td>";
+                            // $report_url
+                            echo "<td><a href='#$audit->id' class='blue white-text' style='padding:10px;'>Report</a></td>";
+                             // <!-- Modal Structure -->
+                            $report_url = base_url()."index.php/pdfdom/audit_report/".$audit->id;
+                                    echo "<div id='$audit->id' class='modal modal-fixed-footer'>
+                                         <div class='modal-content'>
+                                                <div>
+                                                    <div><div id='withImg' class='btn waves-effect orange'>With Images</div></div> <br>
+                                                    <div><div id='withoutImg' class='btn waves-effect yellow'>Without Images</div></div><br>
+                                                </div>
+                                                  <div>
+                                                    <div><div id='withVio' class='btn waves-effect teal'>Violations Only</div></div><br>
+                                                    <div><div id='withoutVio' class='btn waves-effect purple'>Complete</div></div><br>
+                                                </div>
+                                                <div>
+                                                    <p>Send Email To Client</p>
+                                                    <div><div id='withCli' class='btn waves-effect red'>Yes</div></div><br>
+                                                    <div><div id='withoutCli' class='btn waves-effect pink'>No</div></div><br>
+                                                </div>
+                                         </div>
+                                         <div class='modal-footer'>
+                                             <a href='$report_url' class='waves-effect waves-green btn-flat modal-action modal-close'>Submit</a>
+                                             <a href='#' class='waves-effect waves-green btn-flat modal-action modal-close'>Close</a>
+                                         </div>
+                                       </div>"; 
                         }
                         else {
                             echo "<td><a href='#!' class='red white-text' style='padding:10px;'>Undefined</a></td>";

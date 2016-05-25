@@ -139,12 +139,13 @@ class Dashboard extends CI_Controller {
 		$this->load->view('base');
 		$this->load->view('index', $data);
 		$this->load->view('footer');
-		$this->load->view('dashboard-script', $data);
+		$this->load->view('audit_view_js', $data);
+		// $this->load->view('dashboard-script', $data);
 		$data = array(
 			'notification' => 'You have a new audit assigned to you',
 			'delay' => 15000
 		);
-		$this->load->view('notifications', $data);
+		// $this->load->view('notifications', $data);
 	}
 
 	
