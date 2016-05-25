@@ -1,0 +1,33 @@
+Tables
+-Users
+ -Id
+ -Username
+ -Password
+ -Employee Level/Designation
+ -Name
+ -Email
+
+-Userprofile
+ -Employee Id
+ -NIC/IQAMA (unique)
+ -Date of birth
+ -Section
+ -Reports to
+ -Address
+ -Contact
+ -Created At
+ -Updated At
+ -Status
+ -profile picture
+ -sign
+
+Employee Designation Code:
+1- Administrator
+2- Inspector
+3- Supervisor
+4- Manager
+5- Director
+6- Data Entry Workers
+
+
+
