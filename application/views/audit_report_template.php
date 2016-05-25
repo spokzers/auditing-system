@@ -89,11 +89,11 @@
 </head>
 
 <body>
-    <!-- <div id="header">
+    <div id="header">
         <img width="120px" style="float: left;" src="<?php echo base_url(); ?>static/images/logo.png">
         <img width="350px" style="float: right" src="<?php echo base_url(); ?>static/images/pdf_imgs/header.jpg">
     </div>
-    <div id="footer">
+    <!-- <div id="footer">
         <table style="border:none" width="100%">
             <tr>
                 <td style="border:none">‫الاحمدي‬ ‫منصور‬ ‫عبداالله‬</td>
@@ -298,7 +298,29 @@
             <tr>
                 <td class="bg-grey">Site Status After Inspection</td>
                 <td>
-                    <?php echo $audit->status; ?>
+                <?php
+
+                switch (get_site_rank($audit->rank)) {
+                    case 'A':
+                        $s_status="Passed";
+                        break;
+                    case 'B':
+                        $s_status="Needs Improvement";
+                        break;
+                    case 'C':
+                        $s_status="Needs Improvement";
+                        break;
+                    case 'D':
+                        $s_status="Fail";
+                        break;
+                    default:
+                        $s_status = "";
+                        break;
+                }
+
+                echo $s_status;
+
+                 ?>
                 </td>
                 <td class="bg-grey">Site Ranking</td>
                 <td>
@@ -307,7 +329,7 @@
             </tr>
             <tr>
                 <td class="bg-grey">Final Remarks</td>
-                <td colspan="3"></td>
+                <td colspan="3"><?php echo $audit->remarks; ?></td>
             </tr>
         </table>
         <br>
