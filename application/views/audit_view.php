@@ -173,6 +173,7 @@
                                 <th>ID</th>
                                 <th>Inspectors</th>
                                 <th>Template</th>
+                                <th>Facility Name</th>
                                 <th>Date of Audit</th>
                                 <th>Started At</th>
                                 <th>Ended At</th>
@@ -206,6 +207,19 @@
                                  }
                                  
                                  echo "</td>";
+                                 $bool = false;
+                                 foreach ($facilities as $facility) {
+
+                                    if($facility->id == $audit->id_facility){
+                                    echo "<td data-title='Audit Date'>$facility->name</td>";
+                                    $bool = true;
+                                    }
+                                 }
+                                 if(!$bool){
+                                    echo "<td data-title='Audit Date'>No Facility Found</td>";
+                                 }
+                                 
+
                                 echo "<td data-title='Audit Date'>$audit->doa</td>";
                                 echo "<td data-title='Started At'>$audit->started_at</td>";
                                 echo "<td data-title='Ended At'>$audit->ended_at</td>";

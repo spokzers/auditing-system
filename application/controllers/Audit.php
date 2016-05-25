@@ -31,6 +31,7 @@ class Audit extends CI_Controller {
 			$audits = $this->crud->get_table_data('audits');
 		}
 		
+		$facilities = $this->crud->get_columns('facilities', 'id, name');
 		$inspectors = $this->crud->get_columns('userprofiles', 'id, name');
 		$templates = $this->crud->get_columns('checklists',  'id, title');
 
@@ -38,6 +39,7 @@ class Audit extends CI_Controller {
 			'audits' => $audits,
 			'inspectors' => $inspectors,
 			'templates' => $templates,
+			'facilities' => $facilities
 		);
 		$this->load->view('base');
 		$this->load->view('audit_view', $data);
