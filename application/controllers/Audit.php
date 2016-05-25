@@ -191,8 +191,8 @@ class Audit extends CI_Controller {
 		);
 		$this->load->view('base');
 		$this->load->view('audit_template', $data);
-		$this->load->view('footer');
 		$this->load->view('audit_template_js',  $data);
+		$this->load->view('footer');
 	}
 
 	public function finish_audit(){
@@ -213,6 +213,8 @@ class Audit extends CI_Controller {
 		auth_restrict($this, 3);
 		$this->crud->delete_rows_by_parameter('audits', 'id', $id);
 		$this->crud->delete_rows_by_parameter('violations', 'id_audit', $id);
+		// $this->crud->delete_rows_by_parameter('violations_workers', 'id_audit', $id);
+		$this->crud->delete_rows_by_parameter('answers', 'id_audit', $id);
 		redirect('/audit');
 	}
 

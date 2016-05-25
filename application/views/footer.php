@@ -19,19 +19,19 @@
 <!-- ================================================
 Scripts
 ================================================ -->
-<!-- jQuery Library -->
-<script type="text/javascript" src="<?php echo base_url(); ?>static/js/jquery-1.11.2.min.js"></script>
+
 <!-- jQuery Translate Library -->
-<script type="text/javascript" src="<?php echo base_url(); ?>static/js/jquery.translate.js"></script>
-<script type="text/javascript" src="<?php echo base_url(); ?>static/js/translate_main.js"></script>
 <!--materialize js-->
 <script type="text/javascript" src="<?php echo base_url(); ?>static/js/materialize.min.js"></script>
 <!--scrollbar-->
 <script type="text/javascript" src="<?php echo base_url(); ?>static/js/plugins/perfect-scrollbar/perfect-scrollbar.min.js"></script>
+<!--
 <script type="text/javascript" src="<?php echo base_url(); ?>static/js/plugins/chartist-js/chartist.min.js"></script>
-chartjs --> 
-<script type="text/javascript" src="<?php echo base_url(); ?>static/js/plugins/chartjs/chart.min.js"></script>
-<script type="text/javascript" src="<?php echo base_url(); ?>static/js/plugins/chartjs/chart-script.js"></script>
+
+ 
+<script type="text/javascript" src="<?php echo base_url(); ?>static/js/plugins/chartjs/chart.min.js"></script> --><!-- 
+<script type="text/javascript" src="<?php echo base_url(); ?>static/js/plugins/chartjs/chart-script.js"></script> -->
+
 <!-- sparkline -->
 <script type="text/javascript" src="<?php echo base_url(); ?>static/js/plugins/sparkline/jquery.sparkline.min.js"></script>
 <script type="text/javascript" src="<?php echo base_url(); ?>static/js/plugins/sparkline/sparkline-script.js"></script>
@@ -42,8 +42,11 @@ chartjs -->
 <script src="http://cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"></script>
 <script src="http://cdn.oesmith.co.uk/morris-0.4.1.min.js"></script>
 
-<!--plugins.js - Some Specific JS codes for Plugin Settings-->
-<script type="text/javascript" src="<?php echo base_url(); ?>static/js/plugins.js"></script>
+
+
+<script type="text/javascript" src="<?php echo base_url(); ?>static/js/jquery.translate.js"></script>
+<script type="text/javascript" src="<?php echo base_url(); ?>static/js/translate_main.js"></script>
+
 <!-- Toast Notification -->
 <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
 <script type="text/javascript">
@@ -66,6 +69,13 @@ var createdDateTo = currentDate.getFullYear() + "-" + twoDigitMonth + "-" + twoD
 $("#start_date_training").val('<?php echo date("Y-m-d", strtotime('next monday')); ?>');
 
 </script>
+
+
+<script type="text/javascript" src="<?php echo base_url(); ?>static/js/plugins.js"></script>
+
+
+
+<!--plugins.js - Some Specific JS codes for Plugin Settings-->
 
 
 </body>

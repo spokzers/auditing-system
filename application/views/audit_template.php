@@ -178,8 +178,8 @@
                             echo "<p>Select workers: </p>";
                             foreach ($workers as $worker) {
                               # code...
-                            // $work_image = base_url()."uploads/worker/".$worker->picture;
-                              $work_image = '';
+                            $work_image = base_url()."uploads/worker/".$worker->picture;
+                              // $work_image = '';
                             echo"<li class='collection-item avatar'>
                                      <img src='$work_image' alt='' class='circle'>
                                      <span class='title' data-id='$worker->id'>$worker->name</span>

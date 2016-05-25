@@ -2,7 +2,8 @@
     $(document).ready(function(){
     	$('.penalty').hide();
     	$('.segment').hide();
-      // sendDateTime("<?php echo base_url();?>index.php/audit/setdate/<?php echo $audit[0]->id;?>");
+      // alert('Violenve');
+      
     	var totalMarks = 0;
     	var marksObtained = 0;
     	var penalty_amount = 0;
@@ -32,7 +33,6 @@
       }
 
       var sendDateTime = function(url){
-        alert('sss');
         var currentdate = new Date(); 
         month = (currentdate.getMonth()+1);
         if(month < 10){
@@ -53,6 +53,8 @@
             }); 
 
       }
+
+      sendDateTime("<?php echo base_url();?>index.php/audit/setdate/<?php echo $audit[0]->id;?>");
 
       var disposal_template = `<tr>
                     <td><?php print_select_v2('storage', -1, storage_types(), "class='storage'")?></td>
@@ -137,7 +139,7 @@
           $(this).removeClass('lighten-2');
           var wids = "";
           $(this).siblings('li.teal').each(function(index){
-            
+
             wids =  wids + $(this).find('span.title').data('id') + ",";
           });
           $(this).parent().siblings('input.wids').val(wids);

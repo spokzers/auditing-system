@@ -34,6 +34,8 @@
     <script src="<?php echo base_url(); ?>static/js/sweetalert.min.js"></script>
     <!-- xchart css -->
     <link href="<?php echo base_url(); ?>static/js/plugins/xcharts/xcharts.min.css" type="text/css" rel="stylesheet" media="screen,projection">
+    <!-- jQuery Library -->
+    <script type="text/javascript" src="<?php echo base_url(); ?>static/js/jquery-1.11.2.min.js"></script>
 </head>
 
 <body>
