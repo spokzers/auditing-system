@@ -150,6 +150,8 @@ class Facility extends CI_Controller {
 		auth_restrict($this, 3);
 		auth_restrict($this, 6);
 		$this->crud->delete_rows_by_parameter('facilities','id', $id);
+		$this->crud->delete_rows_by_parameter('workers','id_facility', $id);
+		$this->crud->delete_rows_by_parameter('audits','id_facility', $id);
 		redirect('/facility');
 	}
 

@@ -66,13 +66,13 @@
 		auth_restrict($this, 5);
 		auth_restrict($this, 3);
 		$data = get_post_data('workers', $this);
-		$this->crud->insert('workers', $data);
+		$img = $this->crud->insert_v2('workers', $data);
 		$facility = $this->crud->get_row_by_parameter('facilities','id', $data['id_facility']);
 		$temp = array(
 			'workers' => $facility[0]->workers + 1,
 		);
 		$this->crud->update('facilities','id', $data['id_facility'], $temp);
-		$this->do_upload();
+		$this->do_upload($img);
 		redirect("/FacilityWorker/facility_view/".$data['id_facility']);
 	}
 
@@ -101,15 +101,15 @@
 		auth_restrict($this, 3);
 		$data = get_post_data('workers', $this);
 		$status = $this->crud->update('workers', 'id', $id, $data);
-		$this->do_upload();
+		$this->do_upload($id);
 		redirect('/FacilityWorker');
 	}
 
 
-	public function do_upload(){
+	public function do_upload($new_name){
 		$config['upload_path']          = './uploads/worker/';
 		$config['allowed_types']        = 'gif|jpg|png|jpeg';
-
+		$config['file_name'] 			 = $new_name;
 		$this->load->library('upload', $config);
 		if ( ! $this->upload->do_upload('dp')){
 			$error = array('error' => $this->upload->display_errors());
