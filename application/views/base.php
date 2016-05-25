@@ -94,7 +94,7 @@
                     <li class="user-details cyan darken-2">
                         <div class="row">
                             <div class="col col s4 m4 l4">
-                                <img src="<?php echo base_url();?>static/images/avatar.jpg" alt="" class="circle responsive-img valign profile-image">
+                                <img src="<?php echo base_url(); ?>uploads/profile/<?php echo $this->crud->session_designation();?>.jpg" alt="" class="circle responsive-img valign profile-image">
                             </div>
                             <div class="col col s8 m8 l8">
                                 <ul id="profile-dropdown" class="dropdown-content">
@@ -110,32 +110,57 @@
                                     <li><a href="<?php echo base_url();?>index.php/login/logout"><i class="mdi-hardware-keyboard-tab"></i> Logout</a>
                                     </li>
                                 </ul>
-                                <a class="btn-flat dropdown-button waves-effect waves-light white-text profile-btn" href="#" data-activates="profile-dropdown">John Doe<i class="mdi-navigation-arrow-drop-down right"></i></a>
-                                 <?php
+                                <a class="btn-flat dropdown-button waves-effect waves-light white-text profile-btn" href="#" data-activates="profile-dropdown"><?php
 
                                     switch ($this->crud->session_designation()) {
                                         case 1:
-                                            echo "<p class='user-roal'>Administrator</p>";
+                                            echo "Administrator";
                                             break;
                                         case 2:
-                                            echo "<p class='user-roal'>Inspector</p>";
+                                            echo "Inspector";
                                             break;
                                         case 3:
-                                            echo "<p class='user-roal'>Supervisor</p>";
+                                            echo "Supervisor";
                                             break;
                                         case 4:
-                                            echo "<p class='user-roal'>Manager</p>";
+                                            echo "Manager";
                                             break;
                                         case 5:
-                                            echo "<p class='user-roal'>Government Official</p>";
+                                            echo "Government Official";
                                             break;
                                         case 6:
-                                            echo "<p class='user-roal'>Client</p>";
+                                            echo "Client";
                                             break;
                                         default:
-                                            echo "<p class='user-roal'>User</p>";
+                                            echo "User";
                                     }
+                                    ?>
+                                <i class="mdi-navigation-arrow-drop-down right"></i></a>
+                                 <?php
 
+                                    // switch ($this->crud->session_designation()) {
+                                    //     case 1:
+                                    //         echo "<p class='user-roal'>Administrator</p>";
+                                    //         break;
+                                    //     case 2:
+                                    //         echo "<p class='user-roal'>Inspector</p>";
+                                    //         break;
+                                    //     case 3:
+                                    //         echo "<p class='user-roal'>Supervisor</p>";
+                                    //         break;
+                                    //     case 4:
+                                    //         echo "<p class='user-roal'>Manager</p>";
+                                    //         break;
+                                    //     case 5:
+                                    //         echo "<p class='user-roal'>Government Official</p>";
+                                    //         break;
+                                    //     case 6:
+                                    //         echo "<p class='user-roal'>Client</p>";
+                                    //         break;
+                                    //     default:
+                                    //         echo "<p class='user-roal'>User</p>";
+                                    // }
+                                     // echo "<p class='user-roal'>Welcome</p>";
                                     ?>
 
                             </div>
@@ -349,7 +374,7 @@
                             </li>
                             <li class="bold"><a href="<?php echo base_url();?>index.php/login/logout" class="collapsible-header waves-effect waves-cyan"><i class="mdi-action-settings-power"></i> <span class="trn" data-trn-key="Log out">Logout</span></a>
                             </li>
-                            <li class="bold"><a class="collapsible-header waves-effect waves-cyan lang-selector" data-value="en"><i class="mdi-action-language"></i> English</a>
+                            <li class="bold"><a class="collapsible-header waves-effect waves-cyan lang-selector" data-value="ar"><i class="mdi-action-language"></i> العربية</a>
                             </li>
                         </ul>
                     </li>

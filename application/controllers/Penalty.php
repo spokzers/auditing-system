@@ -25,7 +25,8 @@ class Penalty extends CI_Controller {
  	}
 
 	public function index()
-	{
+	{	
+		auth_restrict($this, 6);
 		$this->load->view('base');
 		$penalties = $this->crud->get_row_by_parameter('penalties', 'approval', 0);
 		$category = $this->crud->get_columns('categories', 'id, category');
@@ -38,6 +39,7 @@ class Penalty extends CI_Controller {
 	}
 
 	public function create(){
+		auth_restrict($this, 6);
 		auth_restrict($this, 5);
 		auth_restrict($this, 3);
 		$heading = 'Create New Penalty';
@@ -58,6 +60,7 @@ class Penalty extends CI_Controller {
 	}
 
 	public function insert(){
+		auth_restrict($this, 6);
 		auth_restrict($this, 5);
 		auth_restrict($this, 3);
 		$data = get_post_data('penalties', $this);
@@ -75,6 +78,7 @@ class Penalty extends CI_Controller {
 	}
 
 	public function edit($id){
+		auth_restrict($this, 6);
 		auth_restrict($this, 5);
 		auth_restrict($this, 3);
 		$heading = 'Update This Penalty';
@@ -95,6 +99,7 @@ class Penalty extends CI_Controller {
 	}
 
 	public function update($id){
+		auth_restrict($this, 6);
 		auth_restrict($this, 5);
 		auth_restrict($this, 3);
 		$data = get_post_data('penalties', $this);
@@ -103,6 +108,7 @@ class Penalty extends CI_Controller {
 	}
 
 	public function view($id){
+		auth_restrict($this, 6);
 		$penalty = $this->crud->get_row_by_double_where('penalties', 'id', $id, 'approval', 0);
 		$category = $this->crud->get_columns('categories', 'id, category');
 		$data = array(
@@ -115,6 +121,7 @@ class Penalty extends CI_Controller {
 	}
 
 	public function insert_category(){
+			auth_restrict($this, 6);
 			auth_restrict($this, 5);
 			auth_restrict($this, 3);
 			$data = get_post_data('categories', $this);

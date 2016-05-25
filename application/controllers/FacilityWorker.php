@@ -13,7 +13,8 @@
 	}
 
 	public function index()
-	{
+	{	
+		auth_restrict($this, 6);
 		$workers = $this->crud->get_table_data('workers');
 		$data = array(
 			'workers' => $workers,
@@ -39,6 +40,7 @@
 	public function create($id){
 		auth_restrict($this, 5);
 		auth_restrict($this, 3);
+		// auth_restrict($this, 6);
 		$heading = 'Create New Worker';
 		$url = 'insert';
 		$submit = 'Create';

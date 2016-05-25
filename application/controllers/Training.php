@@ -25,6 +25,7 @@ class Training extends CI_Controller {
 
 
 	public function index(){
+		auth_restrict($this, 6);
 		if($this->crud->session_designation() == 2){
 			$trainings = $this->crud->get_row_by_parameter('trainings', 'id_trainer', $this->session->userdata('id'));
 		}else{
@@ -42,6 +43,7 @@ class Training extends CI_Controller {
 	}
 
 	public function create(){
+		auth_restrict($this, 6);
 		auth_restrict($this, 5);
 		auth_restrict($this, 3);
 		$heading = 'Create New Training';
@@ -61,6 +63,7 @@ class Training extends CI_Controller {
 	}
 
 	public function insert(){
+		auth_restrict($this, 6);
 		auth_restrict($this, 5);
 		auth_restrict($this, 3);
 		$data = get_post_data('trainings', $this);
@@ -76,6 +79,7 @@ class Training extends CI_Controller {
 	}
 
 	public function view($id){
+		auth_restrict($this, 6);
 		$last_row = $this->crud->get('trainings', 'id', $id);
 		$last_row = json_decode(json_encode($last_row),TRUE);
 		$last_row = array_reduce($last_row, 'array_merge', array());
@@ -173,6 +177,7 @@ class Training extends CI_Controller {
 	*/
 
 	public function get_workers($id){
+		auth_restrict($this, 6);
 		$trainings_workers_data = $this->crud->get('trainings_workers','id_training',$id);
 	    $trainings_workers_data = json_decode(json_encode($trainings_workers_data), TRUE);
 
@@ -192,6 +197,7 @@ class Training extends CI_Controller {
 	}
 
 	public function delete($id){
+		auth_restrict($this, 6);
 		auth_restrict($this, 5);
 		auth_restrict($this, 4);
 		auth_restrict($this, 3);
@@ -203,6 +209,7 @@ class Training extends CI_Controller {
 	}
 
 	public function update($id){
+		auth_restrict($this, 6);
 		auth_restrict($this, 5);
 		auth_restrict($this, 3);
 		auth_restrict($this, 2);
@@ -211,6 +218,7 @@ class Training extends CI_Controller {
 	}
 
 	public function schedule(){
+		auth_restrict($this, 6);
 		auth_restrict($this, 5);
 		auth_restrict($this, 3);
 		auth_restrict($this, 2);
@@ -225,6 +233,7 @@ class Training extends CI_Controller {
 	}
 
 	public function add_worker(){
+		auth_restrict($this, 6);
 		auth_restrict($this, 5);
 		auth_restrict($this, 3);
 		auth_restrict($this, 2);
@@ -248,6 +257,7 @@ class Training extends CI_Controller {
 
 	public function get_facility($id)
 	{
+		auth_restrict($this, 6);
 		$facility = $this->crud->get('facilities','id',$id);
 		echo json_encode($facility);
 	}

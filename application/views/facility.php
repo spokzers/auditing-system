@@ -203,10 +203,11 @@
                                                 <th>Name</th>
                                                 <th>License</th>
                                                 <th>Owner</th>
-                                                <th>Rank</th>
+                                                <th>Activity</th>
                                                 <th>Workers</th>
                                                 <th class="trn" data-trn-key="License Expiry">License Expiry</th>
-                                                <!-- <th class="trn" data-trn-key="Site Ranking">Site Ranking</th> -->
+                                                <th class="trn" data-trn-key="Site Ranking">Rank</th>
+                                                <th class="trn" data-trn-key="Size">Size</th>
                                                 <th>Actions</th>
                                             </tr>
                                         </thead>
@@ -223,13 +224,21 @@
                                             echo  "<td>$facility->validity</td>";
                                             foreach ($audits as $audit) {
                                               if($audit->id_facility == $facility->id){
-                                                if($audit->rank == 0){
-                                                    continue;
-                                                }
+                                                //    if($audit->rank == 0){
+                                                //     continue;
+                                                // }
                                                 $ranker = get_site_rank($audit->rank);
+                                                // $temp = $audit->rank;
                                                 echo  "<td>$ranker</td>";
+                                                // var_dump($audit);
+                                                // echo  $audit->rank;
                                               }
+                                              
                                             }
+
+
+                                            echo  "<td>$facility->space</td>";
+
                                             $url = base_url() . "index.php/facility/edit/$facility->id";
                                             $view_url = base_url() . "index.php/facility/view/$facility->id";
                                             $delete_url = base_url() . "index.php/facility/delete/$facility->id";

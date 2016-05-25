@@ -45,6 +45,7 @@ class Audit extends CI_Controller {
 	}
 
 	public function create(){
+		auth_restrict($this, 6);
 		auth_restrict($this, 5);
 		auth_restrict($this, 3);
 		auth_restrict($this, 2);
@@ -70,6 +71,7 @@ class Audit extends CI_Controller {
 	}
 
 	public function auto_create(){
+		auth_restrict($this, 6);
 		auth_restrict($this, 5);
 		auth_restrict($this, 3);
 		auth_restrict($this, 2);
@@ -93,6 +95,7 @@ class Audit extends CI_Controller {
 	}
 
 	public function insert(){
+		auth_restrict($this, 6);
 		auth_restrict($this, 5);
 		auth_restrict($this, 3);
 		auth_restrict($this, 2);
@@ -105,6 +108,7 @@ class Audit extends CI_Controller {
 	}
 
 	public function edit($id){
+		auth_restrict($this, 6);
 		auth_restrict($this, 5);
 		auth_restrict($this, 3);
 		auth_restrict($this, 2);
@@ -126,6 +130,7 @@ class Audit extends CI_Controller {
 	}
 
 	public function update($id){
+		auth_restrict($this, 6);
 		auth_restrict($this, 5);
 		auth_restrict($this, 3);
 		auth_restrict($this, 2);
@@ -135,6 +140,7 @@ class Audit extends CI_Controller {
 	}
 
 	public function view($id){
+		auth_restrict($this, 6);
 		$penalty = $this->crud->get('penalties', 'id', $id);
 		$category = $this->crud->get_columns('categories', 'id, category');
 		$data = array(
@@ -147,6 +153,7 @@ class Audit extends CI_Controller {
 	}
 
 	public function insert_category(){
+			auth_restrict($this, 6);
 			auth_restrict($this, 5);
 			auth_restrict($this, 3);
 			$data = get_post_data('categories', $this);
@@ -158,6 +165,7 @@ class Audit extends CI_Controller {
 	}
 
 	public function audit_launch($id){
+		auth_restrict($this, 6);
 		auth_restrict($this, 5);
 		auth_restrict($this, 3);
 		$audit = $this->crud->get_row_by_parameter('audits','id', $id);
@@ -179,6 +187,7 @@ class Audit extends CI_Controller {
 	}
 
 	public function finish_audit(){
+		auth_restrict($this, 6);
 		auth_restrict($this, 5);
 		auth_restrict($this, 3);
 		$data = $this->input->post();
@@ -189,6 +198,7 @@ class Audit extends CI_Controller {
 	}
 
 	public function delete($id){
+		auth_restrict($this, 6);
 		auth_restrict($this, 5);
 		auth_restrict($this, 4);
 		auth_restrict($this, 3);
@@ -198,6 +208,7 @@ class Audit extends CI_Controller {
 	}
 
 	public function increment_violations(){
+		auth_restrict($this, 6);
 		auth_restrict($this, 5);
 		auth_restrict($this, 3);
 		$data = $this->input->post();
@@ -217,6 +228,7 @@ class Audit extends CI_Controller {
 	}
 
 	public function insert_disposal(){
+		auth_restrict($this, 6);
 		auth_restrict($this, 5);
 		auth_restrict($this, 3);
 		$data = $this->input->post();
@@ -228,6 +240,7 @@ class Audit extends CI_Controller {
 	}
 
 	public function insert_sample(){
+		auth_restrict($this, 6);
 		auth_restrict($this, 5);
 		auth_restrict($this, 3);
 		$data = $this->input->post();
@@ -239,6 +252,7 @@ class Audit extends CI_Controller {
 	}
 
 	public function insert_answer(){
+		auth_restrict($this, 6);
 		auth_restrict($this, 5);
 		auth_restrict($this, 3);
 		$data = $this->input->post();
@@ -250,6 +264,7 @@ class Audit extends CI_Controller {
 	}
 
 	public function insert_violation(){
+		auth_restrict($this, 6);
 		auth_restrict($this, 5);
 		auth_restrict($this, 3);
 		$data = $this->input->post();

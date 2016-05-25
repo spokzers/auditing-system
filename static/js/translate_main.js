@@ -43,7 +43,7 @@ $(function() {
 		"EMPLOYEES": {"ar": "\u0627\u0644\u0645\u0648\u0638\u0641\u064A\u0646"},
     };
 
-	var _t = $('body').translate({lang: "ar", t: t});
+	var _t = $('body').translate({lang: "en", t: t});
 
 	var str = _t.g("translate");
 	console.log(str);

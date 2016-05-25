@@ -26,7 +26,8 @@ class Inspector extends CI_Controller {
  }
 
 	public function index()
-	{
+	{	
+		auth_restrict($this, 6);
 		$this->load->view('base');
 		 if($this->crud->session_designation() == 2){
                 
@@ -45,6 +46,7 @@ class Inspector extends CI_Controller {
 	}
 
 	public function create(){
+		auth_restrict($this, 6);
 		auth_restrict($this, 5);
 		auth_restrict($this, 3);
 		$heading = 'Create New Inspector';
@@ -68,6 +70,7 @@ class Inspector extends CI_Controller {
 	}
 
 	public function insert(){
+		auth_restrict($this, 6);
 		auth_restrict($this, 5);
 		auth_restrict($this, 3);
 		$data = get_post_data('userprofiles', $this);
@@ -75,11 +78,13 @@ class Inspector extends CI_Controller {
 		if($data['designation'] != 6){
 			$data['id_facility'] = -1;
 		}
-		$this->crud->insert('userprofiles', $data);
-		$this->do_upload();
+		$id = $this->crud->insert_v2('userprofiles', $data);
+		$id = $id . '.jpg';
+		$this->do_upload($id);
 	}
 
 	public function edit($id){
+		auth_restrict($this, 6);
 		auth_restrict($this, 5);
 		auth_restrict($this, 3);
 		$heading = 'Update This Inspector';
@@ -104,6 +109,7 @@ class Inspector extends CI_Controller {
 	}
 
 	public function update($id){
+		auth_restrict($this, 6);
 		auth_restrict($this, 5);
 		auth_restrict($this, 3);
 		$data = get_post_data('userprofiles', $this);
@@ -111,15 +117,16 @@ class Inspector extends CI_Controller {
 			$data['id_facility'] = -1;
 		}
 		$status = $this->crud->update('userprofiles', 'id', $id, $data);
-		$this->do_upload();
+		$id = $id . '.jpg';
+		$this->do_upload($id);
 	}
 
 
-	public function do_upload()
+	public function do_upload($new_name)
 			 {
 							 $config['upload_path']          = './uploads/profile/';
 							 $config['allowed_types']        = 'gif|jpg|png|jpeg';
-
+							 $config['file_name'] 			 = $new_name;
 
 							 $this->load->library('upload', $config);
 
