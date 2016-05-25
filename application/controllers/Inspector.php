@@ -133,7 +133,8 @@ class Inspector extends CI_Controller {
 							 if ( ! $this->upload->do_upload('dp'))
 							 {
 											 $error = array('error' => $this->upload->display_errors());
-											 redirect('/inspector');
+											 // redirect('/inspector');
+											 var_dump($error);
 							 }
 							 else
 							 {
@@ -146,6 +147,9 @@ class Inspector extends CI_Controller {
 	public function view($id){
 		$profile = $this->crud->get('userprofiles', 'id', $id);
 		$report = $this->crud->get_row_by_parameter('userprofiles','id',$profile[0]->reports_to);
+		if(!$report){
+			$report[0] = (object) array('name' => 'Does not report to anyone');
+		}
 		$data = array(
 			'profile' => $profile,
 			'report' => $report

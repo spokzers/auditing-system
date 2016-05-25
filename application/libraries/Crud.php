@@ -41,6 +41,11 @@ class Crud{
     	$CI->load->library('session');
     	return  $CI->session->userdata('designation');
     }
+    public function session_data($key){
+    	$CI =& get_instance();
+    	$CI->load->library('session');
+    	return  $CI->session->userdata($key);
+    }
 
 	public function insert($tablename, $data){
 		$CI =& get_instance();
