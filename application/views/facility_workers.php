@@ -326,10 +326,16 @@
                                             echo "<td>$worker->nationality</td>";
                                             echo "<td>$worker->health_card</td>";
                                             foreach ($facilities as $fac) {
+                                                $bool = true;
                                                 if($worker->id_facility == $fac->id){
-                                                  echo "<td>$fac->name</td>";
+                                                  $bool = false;
+                                                  echo "<td>";
+                                                  echo $fac->name;
+                                                  echo "</td>";
                                                 }
                                             }
+                                            
+
                                             
                                             
                                             echo "<td>$worker->id_no</td>";

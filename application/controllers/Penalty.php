@@ -86,7 +86,7 @@ class Penalty extends CI_Controller {
 		$penalty = $this->crud->get_row_by_double_where('penalties', 'id', $id, 'approval', 0);
 		$submit = 'Update';
 		$data = array(
-			'penalty' => $penalties,
+			'penalty' => $penalty,
 			'heading' => $heading,
 			'url' => $url,
 			'submit' => $submit
