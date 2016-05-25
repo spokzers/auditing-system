@@ -94,7 +94,7 @@
                     <li class="user-details cyan darken-2">
                         <div class="row">
                             <div class="col col s4 m4 l4">
-                                <img src="<?php echo base_url(); ?>uploads/profile/<?php echo $this->crud->session_data('id');?>.jpg" alt="" class="circle responsive-img valign profile-image">
+                                <img src="<?php echo base_url(); ?>uploads/profile/<?php echo $this->crud->session_designation();?>.jpg" alt="" class="circle responsive-img valign profile-image">
                             </div>
                             <div class="col col s8 m8 l8">
                                 <ul id="profile-dropdown" class="dropdown-content">
@@ -374,7 +374,7 @@
                             </li>
                             <li class="bold"><a href="<?php echo base_url();?>index.php/login/logout" class="collapsible-header waves-effect waves-cyan"><i class="mdi-action-settings-power"></i> <span class="trn" data-trn-key="Log out">Logout</span></a>
                             </li>
-                            <li class="bold"><a class="collapsible-header waves-effect waves-cyan lang-selector" data-value="ar"><i class="mdi-action-language"></i> العربية</a>
+                            <li class="bold"><a class="collapsible-header waves-effect waves-cyan lang-selector" data-value=""><i class="mdi-action-language"></i></a>
                             </li>
                         </ul>
                     </li>
