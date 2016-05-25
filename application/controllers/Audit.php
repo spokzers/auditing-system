@@ -73,6 +73,12 @@ class Audit extends CI_Controller {
 		$this->load->view('audit_controller');
 	}
 
+	public function setdate($id){
+		$data = $this->input->post();
+		$this->crud->update('audits', 'id', $id, $data);
+		var_dump($data);
+	}
+
 	public function auto_create(){
 		auth_restrict($this, 6);
 		auth_restrict($this, 5);

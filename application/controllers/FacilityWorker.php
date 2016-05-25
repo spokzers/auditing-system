@@ -29,10 +29,12 @@
 
 	public function facility_view($id){
 		$workers = $this->crud->get_row_by_parameter('workers','id_facility', $id);
+		$facilities = $this->crud->get_columns('facilities', 'id, name');
 		$data = array(
 			'workers' => $workers,
 			'facility' => 1,
-			'f_id' => $id
+			'f_id' => $id,
+			'facilities'=> $facilities,
 		);
 		$this->load->view('base');
 		$this->load->view('facility_workers', $data);

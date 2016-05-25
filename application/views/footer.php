@@ -28,9 +28,8 @@ Scripts
 <script type="text/javascript" src="<?php echo base_url(); ?>static/js/materialize.min.js"></script>
 <!--scrollbar-->
 <script type="text/javascript" src="<?php echo base_url(); ?>static/js/plugins/perfect-scrollbar/perfect-scrollbar.min.js"></script>
-<!-- chartist -->
 <script type="text/javascript" src="<?php echo base_url(); ?>static/js/plugins/chartist-js/chartist.min.js"></script>
-<!-- chartjs -->
+chartjs --> 
 <script type="text/javascript" src="<?php echo base_url(); ?>static/js/plugins/chartjs/chart.min.js"></script>
 <script type="text/javascript" src="<?php echo base_url(); ?>static/js/plugins/chartjs/chart-script.js"></script>
 <!-- sparkline -->

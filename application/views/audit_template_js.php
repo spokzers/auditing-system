@@ -2,6 +2,7 @@
     $(document).ready(function(){
     	$('.penalty').hide();
     	$('.segment').hide();
+      // sendDateTime("<?php echo base_url();?>index.php/audit/setdate/<?php echo $audit[0]->id;?>");
     	var totalMarks = 0;
     	var marksObtained = 0;
     	var penalty_amount = 0;
@@ -13,6 +14,45 @@
         $(this).addClass('teal');
       });
 
+      
+
+      var get_datetime = function(){
+        var currentdate = new Date(); 
+        month = (currentdate.getMonth()+1);
+        if(month < 10){
+          month = "0" + month;
+        }
+        var datetime = currentdate.getFullYear() + "-"
+                        + month  + "-" 
+                        + currentdate.getDate()  + " "  
+                        + currentdate.getHours() + ":"  
+                        + currentdate.getMinutes() + ":" 
+                        + currentdate.getSeconds();
+          return datetime;
+      }
+
+      var sendDateTime = function(url){
+        alert('sss');
+        var currentdate = new Date(); 
+        month = (currentdate.getMonth()+1);
+        if(month < 10){
+          month = "0" + month;
+        }
+        var datetime = currentdate.getFullYear() + "-"
+                        + month  + "-" 
+                        + currentdate.getDate()  + " "  
+                        + currentdate.getHours() + ":"  
+                        + currentdate.getMinutes() + ":" 
+                        + currentdate.getSeconds();
+          data = {};
+          data['started_at'] = datetime;
+
+         $.post(url ,data,
+            function(url, data, status){
+                console.log("Data: " + data + "\nStatus: " + status);
+            }); 
+
+      }
 
       var disposal_template = `<tr>
                     <td><?php print_select_v2('storage', -1, storage_types(), "class='storage'")?></td>
@@ -97,6 +137,7 @@
           $(this).removeClass('lighten-2');
           var wids = "";
           $(this).siblings('li.teal').each(function(index){
+            
             wids =  wids + $(this).find('span.title').data('id') + ",";
           });
           $(this).parent().siblings('input.wids').val(wids);
@@ -151,8 +192,8 @@
           data['pass'] = $('select.pass').val();
           data['penalty_deadline'] = dateParser($('input.deadline').val());
           data['status'] = 2;
-          data['started_at'] = get_current_date();
-          data['ended_at'] = get_current_date();
+          // data['started_at'] = get_current_date();
+          data['ended_at'] = get_datetime();
           return data;
         };
 
