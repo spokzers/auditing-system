@@ -1,4 +1,4 @@
-<?php
+	<?php
 	defined('BASEPATH') OR exit('No direct script access allowed');
 
 	/**
@@ -16,9 +16,11 @@
 	{	
 		auth_restrict($this, 6);
 		$workers = $this->crud->get_table_data('workers');
+		$facilities = $this->crud->get_columns('facilities', 'id, name');
 		$data = array(
 			'workers' => $workers,
-			'facility' => 0
+			'facility' => 0,
+			'facilities'=> $facilities,
 		);
 		$this->load->view('base');
 		$this->load->view('facility_workers', $data);

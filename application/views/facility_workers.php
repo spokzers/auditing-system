@@ -325,7 +325,13 @@
                                             echo "<td>$worker->name</td>";
                                             echo "<td>$worker->nationality</td>";
                                             echo "<td>$worker->health_card</td>";
-                                            echo "<td>$worker->id_facility</td>";
+                                            foreach ($facilities as $fac) {
+                                                if($worker->id_facility == $fac->id){
+                                                  echo "<td>$fac->name</td>";
+                                                }
+                                            }
+                                            
+                                            
                                             echo "<td>$worker->id_no</td>";
                                             $status = get_worker_status($worker->status);
                                             echo  "<td><label style='color:#39b2a9'>$status</label></td>";
