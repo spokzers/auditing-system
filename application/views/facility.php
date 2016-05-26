@@ -124,7 +124,7 @@
                     <!-- audit conclusions start -->
                     <div class="row">
                         <div class="container">
-                            <div class="col s6">
+                            <div class="col s12 m6 l6">
                                 <div class="card">
                                     <div class="card-action green">
                                         <div class="card-title">
@@ -134,7 +134,7 @@
                                     <div id="audit-status"></div>
                                 </div>
                             </div>
-                            <div class="col s6">
+                            <div class="col s12 m6 l6">
                                 <div class="card">
                                     <div class="card-action green">
                                         <div class="card-title">
@@ -222,18 +222,24 @@
                                             echo  "<td>$facility->activity</td>";
                                             echo  "<td>$facility->workers</td>";
                                             echo  "<td>$facility->validity</td>";
+                                            $bool = true;
+                                            $other = false; 
                                             foreach ($audits as $audit) {
+                                                
                                               if($audit->id_facility == $facility->id){
-                                                //    if($audit->rank == 0){
-                                                //     continue;
-                                                // }
+                                                $bool = false;
                                                 $ranker = get_site_rank($audit->rank);
-                                                // $temp = $audit->rank;
-                                                echo  "<td>$ranker</td>";
-                                                // var_dump($audit);
-                                                // echo  $audit->rank;
+                                                if($ranker){
+                                                    echo  "<td>$ranker</td>";
+                                                }else{
+                                                    // echo  "<td>N/A in else loop</td>";
+                                                    $bool = true;
+                                                }
+                                               
                                               }
                                               
+                                            }if($bool==true){
+                                                echo  "<td>N/A/td>";
                                             }
 
 

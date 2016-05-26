@@ -127,6 +127,7 @@ class Inspector extends CI_Controller {
 							 $config['upload_path']          = './uploads/profile/';
 							 $config['allowed_types']        = 'gif|jpg|png|jpeg';
 							 $config['file_name'] 			 = $new_name;
+							 $config['overwrite'] 			 = TRUE;
 
 							 $this->load->library('upload', $config);
 

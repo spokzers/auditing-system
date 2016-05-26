@@ -135,7 +135,7 @@
                             <div id="overall-violation"></div>
                             <div class="center">
                                 <ul>
-                                    <li>trn: <?php echo $all_violations_high; ?></li>
+                                    <liclass='trn' data-trn-key="High">High: <?php echo $all_violations_high; ?></li>
                                     <li><span class='trn' data-trn-key="Medium" >Medium</span>: <?php echo $all_violations_med; ?></li>
                                     <li><span class='trn' data-trn-key="Low" >Low</span>: <?php echo $all_violations_low; ?></li>
                                 </ul>
@@ -431,7 +431,8 @@
                         }
                         elseif ($audit->status == 2) {
                             // $report_url
-                            echo "<td><a href='#$audit->id' class='blue white-text' style='padding:10px;'>Report</a></td>";
+                            //#$audit->id
+                            echo "<td><a href='$report_url' class='blue white-text' style='padding:10px;'>Report</a></td>";
                              // <!-- Modal Structure -->
                             $report_url = base_url()."index.php/pdfdom/audit_report/".$audit->id;
                                     echo "<div id='$audit->id' class='modal modal-fixed-footer'>

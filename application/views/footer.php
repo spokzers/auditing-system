@@ -25,12 +25,12 @@ Scripts
 <script type="text/javascript" src="<?php echo base_url(); ?>static/js/materialize.min.js"></script>
 <!--scrollbar-->
 <script type="text/javascript" src="<?php echo base_url(); ?>static/js/plugins/perfect-scrollbar/perfect-scrollbar.min.js"></script>
-<!--
+
 <script type="text/javascript" src="<?php echo base_url(); ?>static/js/plugins/chartist-js/chartist.min.js"></script>
 
  
-<script type="text/javascript" src="<?php echo base_url(); ?>static/js/plugins/chartjs/chart.min.js"></script> --><!-- 
-<script type="text/javascript" src="<?php echo base_url(); ?>static/js/plugins/chartjs/chart-script.js"></script> -->
+<script type="text/javascript" src="<?php echo base_url(); ?>static/js/plugins/chartjs/chart.min.js"></script> 
+<script type="text/javascript" src="<?php echo base_url(); ?>static/js/plugins/chartjs/chart-script.js"></script> 
 
 <!-- sparkline -->
 <script type="text/javascript" src="<?php echo base_url(); ?>static/js/plugins/sparkline/jquery.sparkline.min.js"></script>
@@ -39,8 +39,8 @@ Scripts
 <script type="text/javascript" src="<?php echo base_url(); ?>static/js/plugins/jvectormap/jquery-jvectormap-1.2.2.min.js"></script>
 <script type="text/javascript" src="<?php echo base_url(); ?>static/js/plugins/jvectormap/jquery-jvectormap-world-mill-en.js"></script>
 <script type="text/javascript" src="<?php echo base_url(); ?>static/js/plugins/jvectormap/vectormap-script.js"></script>
-<script src="http://cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"></script>
 <script src="http://cdn.oesmith.co.uk/morris-0.4.1.min.js"></script>
+<script src="http://cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"></script>
 
 
 

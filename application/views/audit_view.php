@@ -232,7 +232,8 @@
                                 echo "<td>";
                                 if($audit->status == 2){
                                     //$report_url
-                                    echo"<a href='#$audit->id' class='modal-trigger'><button class='btn btn-floating small green'><i class='mdi-action-assignment'></i>View Report</button></a>";
+                                    //#$audit->id
+                                    echo"<a href='$report_url' class='modal-trigger'><button class='btn btn-floating small green'><i class='mdi-action-assignment'></i>View Report</button></a>";
                                     // <!-- Modal Structure -->
                                      echo "<div id='$audit->id' class='modal modal-fixed-footer'>
                                          <div class='modal-content'>

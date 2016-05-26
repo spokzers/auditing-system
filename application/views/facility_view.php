@@ -72,7 +72,9 @@
                         foreach ($star as $s) {
                               $rate[$s->rank]=$rate[$s->rank] + 1;
                         }
-                        if($rate[1] >= 3){
+
+                        if(!$rate[0]){
+                            if($rate[1] >= 3){
                             echo "5 Star";
                         }elseif ($rate[1] == 2) {
                             echo "4 Star";
@@ -82,7 +84,11 @@
                             echo "2 Star";
                         }else{
                             echo "1 Star";
+                        }    
+                        }else{
+                            echo "N/A";
                         }
+                        
                         ?></h4>
                     </div>
                 </div>
