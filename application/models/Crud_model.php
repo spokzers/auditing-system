@@ -94,6 +94,16 @@ class Crud_model extends CI_Model {
            $this->db->update($tablename, $data);
          }
 
+         public function record_update_by_two_parameter($tablename,$key1, $val1,$key2, $val2, $data){
+           $this->db->select('*');
+           $this->db->from($tablename);
+           $this->db->where($key1, $val1);
+           $this->db->where($key2, $val2);
+           unset($data[$key1]);
+           unset($data[$key2]);
+           $this->db->update($tablename, $data);
+         }
+
          public function record_get($tablename, $key, $val){
            $this->db->select('*');
            $this->db->from($tablename);
@@ -141,6 +151,13 @@ class Crud_model extends CI_Model {
          public function delete_by_parameter($tablename, $column, $id)
          {
            $this->db->where($column, $id);
+           $this->db->delete($tablename);
+         }
+
+         public function delete_by_two_parameter($tablename, $key1, $val1, $key2, $val2)
+         {
+           $this->db->where($key1, $val1);
+           $this->db->where($key2, $val2);
            $this->db->delete($tablename);
          }
 

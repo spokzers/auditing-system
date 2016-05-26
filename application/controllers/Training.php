@@ -194,6 +194,53 @@ class Training extends CI_Controller {
 		$result = array_reduce(json_decode(json_encode($workers), TRUE), 'array_merge', array());
 
 		echo json_encode($result);
+		// echo json_encode($trainings_workers_data);
+
+
+		// $a1 = json_encode($result);
+		// $a2 = json_encode($trainings_workers_data);
+		// $a1 = $result;
+		// $a2 = $trainings_workers_data;
+
+		// $res = array_merge( $a1, $a2 );
+
+		// echo json_encode(array_reduce(json_decode(json_encode($res), TRUE), 'array_merge', array()));
+		// echo json_encode($res);
+		// echo json_encode(array("result1"=>$a1,"result2"=>$a2));
+		// echo "<pre>";
+		// var_dump($res);
+		// echo "</pre>";
+
+	}
+
+	public function get_status($id_training)
+	{
+		$trainings_workers_data = $this->crud->get('trainings_workers','id_training',$id_training);
+	    $trainings_workers_data = json_decode(json_encode($trainings_workers_data), TRUE);
+
+	    echo json_encode($trainings_workers_data);
+	}
+
+	public function update_status()
+	{
+		// $id_t,$id_w,$status
+		$data = array(
+			'id_training' => $_POST['id_training'],
+			'id_worker' => $_POST['id_worker'],
+			'status' => $_POST['status']
+			);
+
+		// $data = array(
+		// 	'id_training' => $id_t,
+		// 	'id_worker' => $id_w,
+		// 	'status' => $status
+		// 	);
+
+		// print_r($data);
+
+		$result = $this->crud->update_by_two_parameters('trainings_workers','id_training',$_POST['id_training'],'id_worker',$_POST['id_worker'],$data );
+		// $result = $this->crud->update_by_two_parameters('trainings_workers','id_training',$id_t,'id_worker',$id_w,$data );
+		return $result;
 	}
 
 	public function delete($id){
@@ -226,7 +273,7 @@ class Training extends CI_Controller {
 		// print_r($data);
 		foreach ($data as $row) {
 			// print_r($row);
-			// echo $this->crud->insert('classes',$row);
+			$this->crud->insert('classes',$row);
 		}
 
 		redirect('/training');
@@ -260,6 +307,15 @@ class Training extends CI_Controller {
 		auth_restrict($this, 6);
 		$facility = $this->crud->get('facilities','id',$id);
 		echo json_encode($facility);
+	}
+
+	public function remove_worker($id_training, $id_worker)
+	{
+
+		// echo $id_training;
+		// echo $id_worker;
+		$result = $this->crud->delete_rows_by_two_parameter('trainings_workers', 'id_training', $id_training, 'id_worker', $id_worker);
+		echo $result;
 	}
 
 }

@@ -146,12 +146,18 @@ class Crud{
 		$data = $CI->Crud_model->get_columns($tablename, $id);
 	}
 
-	
 	public function delete_rows_by_parameter($tablename, $column, $id)
 	{
 		$CI =& get_instance();
 		$CI ->load->model('Crud_model');
 		return $CI->Crud_model->delete_by_parameter($tablename, $column, $id);
+	}
+
+	public function delete_rows_by_two_parameter($tablename, $key1, $val1, $key2, $val2)
+	{
+		$CI =& get_instance();
+		$CI ->load->model('Crud_model');
+		return $CI->Crud_model->delete_by_two_parameter($tablename, $key1, $val1, $key2, $val2);
 	}
 
 	public function get_last_id(){
@@ -201,6 +207,13 @@ class Crud{
 		$CI->load->model('Crud_model');
 		return $CI->Crud_model->model();
 	 }
+
+	 public function update_by_two_parameters($tablename,$key1, $val1,$key2, $val2, $data){
+		$CI =& get_instance();
+		$CI->load->model('Crud_model');
+		$status = $CI->Crud_model->record_update_by_two_parameter($tablename,$key1, $val1,$key2, $val2, $data);
+		return $status;
+	}
 // =====================================================================//
 // 							JSON API LIBRARY							//
 // =====================================================================//
