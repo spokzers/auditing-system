@@ -30,15 +30,42 @@
 	public function facility_view($id){
 		$workers = $this->crud->get_row_by_parameter('workers','id_facility', $id);
 		$facilities = $this->crud->get_columns('facilities', 'id, name');
+		$trainings_workers = $this->crud->get_table_data('trainings_workers');
+		$status = [];
+		// echo  "<pre>";
+		// var_dump($trainings_workers);
+		// echo "</pre>";
+		// foreach ($workers as $worker && $trainings_workers as $t_workers) {
+		// 	if ($t_workers->id_worker == $worker->id) {
+		// 		$status[] = $t_workers->status;
+		// 	}
+		// }
+
+		/*foreach($workers as $worker) {
+			foreach ($trainings_workers as $t_worker) {
+				if ($t_worker->id_worker == $worker->id){
+					$status[$worker->id] = $t_worker->status;
+					// echo $worker->id;
+				}
+			}
+
+		}*/
+			// echo  "<pre>";
+			// var_dump($status);
+			// echo "</pre>";
+
+
 		$data = array(
 			'workers' => $workers,
 			'facility' => 1,
 			'f_id' => $id,
 			'facilities'=> $facilities,
+			'trainings' => $trainings_workers,
 		);
 		$this->load->view('base');
 		$this->load->view('facility_workers', $data);
 		$this->load->view('footer');
+
 	}
 
 	public function create($id){

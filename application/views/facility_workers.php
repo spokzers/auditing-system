@@ -334,12 +334,15 @@
                                                   echo "</td>";
                                                 }
                                             }
-                                            
-
-                                            
-                                            
                                             echo "<td>$worker->id_no</td>";
-                                            $status = get_worker_status($worker->status);
+                                            $status = "";
+                                                foreach ($trainings as $t_worker) {
+                                                      if ($t_worker->id_worker == $worker->id){
+                                                      $status = $t_worker->status;
+                                                      }
+                                                }
+                                            $status = get_worker_status($status);
+
                                             echo  "<td><label style='color:#39b2a9'>$status</label></td>";
                                              $edit = base_url(). "index.php/FacilityWorker/edit/$worker->id";
                                              $card = base_url(). "index.php/pdfdom/worker_pdf_gen/$worker->id";
