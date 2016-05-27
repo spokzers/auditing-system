@@ -159,6 +159,17 @@ $(document).ready(function(){
         }
 
 
+	
+	var get_id = function(data , val){
+		keys = Object.keys(data);
+		for (var i = 0; i < keys.length; i++) {
+			if(data[keys[i]] == val){
+				return keys[i];
+			}
+		}
+	}
+
+
 	$('#select_facility').click(function(){
 		facility[$('#pick_facility').val()] = $('select#pick_facility').find(":selected").text();
 		$('tbody.facility_body').empty();
@@ -171,11 +182,27 @@ $(document).ready(function(){
 		$('tbody.inspector_body').append(get_text(inspector)); 
 	});
 
+
+
 	$('#show').click(function(){
 		$('tbody.schedule_body').empty();
 		// console.log(get_table_data());
 		$('tbody.schedule_body').append(get_schedule(get_table_data())); 
-		console.log(get_schedule(get_table_data()));
+		var data = get_table_data();
+		data_keys = Object.keys(data);
+		final = {};
+		for (var i = 0; i < data_keys.length; i++) {
+			final[i] = {	id_facility: get_id(facility, data[data_keys[i]].facility), 
+							id_inspector: get_id(inspector, data[data_keys[i]].inspector), 
+							doa:data[data_keys[i]].doa,
+							section: $('#audit_type').val(),
+							id_templates: 1
+						};
+			
+		}
+		console.log(final);
+		// console.log(facility);
+		// console.log(inspector);
 	});
 
 });
