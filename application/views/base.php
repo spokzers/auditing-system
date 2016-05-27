@@ -24,6 +24,7 @@
     <meta name="msapplication-TileImage" content="<?php echo base_url(); ?>static/images/favicon/mstile-144x144.png">
     <!-- For Windows Phone -->
     <!-- CORE CSS-->
+    <script type="text/javascript" src="<?php echo base_url(); ?>static/js/jquery-1.11.2.min.js"></script>
     <link href="<?php echo base_url(); ?>static/css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection">
     <link href="<?php echo base_url(); ?>static/css/style.css" type="text/css" rel="stylesheet" media="screen,projection">
     <link href="<?php echo base_url(); ?>static/css/sweetalert.css" type="text/css" rel="stylesheet" media="screen,projection">
@@ -35,7 +36,7 @@
     <!-- xchart css -->
     <link href="<?php echo base_url(); ?>static/js/plugins/xcharts/xcharts.min.css" type="text/css" rel="stylesheet" media="screen,projection">
     <!-- jQuery Library -->
-    <script type="text/javascript" src="<?php echo base_url(); ?>static/js/jquery-1.11.2.min.js"></script>
+    
 </head>
 
 <body>
@@ -328,9 +329,9 @@
                                         echo "<div style='display:none;'>";
                                     }
                                     ?>
-                                      <!--   <li><a href="<?php // echo base_url();?>index.php/audit/auto_create"><span class="trn" data-trn-key="Auto Schedule">Auto Schedule</span></a>
+                                        <li><a href="<?php  echo base_url();?>index.php/audit/auto_create"><span class="trn" data-trn-key="Auto Schedule">Auto Schedule</span></a>
                                         </li>
-                                     -->
+                                    
                                       <?php
                                     if($this->crud->session_designation() == 5 || $this->crud->session_designation() == 3 || $this->crud->session_designation() == 2){
                                         echo "</div>";

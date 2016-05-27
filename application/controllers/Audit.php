@@ -99,8 +99,8 @@ class Audit extends CI_Controller {
 		);
 		$this->load->view('base');
 		$this->load->view('audit_auto', $data);
+		$this->load->view('audit_auto_js', $data);
 		$this->load->view('footer');
-		$this->load->view('audit_controller');
 	}
 
 	public function insert(){

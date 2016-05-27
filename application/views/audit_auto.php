@@ -11,11 +11,11 @@
                 </div>
                 <div class="input-field col s9">
                     <div class="row">
-                        <input type="date" name="start_date" class="col s3">
+                        <input type="date" name="start_date" id="start_date" class="col s3 datepicker">
                         <div class="col s1" style="margin-top:15px;">
                             <i class="mdi-action-settings-ethernet"></i>
                         </div>
-                        <input type="date" name="end_date" class="col s3">
+                        <input type="date" name="end_date" id="end_date" class="col s3 datepicker">
                     </div>
                 </div>
             </div>
@@ -37,45 +37,74 @@
                 </div>
                 <div class="input-field col s9">
                     <!-- make this a modal trigger -->
-                    <a href="#!" class="btn waves-effect grey">Select</a>
+                    <?php
+                        foreach ($facilities as $facility) {
+                            $options[$facility->id] = $facility->name;
+
+                        }
+                        print_select_v2('pick_facility', 1, $options, "id='pick_facility'");
+                        ?>
+                    <a href="#!" id='select_facility' class="btn waves-effect grey">Select</a>
                     <table>
                         <thead>
                             <tr>
                                 <th>ID</th>
-                                <th>Property Number</th>
-                                <th>Building Number</th>
-                                <th>Area</th>
-                                <th>District</th>
+                                <th>Facility Name</th>
                             </tr>
                         </thead>
-                        <tbody>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
+                        <tbody class='facility_body'>
+                            
                         </tbody>
                     </table>
                 </div>
             </div>
-            <div class="row">
+
+             <div class="row">
                 <div class="input-field col s3">
-                    <p>Select Inpectors</p>
+                    <p>Select Inspectors</p>
                 </div>
                 <div class="input-field col s9">
-                	<a href="#!">Add More</a>
-                    <select id="audit_by" name="audit_by">
-                        <option value="" selected="selected">Not Selected</option>
-                        <option value="59">احمد الجهيني</option>
-                        <option value="62">محمد ناجي الإدريسي</option>
-                        <option value="65">عبدالعزيز زارع </option>
-                        <option value="66">عبد الرحمن القرشي</option>
-                    </select>
+                    <!-- make this a modal trigger -->
+                    <?php
+                        unset($options);
+                        foreach ($inspectors as $inspector) {
+                            $options[$inspector->id] = $inspector->name;
+
+                        }
+                        print_select_v2('pick_inspector', 0 , $options, "id='pick_inspector'");
+                        ?>
+                    <a href="#!" id='select_inspector' class="btn waves-effect grey">Select</a>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Name</th>
+                            </tr>
+                        </thead>
+                        <tbody class='inspector_body'>
+                            
+                        </tbody>
+                    </table>
                 </div>
             </div>
+           
             <div class="row">
             	<div class="input-field col s9 offset-s3">
-            		<a href="#!" class="waves-effect btn teal">Show Schedule</a>
+                    <h4>Final Schedule</h4>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Facility Name</th>
+                                <th>Inspector Name</th>
+                                <th>Date</th>
+                            </tr>
+                        </thead>
+                        <tbody class='schedule_body'>
+                            
+                        </tbody>
+                    </table>
+            		<a href="#!" class="waves-effect btn teal">Schedule</a>
+                    <a href="#!" class="waves-effect btn teal" id="show">Show Schedule</a>
             	</div>
             </div>
         </div>

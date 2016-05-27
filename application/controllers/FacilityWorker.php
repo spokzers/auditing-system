@@ -17,10 +17,13 @@
 		auth_restrict($this, 6);
 		$workers = $this->crud->get_table_data('workers');
 		$facilities = $this->crud->get_columns('facilities', 'id, name');
+		$trainings_workers = $this->crud->get_table_data('trainings_workers');
+		$status = [];
 		$data = array(
 			'workers' => $workers,
 			'facility' => 0,
 			'facilities'=> $facilities,
+			'trainings' => $trainings_workers,
 		);
 		$this->load->view('base');
 		$this->load->view('facility_workers', $data);
