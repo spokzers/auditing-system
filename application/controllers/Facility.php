@@ -39,11 +39,9 @@ class Facility extends CI_Controller {
             	$facility = $this->crud->get_table_data('facilities');
             }
 		$audits  = $this->crud->get_columns('audits', 'id_facility, rank');
-		$rankings = $this->crud->get_table_data('site_rankings');
 		$data = array(
 			'facilities' => $facility,
 			'designation' => get_designation(),
-			// 'rankings' => $rankings,
 			'audits' => $audits
 		);
 		$this->load->view('facility', $data);

@@ -222,25 +222,16 @@
                                             echo  "<td>$facility->activity</td>";
                                             echo  "<td>$facility->workers</td>";
                                             echo  "<td>$facility->validity</td>";
+                                            echo "<td>"; 
                                             $bool = true;
-                                            $other = false; 
                                             foreach ($audits as $audit) {
-                                                
-                                              if($audit->id_facility == $facility->id){
+                                              if($audit->id_facility == $facility->id && $bool){
                                                 $bool = false;
                                                 $ranker = get_site_rank($audit->rank);
-                                                if($ranker){
-                                                    echo  "<td>$ranker</td>";
-                                                }else{
-                                                    // echo  "<td>N/A in else loop</td>";
-                                                    $bool = true;
-                                                }
-                                               
-                                              }
-                                              
-                                            }if($bool==true){
-                                                echo  "<td>N/A/td>";
+                                                    echo  $ranker;
                                             }
+                                            }
+                                            echo "</td>";
 
 
                                             echo  "<td>$facility->space</td>";
