@@ -20,6 +20,9 @@ class Pdfdom extends CI_Controller {
 
 
 	 public function audit_report($id){
+
+
+
 	 	$audit = $this->crud->get_row_by_parameter('audits','id',$id);
 	 	$facility = $this->crud->get_row_by_parameter('facilities','id',$audit[0]->id_facility);
 	 	$num_audit = $this->crud->get_row_count_by_parameter('audits','id_facility',$audit[0]->id_facility);
@@ -131,6 +134,14 @@ class Pdfdom extends CI_Controller {
 		}
 
 		public function test_audit_report($id){
+
+			$post_data = $this->input->get();
+
+			echo "<pre>";
+			print_r($post_data);
+			echo "</pre><br><br><br>";
+
+
 			$audit = $this->crud->get_row_by_parameter('audits','id',$id);
 			$facility = $this->crud->get_row_by_parameter('facilities','id',$audit[0]->id_facility);
 			$num_audit = $this->crud->get_row_count_by_parameter('audits','id_facility',$audit[0]->id_facility);

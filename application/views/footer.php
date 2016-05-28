@@ -28,10 +28,10 @@ Scripts
 
 <script type="text/javascript" src="<?php echo base_url(); ?>static/js/plugins/chartist-js/chartist.min.js"></script>
 
- 
+<!--  
 <script type="text/javascript" src="<?php echo base_url(); ?>static/js/plugins/chartjs/chart.min.js"></script> 
 <script type="text/javascript" src="<?php echo base_url(); ?>static/js/plugins/chartjs/chart-script.js"></script> 
-
+-->
 <!-- sparkline -->
 <script type="text/javascript" src="<?php echo base_url(); ?>static/js/plugins/sparkline/jquery.sparkline.min.js"></script>
 <script type="text/javascript" src="<?php echo base_url(); ?>static/js/plugins/sparkline/sparkline-script.js"></script>
@@ -51,8 +51,10 @@ Scripts
 <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
 <script type="text/javascript">
   var input = $('.datepicker').pickadate({
-    formatSubmit: 'yyyy/mm/dd',
-      hiddenName: true
+		formatSubmit: 'yyyy/mm/dd',
+		hiddenName: true,
+		selectMonths: true, // Creates a dropdown to control month
+		selectYears: 15 // Creates a dropdown of 15 years to control year
     });
 
   
