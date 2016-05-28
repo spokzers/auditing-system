@@ -116,6 +116,8 @@ class Facility extends CI_Controller {
 		$templates = $this->crud->get_table_data('checklists');
 		$star = $this->crud->get_star($id);
 		$rank = $this->crud->get_recent_audit_where('id_facility', $id, 1);
+		$worker_waiting  = $this->crud->get_count_by_double_where('workers', 'id_facility', $facility[0]->id, 'status', 3);
+		$worker_trained  = $this->crud->get_count_by_double_where('workers', 'id_facility', $facility[0]->id, 'status', 1);
 		if(!$rank){
 			$rank[0] = (object) array("rank" => "N/A");
 		}
@@ -126,10 +128,10 @@ class Facility extends CI_Controller {
 			'audits' => $audits,
 			'inspectors' => $inspectors,
 			'templates' => $templates,
-			'star' => $star
-			// 'url' => $url,
-			// 'submit' => $submit,
-			// 'heading' => $heading
+			'star' => $star,
+			'worker_waiting' => $worker_waiting,
+			'worker_trained' => $worker_trained
+			
 		);
 		$this->load->view('base');
 		$this->load->view('facility_view', $data);

@@ -344,15 +344,19 @@
       		$('#rank').text(site_rank(calculate_rank(marksObtained, totalMarks)));
           if(site_rank(calculate_rank(marksObtained, totalMarks)) == 'A'){
             $('#result').text('Pass');
+            $('#pass').val('Pass With High Complaince');
           }
             if(site_rank(calculate_rank(marksObtained, totalMarks)) == 'B'){
-            $('#result').text('Pass');
+            $('#result').text('Pass With Satisfactory Complaince');
+            $('#pass').val('Pass With Satisfactory Complaince');
           }
           if(site_rank(calculate_rank(marksObtained, totalMarks)) == 'C'){
             $('#result').text(' Needs Improvement');
+            $('#pass').val('Pass With Needs Improvement');
           }
            if(site_rank(calculate_rank(marksObtained, totalMarks)) == 'D'){
             $('#result').text('Fail');
+            $('#pass').val('Fail');
           }
           $('#percent').text(marksObtained/totalMarks * 100);
       	};

@@ -227,6 +227,13 @@
                                 echo "<td data-title='Penalties'>$audit->penalty</td>";
                                 $temp = get_audit_reason($audit->reason);
                                 echo "<td>$temp</td>";
+
+                                $today = new DateTime('');
+                                $expireDate = new DateTime( $audit->doa);
+                                $color = 'amber';
+                                if($today->format("Y-m-d") > $expireDate->format("Y-m-d")){
+                                    $color = 'red';
+                                }
                                 $temp_url = base_url()."index.php/audit/audit_launch/".$audit->id;
                                 $report_url = base_url()."index.php/pdfdom/audit_report/".$audit->id;
                                 echo "<td>";
@@ -268,7 +275,7 @@
                                          </div>
                                        </div>';
                                 }else{
-                                echo"<a href='$temp_url'><button class='btn btn-floating small amber'><i class='mdi-action-assignment'></i>Launch</button></a>";
+                                echo"<a href='$temp_url'><button class='btn btn-floating small $color'><i class='mdi-action-assignment'></i>Launch</button></a>";
                                 }
                                 $temp_url = base_url()."index.php/audit/delete/".$audit->id;
                                 echo "<a href='$temp_url'><button class='btn btn-floating small red'><i class='mdi-action-delete'></i>Delete</button></a></td>";
