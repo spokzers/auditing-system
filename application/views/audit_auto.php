@@ -32,24 +32,54 @@
                 </div>
             </div>
             <div class="row">
+
+            <div>
+                <div class="input-field col s3">
+                    <p>Select Checklist</p>
+                </div>
+                <div class="input-field col s9">
+                    <!-- make this a modal trigger -->
+                    <?php
+                        // unset($options);
+                        $options = "";
+                        $temp = "";
+                        foreach ($checklists as $checklist) {
+                            $options[$checklist->id] = $checklist->title;
+                            $temp = $checklist->id;
+                        }
+                        print_select_v2('pick_checklist', $temp, $options, "id='pick_checklist'");
+                        ?>
+                    <!-- <a href="#!" id='select_checklist' class="btn waves-effect grey">Select</a> -->
+                </div>
+            </div>
+
+
+               
+            <div>
                 <div class="input-field col s3">
                     <p>Select Facilities</p>
                 </div>
                 <div class="input-field col s9">
                     <!-- make this a modal trigger -->
                     <?php
+                        $options = "";
+                        $temp = "";
                         foreach ($facilities as $facility) {
                             $options[$facility->id] = $facility->name;
-
+                            $temp = $facility->id;
                         }
-                        print_select_v2('pick_facility', 1, $options, "id='pick_facility'");
+                        print_select_v2('pick_facility', $temp, $options, "id='pick_facility'");
                         ?>
                     <a href="#!" id='select_facility' class="btn waves-effect grey">Select</a>
+            
+
+
                     <table>
                         <thead>
                             <tr>
                                 <th>ID</th>
                                 <th>Facility Name</th>
+                                <th>Checklist Name</th>
                             </tr>
                         </thead>
                         <tbody class='facility_body'>
@@ -67,11 +97,12 @@
                     <!-- make this a modal trigger -->
                     <?php
                         unset($options);
+                        $temp = "";
                         foreach ($inspectors as $inspector) {
                             $options[$inspector->id] = $inspector->name;
-
+                            $temp = $inspector->id;
                         }
-                        print_select_v2('pick_inspector', 1 , $options, "id='pick_inspector'");
+                        print_select_v2('pick_inspector', $temp , $options, "id='pick_inspector'");
                         ?>
                     <a href="#!" id='select_inspector' class="btn waves-effect grey">Select</a>
                     <table>
@@ -95,6 +126,7 @@
                         <thead>
                             <tr>
                                 <th>Facility Name</th>
+                                <th>Template Name</th>
                                 <th>Inspector Name</th>
                                 <th>Date</th>
                             </tr>

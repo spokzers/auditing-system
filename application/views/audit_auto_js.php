@@ -2,6 +2,11 @@
 $(document).ready(function(){
 	var facility = {};
 	var inspector = {};
+    var template = {
+        <?php foreach ($checklists as $checklist) {
+            echo "'". $checklist->id . "'" . " : " . "'" . $checklist->title . "'" . ","; 
+        } ?>
+    };
 	var currentDate = '';
 	var oneDay = 24*60*60*1000;
 	thedays = "";
@@ -12,12 +17,26 @@ $(document).ready(function(){
 		Object.keys(data).map(function(currentValue,index,arr){
 			text = text + `<tr>`;
 			text = text + `<td>` + currentValue +`</td>`;
-			text = text + `<td>` + temp[currentValue] +`</td>`;
+			text = text + `<td>` + temp[currentValue].facility +`</td>`;
+            text = text + `<td>` + temp[currentValue].template +`</td>`;
 			text = text + `</tr>`;
 		});
 
 		return text;
 	}
+
+    var get_inspector_text = function(data){
+        var text = ``;
+        temp = data;
+        Object.keys(data).map(function(currentValue,index,arr){
+            text = text + `<tr>`;
+            text = text + `<td>` + currentValue +`</td>`;
+            text = text + `<td>` + temp[currentValue] +`</td>`;
+            text = text + `</tr>`;
+        });
+
+        return text;
+    }
 
 	var get_schedule = function(data){
 		var text = ``;
@@ -26,7 +45,8 @@ $(document).ready(function(){
 		data_keys = Object.keys(data);
 		for (var i = 0; i < data_keys.length; i++) {
 			text = text + `<tr>`;
-			text = text + `<td>` + data[i].facility +`</td>`;
+			text = text + `<td>` + data[i].facility.facility +`</td>`;
+            text = text + `<td>` + data[i].facility.template +`</td>`;
 			text = text + `<td>` + data[i].inspector +`</td>`;
 			text = text + `<td>` + data[i].doa +`</td>`;
 			text = text + `</tr>`;
@@ -171,7 +191,11 @@ $(document).ready(function(){
 
 
 	$('#select_facility').click(function(){
-		facility[$('#pick_facility').val()] = $('select#pick_facility').find(":selected").text();
+		facility[$('#pick_facility').val()] = {
+                                                facility: $('select#pick_facility').find(":selected").text(), 
+                                                template: $('select#pick_checklist').find(":selected").text(),
+                                              } 
+         
 		$('tbody.facility_body').empty();
 		$('tbody.facility_body').append(get_text(facility)); 
 	});
@@ -179,7 +203,7 @@ $(document).ready(function(){
 	$('#select_inspector').click(function(){
 		inspector[$('#pick_inspector').val()] = $('select#pick_inspector').find(":selected").text();
 		$('tbody.inspector_body').empty();
-		$('tbody.inspector_body').append(get_text(inspector)); 
+		$('tbody.inspector_body').append(get_inspector_text(inspector)); 
 	});
 
 
@@ -196,12 +220,12 @@ $(document).ready(function(){
 							id_inspector: get_id(inspector, data[data_keys[i]].inspector), 
 							doa:data[data_keys[i]].doa,
 							section: $('#audit_type').val(),
-							id_templates: 1
+							id_templates: get_id(template, data[data_keys[i]].template)
 						};
 			
 		}
 		console.log(final);
-		// console.log(facility);
+		console.log(template);
 		// console.log(inspector);
 	});
 

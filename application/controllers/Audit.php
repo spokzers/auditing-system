@@ -89,10 +89,12 @@ class Audit extends CI_Controller {
 		$submit = 'Schedule';
 		$inspectors = $this->crud->get_row_by_parameter('userprofiles', 'designation', 2);
 		$facilities = $this->crud->get_columns('facilities', 'id, name');
+		$checklists = $this->crud->get_columns('checklists', 'id, title');
 		$data = array(
 			'penalty' => get_empty_model('audits'),
 			'inspectors' => $inspectors,
 			'facilities' => $facilities,
+			'checklists' => $checklists,
 			'heading' => $heading,
 			'url' => $url,
 			'submit' => $submit
@@ -191,6 +193,7 @@ class Audit extends CI_Controller {
 		);
 		$this->load->view('base');
 		$this->load->view('audit_template', $data);
+		$this->load->view('signature');
 		$this->load->view('audit_template_js',  $data);
 		$this->load->view('footer');
 	}
