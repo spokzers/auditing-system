@@ -71,7 +71,7 @@
                             $options[$inspector->id] = $inspector->name;
 
                         }
-                        print_select_v2('pick_inspector', 0 , $options, "id='pick_inspector'");
+                        print_select_v2('pick_inspector', 1 , $options, "id='pick_inspector'");
                         ?>
                     <a href="#!" id='select_inspector' class="btn waves-effect grey">Select</a>
                     <table>
