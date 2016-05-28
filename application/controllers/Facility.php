@@ -37,15 +37,26 @@ class Facility extends CI_Controller {
                 $facility = $this->crud->get_row_by_parameter('facilities', 'id', $facility_id[0]->id_facility);
             }else{
             	$facility = $this->crud->get_table_data('facilities');
+            	$pass_high = $this->crud->get_row_count_by_parameter('audits', 'rank', 1);
+            	$pass_satis = $this->crud->get_row_count_by_parameter('audits', 'rank', 2);
+            	$pass_imp = $this->crud->get_row_count_by_parameter('audits', 'rank', 3);
+            	$pass_fail = $this->crud->get_row_count_by_parameter('audits', 'rank', 4);
+            	$pass_not = $this->crud->get_row_count_by_parameter('audits', 'rank', 0);
             }
 		$audits  = $this->crud->get_columns('audits', 'id_facility, rank');
 		$data = array(
 			'facilities' => $facility,
 			'designation' => get_designation(),
-			'audits' => $audits
+			'audits' => $audits,
+			'pass_high' => $pass_high,
+			'pass_satis' => $pass_satis,
+			'pass_imp' => $pass_imp,
+			'pass_fail' => $pass_fail,
+			'pass_not' => $pass_not
 		);
 		$this->load->view('facility', $data);
 		$this->load->view('footer');
+		$this->load->view('facility_js');
 	}
 
 	public function create(){

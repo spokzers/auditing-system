@@ -148,40 +148,25 @@
                                             <tbody>
                                                 <tr>
                                                     <td>Not Given</td>
-                                                    <td>508</td>
+                                                    <td><?php echo $pass_not;?></td>
                                                 </tr>
                                                 <tr>
-                                                    <td>Passed</td>
-                                                    <td>645</td>
+                                                    <td>Passed With High Complaince</td>
+                                                    <td><?php echo $pass_high;?></td>
                                                 </tr>
                                                 <tr>
-                                                    <td>Warning</td>
-                                                    <td>392</td>
+                                                    <td>Passed With Satisfactory Complaince</td>
+                                                    <td><?php echo $pass_satis;?></td>
                                                 </tr>
                                                 <tr>
-                                                    <td>Suspension</td>
-                                                    <td>2</td>
+                                                    <td>Passed With Needs Improvement</td>
+                                                    <td><?php echo $pass_imp;?></td>
                                                 </tr>
                                                 <tr>
-                                                    <td>Closure</td>
-                                                    <td>5</td>
+                                                    <td>Fail</td>
+                                                    <td><?php echo $pass_fail;?></td>
                                                 </tr>
-                                                <tr>
-                                                    <td>Office Hearing</td>
-                                                    <td>38</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Warning and Office Hearing</td>
-                                                    <td>93</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Suspension and Office Hearing</td>
-                                                    <td>3</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Closure and Office Hearing</td>
-                                                    <td>10</td>
-                                                </tr>
+                                                
                                             </tbody>
                                         </table>
                                     </div>
