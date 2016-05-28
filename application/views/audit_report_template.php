@@ -220,7 +220,7 @@
     <?php
         for ($i=0; $i < sizeof($categories) ; $i++) {
             $num = $i+1;
-            echo '<h4 class="color-brown">'.$num.' '.  $categories[$i].'</h4>';
+            echo '<h4 class="color-brown">'.$num.'. '.  $categories[$i].'</h4>';
 
 
             echo '<table style="table-layout: auto;border: 1px solid black;border-collapse: collapse;padding: 5px;">';
