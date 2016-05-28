@@ -285,7 +285,7 @@
             <tr>
                 <td style="border:1px solid black; border-collapse:collapse;" class="bg-grey">Site Score</td>
                 <?php
-                echo "<td>$audit->marks_obtained/$audit->total_marks</td>";
+                echo "<td>$audit->marks_obtained/$audit->total_marks (". round($audit->marks_obtained/$audit->total_marks , 4 )*100 . "%)</td>";
             ?>
                     <td style="border:1px solid black; border-collapse:collapse;" class="bg-grey">Penalty Payment Deadline</td>
                     <td style="border:1px solid black; border-collapse:collapse;">
@@ -293,11 +293,11 @@
                     </td>
             </tr>
             <tr>
-                <td style="border:1px solid black; border-collapse:collapse;" class="bg-grey">Site Status After Inspection</td>
+                <!-- <td style="border:1px solid black; border-collapse:collapse;" class="bg-grey">Site Status After Inspection</td>
                 <td style="border:1px solid black; border-collapse:collapse;">
                     <?php
 
-                switch (get_site_rank($audit->rank)) {
+                /*switch (get_site_rank($audit->rank)) {
                     case 'A':
                         $s_status="Passed";
                         break;
@@ -316,11 +316,12 @@
                 }
 
                 echo $s_status;
+                */
 
                  ?>
-                </td>
+                </td> -->
                 <td style="border:1px solid black; border-collapse:collapse;" class="bg-grey">Site Ranking</td>
-                <td style="border:1px solid black; border-collapse:collapse;">
+                <td style="border:1px solid black; border-collapse:collapse;" colspan="3">
                     <?php echo get_site_rank($audit->rank); ?>
                 </td>
             </tr>
@@ -335,7 +336,7 @@
         <br>
         <br>
         <?php
-            echo '<table width="100%"><tbody><tr>';
+            echo '<table width="100%;padding:5px;"><tbody><tr>';
             $check = 1;
             $row_chk = 0;
             foreach ($violations as $violation) {

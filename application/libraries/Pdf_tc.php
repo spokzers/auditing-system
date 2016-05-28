@@ -23,7 +23,7 @@ class Pdf_tc extends TCPDF
     	$html = '<table style="font-size:10px;padding:5px;margin-bottom:50%;text-align: center;border: 1px solid black;border-collapse: collapse;">
             <tr>
                 <td style="border: 1px solid black;border-collapse: collapse;background-color:orange;">EPIC Address</td>
-                <td colspan="3" style="border: 1px solid black;border-collapse: collapse;">دول الجو بأضرار الأثنان مع, قبل هو دخول المضي الأهداف<br>Salah uddin Ayubi Road, Malaz, Riyadh, Kingdom of Saudi Arabia.</td>
+                <td colspan="3" style="border: 1px solid black;border-collapse: collapse;">Salah uddin Ayubi Road, Malaz, Riyadh, Kingdom of Saudi Arabia.</td>
             </tr>
         </table>';
 
