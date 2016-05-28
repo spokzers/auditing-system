@@ -66,6 +66,10 @@
                     <div class="card-action red darken-2 white-text">
                         <h4 class="card-stats-number center"><?php 
                         $rate = [];
+                        if(count($star) >= 3){
+                            $fa = count($star);
+                            // echo "<h2>$fa</h2>";
+
                         foreach ($star as $s) {
                               $rate[$s->rank]=0;
                         }
@@ -73,7 +77,7 @@
                               $rate[$s->rank]=$rate[$s->rank] + 1;
                         }
 
-                        if(!$rate[0]){
+                        
                             if($rate[1] >= 3){
                             echo "5 Star";
                         }elseif ($rate[1] == 2) {
@@ -85,8 +89,10 @@
                         }else{
                             echo "1 Star";
                         }    
+                        
                         }else{
                             echo "N/A";
+
                         }
                         
                         ?></h4>
@@ -102,13 +108,15 @@
                     </div>
                     <div class="card-action amber darken-2 white-text">
                         <h4 class="card-stats-number center"><?php 
-                        if($rank == 0){
-                            $rank = 1;
-                            echo strtoupper(get_site_rank($rank)) . "</h4>";
-                            $rank = 0;  
-                        }else{
-                        echo strtoupper(get_site_rank($rank)) . "</h4>"; 
-                        }?>
+                        // if($rank == 0){
+                        //     $rank = 1;
+                        //     echo strtoupper(get_site_rank($rank)) . "</h4>";
+                        //     $rank = 0;  
+                        // }else{
+                        // echo strtoupper(get_site_rank($rank)) . "</h4>"; 
+                        // }
+                        echo strtoupper(get_site_rank($rank[0]->rank)) . "</h4>";
+                        ?>
                     </div>
                 </div>
             </div>
