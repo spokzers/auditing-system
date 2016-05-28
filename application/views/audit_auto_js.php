@@ -225,7 +225,7 @@ $(document).ready(function(){
 			
 		}
 		console.log(final);
-		console.log(template);
+		// console.log(template);
 		// console.log(inspector);
 	});
 

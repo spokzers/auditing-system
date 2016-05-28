@@ -277,6 +277,23 @@ class Audit extends CI_Controller {
 		echo "Success! Viola!";
 	}
 
+	public function importfile(){
+		$this->load->helper('file');
+		$string = read_file('final.txt');
+		$string = explode("\n", $string);
+
+		for ($i=0; $i < count($string); $i++) { 
+			$temp = explode(",", $string[$i]); 
+			$id =  $temp[0];
+			$val =  $temp[1];
+			$data = array(
+				"statement" => $val,
+			);
+			$this->crud->update('questions', 'id', $id, $data);
+		}
+		
+	}
+
 	public function insert_violation(){
 		auth_restrict($this, 6);
 		auth_restrict($this, 5);

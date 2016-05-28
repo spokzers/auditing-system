@@ -1,0 +1,112 @@
+238,Operate the facility with license issues by Government - تشغيل المنشأة من دون ترخيص ممنوح من قبل الهيئة الملكية
+239,Last (Previous) health Inspection Report available. - تقرير التفتيش السابق متوفر
+240,Business activity is as per the license and not outside allocated premises - المهام مطابقة للنشاط الموضح بالرخصة و ضمن المساحة المعطى
+241,Worksite is as per the space allocation - مساحة العمل مطابق لكمية العمل
+242,Any other - أي شيء أخر
+243,Water used in all operation is of potable and approved quality. - الماء المستخدم في جميع العمليات صالح للشرب و بجودة عالية
+244,Hot/Cold water available in taps. - ماء حار- دافئ متوفر في الحنفيات
+245,Only correctly identified animals with all relevant documentation are accepted for slaughter or processing - فقط لحوم معروفة و موافق عليها،  و كل المستندات المتعلقة بها موجودة
+246,Animal health restrictions in disease control area are implemented by slaughterhouse  operator - ضوابط سلامة الحيوانات للسيطرة على الأمراض مطبقة في المسالخ
+247,Slaughterhouse operators transporting meat ensure suitable crates/modules are used. All equipment used for collecting/delivery are cleaned  washed and disinfected immediately after use and if necessary before re-use. - عند نقل الحيوانات المذبوحة، على مشغل المسالخ التأكد من كون السلال و الأدوات المستخدمة بحالة جيدة، سلال و أدوات النقل و التجميع نظيفة، مغسولة و معقمة بعد الإستخدام و قبل افستخدام إن لزم
+248,Cleansing and disinfection of livestock vehicles is done by slaughterhouse operator - تنظيف و تعقيم عربات نقل المواشي يتم عن طريق مشغل المسالخ
+249,Standard operating procedures  (SOPs) for killing and related operations in slaughterhouses are developed  implemented and maintained - لكل العمليات اللمتعلقة بالذبح و كافة العمليات الأخرى في المسلخ ، توجد لها إجرائات تشغبل معيارية موجودة و مطبقة بشكل صحيح
+250,Structures of the building safeguard animal welfare (adverse weather protection  adequate ventilation) - البناء مصمم لصون حياة الحيوان (من جهة المناخ و التهوية)
+251,Adequate unloading facilities are available (suitable ramps  containing rails  isolation pens) - تجهيزات تنزيل مناسبة متوفرة في المسلخ (كالرمبات، السكك و الزريبة)
+252,Restraining facilities and equipment are adequately designed  constructed and maintained  (including shackle lines) - ادوات تقييد الحيوانات مصممة بشكل جيد، بما في ذلك سير التعليق
+253,Restraining procedures ensure welfare of animals is protected. - القيود مصممة بطريقة لحفظ حقوق الحيوانات حسب التشريع الإسلامي
+254,Place where animals have  to be slaughtered is clean based on  HACCP procedures to avoid contamination of carcasses from dirty animals - أماكن ذبح الحيوانت نظيفة طبقا لنظام الهاسب، بهدف منع تلوث الحيوانات المذبوحة بالأخرى المتسخة
+255,All handling and processes from slaughtering to dispatch are done in a way that avoids the contamination of meat and offal entering the food chain - كل العمليات في المسلخ مصممة لمنع تلوث اللحم و منع دخول الفضلات بسلسلة تنقل اللحوم
+256,Any visible contamination removed without delay by trimming or alternative means having an equivalent effect - اي تلوث على اللحوم يزال بالقطع من دو تأخر أو اي إجراء مكافىء له نفس المفعول
+257,Where relevant  all edible co-products are handled hygienically and subject to relevant controls (including raw materials intended for further processing) - كل المواد الصالحة للأكل يتم التعامل معها بطريقة نظيفة و تحت السيطرة (يتضمن ذلك اللحم النيئ المستخدمة في مراحل لاحقة)
+258,Slaughtering in traditional kitchens - هل المسلخ في مطبخ تقليدي
+259,Any other - أي شيء أخر
+260,Carcass and offal are chilled  stored and received within the required temperatures and in a manner that avoids cross – contamination - جثث الحيوانات المذبوحة مبردة، مخزنة و مسلمة بدرجات حرارة صحيحة، و كل ذلك يتم بطريقة سليمة لمنع التلوث التبادلي
+261,All products have Health Mark  Identification Mark or approval mark  stamp or food card as appropriate - جميع المنتجات ذات مظهر طازج،بطاقات التعريف و أختام الموافقة واضحة،
+262,There is no sign of any rotten  expired meat item. - لا يوجد علامات فساد، تلف أو إنتهاء صلاحية منتج من اللحوم
+263,Any other - أي شيء أخر
+264,The temperature of all cold items is less than 5°C - كل البرادات على درجة حرارة اقل من 5م
+265,Temperature of refrigerator is not higher than 5°C   ±10 C - درجات البرادات على النحو التالي
+266,Temperature of freezer is not higher than -18°C   ± 20 C - 5°C   ±1 C
+267,Thermometer is in use and calibrated correctly - درجات الثلاجات على النحو التالي
+268,Any other - -18°C   ± 2 C
+269,Chemicals are properly labeled and stored - مقياس الحرارة مستخدم و معاير
+270,Chemical is not stored in food container - أي شيء أخر
+271,Food is not stored in chemical container - الكيماويات معرفة ببطاقة و مخزنة بشكل سليم
+272,Chemicals are stored away from food items  food preparation area and food contact surfaces. - الكيماويات ليست مخزنة في حاويات أو علب الطعام
+273,Any other - مواد الغذائية ليست مخزنة بحاويات أو علب المواد الكيميائية
+274,Legal temperature controls are maintained throughout the process from intake to dispatch for all products - الكيماويات مخزنة بعيداً عن المواد الغزائية و أماكن تصنيع الغذاء
+275,Frozen or chilled meat (Not Fresh) is being sold as fresh meat. - أي شيء أخر
+276,All equipment & tools are stored in proper place and no equipment or tool is rusty - تطبيق صحيح لدرجات الحرارة القانونية من مرحلة اللإستلام الى مرحلة تسليم المنتج
+277,Single use consumables including paper towels are not used again. - يباع اللحم المبرد أو المثلج (ليس طازج) على أنه لحم طازج
+278,Controls are in place to ensure that risk of cross contamination is minimized  prevented or reduced to acceptable levels during operation and appropriate action taken should contamination occur - كل مواد التحضير مخزنة بشلكل جيد و الأدوات جيدة و لا علامات صدأ
+279,Only permitted raw materials  including water and other ingredients  are used - المواد المستخدمة لمرة واحدة كالمناديل لا تستخدم مرتين
+280,Wrapping and Packaging materials are not a source of contamination  stored and handled in such a way that product contamination is avoided - الإجرائات متوفرة لمنع التلوث بلإنتقال و منع أو تقليل المخاطر لدرجة مقبولة أثناء العمل و غجرائات موجودة للتصحيح في حال ظهور تلوث
+281,Re-usable wrapping and packaging materials for foodstuffs are easy to clean and disinfect and are clean at point of use - فقط مواد مصرَحة بما في ذلك المياه مستخدمة في تحضير الغذاء
+282,Meat items are not directly stored on the floor. - مواد اللف و التغليف ليست مصدر للتلوث، و مخزنة بطريقة تمنع تلوث الغذاء
+283,Mincing machine is cleaned after use - مواد التغليف و اللف المتعددة الإستخدام نظيفة و معقمة عند الإستخدام
+284,No open meat is not left exposed and is in temperature controlled area. - عدم وضع اللحوم على الأرض مباشرة
+285,If required  defrosting/thawing is done properly and meat is not refrozen after thawing - مكائن الفرم تغسل بشكل جيد بعد الإستخدام
+286,Labeling of chilled or frozen meat and also the products that require cooking before eating complies with the legislation - لا يوجد لحم مكشوف، كل اللحوم في أمكنة مبردة
+287,Heading  gutting and filleting are carried out hygienically - عند الحاجة، يذاب اللحم بطريقة سليمة، و يمنع منعا باتاَ إعادة التثليج
+288,Products susceptible to parasite infestation are subject to the required temperature treatment - بطاقة التعليمات على اللحوم المثلجة و المبردة صحيحة، و اللحوم المحتاجة لطبخ قبل الأكل مطابقة لقوانين الهيئة الملكيه
+289,Health standards criteria for fishery products are met (e.g. organoleptic  histamine  TVN  parasite and toxins harmful to human health) - قطع الرأس، إزالة الأحشاء و صنع الشرائح يتم بطريقة سليمة و نظيفة
+290,Any other - المواد مشتبه تواجد طفيليات بها يجب أن تعالج بدرجات حرارة مطلوبة
+291,There is no sign of flies  insects  rodents or cockroaches or any other pest. - الشروط الصحية لمنتجات الأسماك مطبقة (مثل الشكل المظهري و الرائحة، الهيستامين،التي في إن، الطفيليات و السموم المؤثرة على صحة الإنسان)
+292,Pest controller is approved - أي شيء أخر
+293,Last two pest controlled reports are available for inspection - لا علامات تواجد ذباب، صراصير، قوارض، أو أي آفة اخرى
+294,Fly killers are installed in appropriate location and numbers - شركة مكافحة الحشرات موافق عليها من قبل الهيئة الملكية
+295,All fly killers are clean and tray is not full - التقريرين الماضيين لمكافخة الحشرات متوفرين
+296,Any other - مصائد الحشرات موضوعة بأماكن مناسبة و مرقمة
+297,All the walls  doors  ceilings  exhaust fans  fixtures and lights are clean with no buildup - كل مصائد الحشرات نظيفة و الصينية غير ممتلئة
+298,There are no broken floor tiles or ceiling tiles - أي شيء أخر
+299,All walls are in good condition and not in need of repair or painting - كل الجدران، الأبواب، السقف، شفاطات الهواء، اجهزة الإضائة نظيفة و لا يوجد عليها طبقات تكدس أوساخ
+300,There is no damage to any furniture or fixtures - لا يوجد سيراميك، برصلان، أو بلاط مكسر في الأرض ، السقف او الجدران
+301,All the Hoods and vents clean and free of buildup  rust or mold - كل الجدران بحالة جيدة ولا تحتاج صيانة
+302,There is sufficient light and all light guards are in place - لا كسور في  الثأثيث أو التركيبات
+303,Trash bins are not overflowing and waste segregation is in place - كل مراوح الشفط نظيفة من دون تكدس أوساخ، صدأ أو عفن
+304,Liquid waste is disposed of properly - توجد إضائة كافية، و كل لمبات الإضائة محمية
+305,There is no leakage or over flowing drain in the facility - حاويات القمامة  غير فائضة
+306,Ventilation or air conditioning does not contribute towards increased risk of employee hygiene - القمامة في اماكنها المخصصة
+307,Air curtains are installed on the door - التخلص من النفايات السائلة بطريقة صحيحة
+308,All windows have mesh or glass appropriate as per RC rules - لا تسرب و لا مصارف فائضة
+309,Any Other - أماكن التهوية و التبريد لا تزيد من الخطر على نظافة العاملين
+310,Sufficient waste containers are present  provided with lid  have plastic bags (liner) and are clean  intact and foot operated - ستائر هوائية مركبة على البواب
+311,Waste is collected  stored properly and disposed off timely - كل النوافذ لها شبك أو زجاج تبعا لقوانين الهيئة الملكية
+312,Floors are not dirty or smelly and there is no waste on the floor - أي شيء أخر
+313,Drains are not smelly - كمية حاويات النفايات كافية،مع غطاء،داخلها كيس بلاستيك (بربطة) و نظيفة،سليمة و تفتح بالقدم
+314,Wash rooms are clean  good ventilation  no foul smell  soap available and well maintained - النفايات تجمع،تخزن بشكل سليم، و يتخلص منها باوقات مجدولة
+315,Chillers  Freezer gaskets  shelves are clean and without any mold - الأرضيات نظيفة، لا توجد لها رائحة، ولا يوجد أوساخ على الأرضيات
+316,Mop buckets are clean and there is no standing water - لا توجد رائحة للمصارف
+317,Any other - الحمامات نظيفة، بتهوية جيدة، بدون رائحة سيئة، الصابون متوفر، و يتم الإعتناء بها بشكل جيد
+318,Criteria Description - البرادات و الثلاجات، الأرفف نظيفة دون وجود عفن
+319,Auditor Choice - ممسحة الأراضي نظيفة، لايوجد مياه على الأرض
+320,Pre-Defined - أي شيء أخر
+321,Yes - المعايير
+322,No - إختيار المدقق
+323,NA - التقييم
+324,Severity Value - نعم
+325,(H=5  M=3 L=1) - لا
+326,Hand washing is done after wiping hands on apron  handling trash  sneezing  coughing  touching face/hair/skin  eating drinking  after breaks  after handling dirty dishes or equipment  after cleaning tasks  before starting shift  before putting on glo - غير قابل للتطبيق
+327,Every worker washes hands using soap for at least 20 seconds - قيمة الخطورة
+328,There is a dedicated hand wash sink present - (ع=5  مت=3 من=1)
+329,Equipment is not Washed in hand wash sink - تم غسل اليدين بعد مسحهما على المريلة، التعامل مع النفايات، لمس الأنف\الفم\ الجلد،الأكل أو الشرب، بعد فترة الراحة، مسك أواني متسخة، بعد تنظيف، قبل العمل ، قبل وضع القفازات و بعد إستخدام المرحاض
+330,Soap and tissue dispenser is available at hand sink and are not empty - كل عامل يغسل يديه بستخدام الصابون بمدة لا تقل عن 20 ثانية
+331,All workers Attends Training course in environmental health - يوجد مغاسل يدين مخصصة داخل المخبز
+332,Hand wash sign is posted on hand wash sink  visible and clean - الأدوات لا تغسل في أماكن غسل اليدين
+333,Workers are wearing clean clothes  clean apron  hair net  beard mask and safety Shoes - موزع أتوماتيكي للمناديل و الصابون موجود عند المغاسل و غير فارغ
+334,Worker is ill and working - تعليمات غسيل اليدين معلقة بالقرب من المغسلة، واضحة و نظيفة
+335,Sanitizer for food contact surfaces is available and in proper concentration - العمال يرتدون ملابس نظيفة، مريلة نظيفة، غطاء للرأس، غطاء للذقن، و أحذية سلامة
+336,Workers wear uniforms - هل يوجد عامل مريض في المخبز؟
+337,There is no eating/drinking and no evidence of eating/drinking observed in areas that are not designated for eating/drinking - معقم لأسطح تحضير الأغذية متوفر بتركيز صحيح
+338,There is no smoking and no evidence of smoking observed in food service area - العمال يرتدون زي موحد
+339,There is no jewelry worn by food handlers - لا أكل أو شرب، أو اثار اكل أو شرب في اماكن غير مخصصة للأكل و الشرب
+340,There is no sign of any cross contamination - لا تدخين، ولا اثار تدخين في مناطق تحضير و تقديم الأغذية
+341,Any other - لا يرتدي عمال تحضير الأغذية المجوهرات
+342,Delaying the inspection  inspector entrance or no cooperation  not allowed to enter or any other misconduct - تعليمات غسيل اليدين معلقة بالقرب من المغسلة، واضحة و نظيفة
+343,Staff has valid medical Report. - لا أثار تلوث تبادلي
+344,Staff is already trained - أي شيء أخر
+345,Shop is used for noncommercial purpose or activity not in the license  for staff sleeping or for staff residence or staff is cooking food and eating - تأخير التفتيش، دخول المفتش، عدم التعاون، عدم السماح بالدخول أو أي إسائة تصرف
+346,Disengagement seals and re-open the shop before the end of the penalty decided by the closure of the municipality - العمال لديهم شهادات صحية سارية المفعول
+347,Owners or supervisors helps violated workers for escape - العمال تم تدريبهم
+348,Not observing the Islamic provisions and rules of slaughtering - المحل يقوم بنشاط غير تجاري أو غير مرخص، منامة للعمال داخل المحل، طبخ و أكل  للعمال داخل المحل،
+349,Any other - إزالة ختم الإغلاق و أعادة فتح المحل قبل نهاية العقوبة المفروضة من قبل الهيئة الملكية
