@@ -24,9 +24,11 @@ class Crud_model extends CI_Model {
 
          }
 
-         public function get_star(){
+         public function get_star($id){
           $this->db->select('*');
           $this->db->from('audits');
+          $this->db->where("id_facility", $id);
+          $this->db->where("rank <>", 0);
           $this->db->order_by('ended_at','DESC');
           $this->db->limit(3);
           $query = $this->db->get();
@@ -37,7 +39,7 @@ class Crud_model extends CI_Model {
           $this->db->select('*');
           $this->db->from('audits');
           $this->db->where($key, $val);
-          $this->db->order_by('ended_at','DESC');
+          $this->db->order_by('doa','DESC');
           $this->db->limit($limit);
           $query = $this->db->get();
           return $query->result();

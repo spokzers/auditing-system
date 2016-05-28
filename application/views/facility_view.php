@@ -35,29 +35,29 @@
         <!-- start stats card -->
         <!--card stats start-->
         <div class="row">
-            <div class="col s12 m3 l3">
+            <div class="col s12 m4 l4">
                 <div class="card">
-                    <div class="card-content  cyan white-text">
+                    <div class="card-content  red white-text">
                         <p class="card-stats-title center"><i class="mdi-social-group large"></i></p>
                         <h5 class="center">Workers Waiting</h5>
                     </div>
-                    <div class="card-action  cyan darken-2 white-text">
-                        <h4 class="card-stats-number center">9</h4>
+                    <div class="card-action  red darken-2 white-text">
+                        <h4 class="card-stats-number center"><?php echo $worker_waiting; ?></h4>
                     </div>
                 </div>
             </div>
-            <div class="col s12 m3 l3">
+            <div class="col s12 m4 l4">
                 <div class="card">
                     <div class="card-content red white-text">
                         <p class="card-stats-title center"><i class="mdi-social-group large"></i></p>
                         <h5 class="center">Workers Trained</h5>
                     </div>
                     <div class="card-action red darken-2 white-text">
-                        <h4 class="card-stats-number center">4</h4>
+                        <h4 class="card-stats-number center"><?php echo $worker_trained ?></h4>
                     </div>
                 </div>
             </div>
-             <div class="col s12 m3 l3">
+             <div class="col s12 m4 l4">
                 <div class="card">
                     <div class="card-content red white-text">
                         <p class="card-stats-title center"><i class="mdi-action-stars large"></i></p>
@@ -66,6 +66,10 @@
                     <div class="card-action red darken-2 white-text">
                         <h4 class="card-stats-number center"><?php 
                         $rate = [];
+                        if(count($star) >= 3){
+                            $fa = count($star);
+                            // echo "<h2>$fa</h2>";
+
                         foreach ($star as $s) {
                               $rate[$s->rank]=0;
                         }
@@ -73,7 +77,7 @@
                               $rate[$s->rank]=$rate[$s->rank] + 1;
                         }
 
-                        if(!$rate[0]){
+                        
                             if($rate[1] >= 3){
                             echo "5 Star";
                         }elseif ($rate[1] == 2) {
@@ -85,8 +89,10 @@
                         }else{
                             echo "1 Star";
                         }    
+                        
                         }else{
                             echo "N/A";
+
                         }
                         
                         ?></h4>
@@ -94,7 +100,12 @@
                 </div>
             </div>
 
-            <div class="col s12 m3 l3">
+           
+        </div>
+
+        <div class="row">
+            
+             <div class="col s12 m4 l4">
                 <div class="card">
                     <div class="card-content amber white-text">
                         <p class="card-stats-title center"><i class="mdi-action-stars large"></i></p>
@@ -102,17 +113,54 @@
                     </div>
                     <div class="card-action amber darken-2 white-text">
                         <h4 class="card-stats-number center"><?php 
-                        if($rank == 0){
-                            $rank = 1;
-                            echo strtoupper(get_site_rank($rank)) . "</h4>";
-                            $rank = 0;  
-                        }else{
-                        echo strtoupper(get_site_rank($rank)) . "</h4>"; 
-                        }?>
+                        echo strtoupper(get_site_rank($rank[0]->rank)) . "</h4>";
+                        ?>
+                    </div>
+                </div>
+            </div>
+
+             <div class="col s12 m4 l4">
+                <div class="card">
+                    <div class="card-content amber white-text">
+                        <p class="card-stats-title center"><i class="mdi-action-stars large"></i></p>
+                        <h5 class="center">Site Result</h5>
+                    </div>
+                    <div class="card-action amber darken-2 white-text">
+                        <h5 class="card-stats-number center"><?php 
+                        $temp_result = '';
+                        if(strtoupper(get_site_rank($rank[0]->rank)) == 'A'){
+                            $temp_result = "Passed With High Compliance";
+                        }if(strtoupper(get_site_rank($rank[0]->rank)) == 'B'){
+                            $temp_result = "Passed With Satisfactory Compliance";
+                        }if(strtoupper(get_site_rank($rank[0]->rank)) == 'C'){
+                            $temp_result = "Passed With Needs Improvement";
+                        }if(strtoupper(get_site_rank($rank[0]->rank)) == 'D'){
+                            $temp_result = "Failed";
+                        }
+
+                        echo $temp_result . "</h5>";
+                        ?>
+                    </div>
+                </div>
+            </div>
+
+             <div class="col s12 m4 l4">
+                <div class="card">
+                    <div class="card-content amber white-text">
+                        <p class="card-stats-title center"><i class="mdi-action-stars large"></i></p>
+                        <h5 class="center">Facility Size</h5>
+                    </div>
+                    <div class="card-action amber darken-2 white-text">
+                        <h4 class="card-stats-number center"><?php 
+                     
+
+                        echo $facility->space . "</h4>";
+                        ?>
                     </div>
                 </div>
             </div>
         </div>
+
         <!--card stats end-->
         <!-- Compliance VS Non Compliance start -->
         <!-- <div class="card-panel">

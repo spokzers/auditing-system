@@ -114,20 +114,13 @@ class Facility extends CI_Controller {
 		$audits = $this->crud->get_row_by_parameter('audits','id_facility',$id);
 		$inspectors = $this->crud->get_columns('userprofiles','id, name');
 		$templates = $this->crud->get_table_data('checklists');
-		$star = $this->crud->get_star();
-		$rank = "";
-		foreach ($audits as $audit) {
-			$rank = $audit->rank;
-			// foreach ($inspectors_table as $row) {
-			// 	if ($audit->id_inspector == $row->id) {
-			// 		$inspectors[] = $row;
-			// 	}
-			// }
+		$star = $this->crud->get_star($id);
+		$rank = $this->crud->get_recent_audit_where('id_facility', $id, 1);
+		$worker_waiting  = $this->crud->get_count_by_double_where('workers', 'id_facility', $facility[0]->id, 'status', 3);
+		$worker_trained  = $this->crud->get_count_by_double_where('workers', 'id_facility', $facility[0]->id, 'status', 1);
+		if(!$rank){
+			$rank[0] = (object) array("rank" => "N/A");
 		}
-		// print_r($inspectors);
-		// $url = 'update';
-		// $submit = 'update';
-		// $heading = 'Update Facility';
 		$data = array(
 			'facility' => $facility[0],
 			'centres' => $centres,
@@ -135,10 +128,10 @@ class Facility extends CI_Controller {
 			'audits' => $audits,
 			'inspectors' => $inspectors,
 			'templates' => $templates,
-			'star' => $star
-			// 'url' => $url,
-			// 'submit' => $submit,
-			// 'heading' => $heading
+			'star' => $star,
+			'worker_waiting' => $worker_waiting,
+			'worker_trained' => $worker_trained
+			
 		);
 		$this->load->view('base');
 		$this->load->view('facility_view', $data);

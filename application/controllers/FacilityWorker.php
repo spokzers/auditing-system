@@ -140,6 +140,8 @@
 		$config['upload_path']          = './uploads/worker/';
 		$config['allowed_types']        = 'gif|jpg|png|jpeg';
 		$config['file_name'] 			 = $new_name;
+		$config['overwrite'] 			 = TRUE;
+		
 		$this->load->library('upload', $config);
 		if ( ! $this->upload->do_upload('dp')){
 			$error = array('error' => $this->upload->display_errors());

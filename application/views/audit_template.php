@@ -262,9 +262,10 @@
             <div>
                 <p>Site Status After Inspection:</p>
                 <?php
-                print_select_v2('pass',-1, get_site_status(), "class='pass'");
+                // print_select_v2('pass',-1, get_site_status(), "class='pass'");
                 ?>
-                <p>Comments: </p>
+                <input type="text" disabled="disabled", id='pass'></input>
+                <p>Remarks: </p>
                 <textarea placeholder="Type any comments if any" class='materialize-textarea comments'></textarea>
                 <p>Penalty Deadline</p>
                 <input class='datepicker deadline'  placeholder="Penalty Deadline Date" type="date"></input>

@@ -29,10 +29,10 @@ class Crud{
 
     }
 
-      public function get_star(){
+      public function get_star($id){
          $CI =& get_instance();
 		$CI->load->model('Crud_model');
-		$status = $CI->Crud_model->get_star();
+		$status = $CI->Crud_model->get_star($id);
 		return $status;
          }
 
