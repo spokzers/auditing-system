@@ -188,7 +188,4 @@ class Pdfdom extends CI_Controller {
 
 			$this->load->view('audit_report_template',$data);
 		}
-
-
-
 }
