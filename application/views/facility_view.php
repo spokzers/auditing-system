@@ -37,33 +37,33 @@
         <div class="row">
             <div class="col s12 m4 l4">
                 <div class="card">
-                    <div class="card-content  red white-text">
+                    <div class="card-content red white-text">
                         <p class="card-stats-title center"><i class="mdi-social-group large"></i></p>
                         <h5 class="center">Workers Waiting</h5>
                     </div>
-                    <div class="card-action  red darken-2 white-text">
+                    <div class="card-action red darken-2 white-text">
                         <h4 class="card-stats-number center"><?php echo $worker_waiting; ?></h4>
                     </div>
                 </div>
             </div>
             <div class="col s12 m4 l4">
                 <div class="card">
-                    <div class="card-content red white-text">
+                    <div class="card-content amber white-text">
                         <p class="card-stats-title center"><i class="mdi-social-group large"></i></p>
                         <h5 class="center">Workers Trained</h5>
                     </div>
-                    <div class="card-action red darken-2 white-text">
+                    <div class="card-action amber darken-2 white-text">
                         <h4 class="card-stats-number center"><?php echo $worker_trained ?></h4>
                     </div>
                 </div>
             </div>
              <div class="col s12 m4 l4">
                 <div class="card">
-                    <div class="card-content red white-text">
+                    <div class="card-content green white-text">
                         <p class="card-stats-title center"><i class="mdi-action-stars large"></i></p>
                         <h5 class="center">Star Rating</h5>
                     </div>
-                    <div class="card-action red darken-2 white-text">
+                    <div class="card-action green darken-2 white-text">
                         <h4 class="card-stats-number center"><?php 
                         $rate = [];
                         if(count($star) >= 3){
@@ -107,11 +107,11 @@
             
              <div class="col s12 m4 l4">
                 <div class="card">
-                    <div class="card-content amber white-text">
-                        <p class="card-stats-title center"><i class="mdi-action-stars large"></i></p>
+                    <div class="card-content light-blue white-text">
+                        <p class="card-stats-title center"><i class="mdi-action-assessment large"></i></p>
                         <h5 class="center">Site Ranking</h5>
                     </div>
-                    <div class="card-action amber darken-2 white-text">
+                    <div class="card-action light-blue darken-2 white-text">
                         <h4 class="card-stats-number center"><?php 
                         echo strtoupper(get_site_rank($rank[0]->rank)) . "</h4>";
                         ?>
@@ -121,11 +121,11 @@
 
              <div class="col s12 m4 l4">
                 <div class="card">
-                    <div class="card-content amber white-text">
-                        <p class="card-stats-title center"><i class="mdi-action-stars large"></i></p>
+                    <div class="card-content cyan white-text">
+                        <p class="card-stats-title center"><i class="mdi-action-receipt large"></i></p>
                         <h5 class="center">Site Result</h5>
                     </div>
-                    <div class="card-action amber darken-2 white-text">
+                    <div class="card-action cyan darken-2 white-text">
                         <h5 class="card-stats-number center"><?php 
                         $temp_result = '';
                         if(strtoupper(get_site_rank($rank[0]->rank)) == 'A'){
@@ -146,11 +146,11 @@
 
              <div class="col s12 m4 l4">
                 <div class="card">
-                    <div class="card-content amber white-text">
-                        <p class="card-stats-title center"><i class="mdi-action-stars large"></i></p>
+                    <div class="card-content teal white-text">
+                        <p class="card-stats-title center"><i class="mdi-action-home large"></i></p>
                         <h5 class="center">Facility Size</h5>
                     </div>
-                    <div class="card-action amber darken-2 white-text">
+                    <div class="card-action teal darken-2 white-text">
                         <h4 class="card-stats-number center"><?php 
                      
 
@@ -266,7 +266,41 @@
                                             // echo "<td><button class='btn btn-floating'></button></td>";
                                             echo "<td>";
                                             if($audit->status == 2){
-                                                echo "<a href='$report_url' class='btn green btn-floating tooltipped' data-position='bottom' data-delay='50' data-tooltip='Report'><i class='mdi-action-assignment'></i></a>";
+                                                echo "<a href='#$audit->id' class='modal-trigger btn green btn-floating tooltipped' data-position='bottom' data-delay='50' data-tooltip='Report'><i class='mdi-action-assignment'></i></a>";
+                                                // echo"<a href='#$audit->id' class='modal-trigger'><button class='btn btn-floating small green'><i class='mdi-action-assignment'></i>View Report</button></a>";
+                                    // <!-- Modal Structure -->
+                                     echo '<div id='.$audit->id.' class="modal modal-fixed-footer" style="width:33%;height:50%">
+                                        <div class="white-text teal center" style="top:0;border-bottom: 1px solid rgba(0, 0, 0, 0.1);padding:10px;">
+                                            <p style="font-weight: 300;">Audit Report Options</p>
+                                        </div>
+                                        <div class="modal-content">
+                                            <div class="row" style="margin-bottom:5px">
+                                                <div class="col s12">
+                                                    <button id="img" value="0" style="width:50%" class="active btn green left">Without Images</button>
+                                                    <button id="img" value="1" style="width:50%" class="btn grey">With Images</button>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col s12" style="margin-bottom:15px">
+                                                    <button id="vio" value="0" style="width:50%" class="active btn blue left">Violations Only</button>
+                                                    <button id="vio" value="1" style="width:50%" class="btn grey">Complete</button>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col s6">
+                                                    <p>Send Email to Client</p>
+                                                </div>
+                                                <div class="col s6">
+                                                    <button id="email" value="0" style="width:50%" class="active btn indigo left">Yes</button>
+                                                    <button id="email" value="1" style="width:50%" class="btn grey">No</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                         <div class="modal-footer">
+                                             <a href="#!" id="submit_report" data-audit-id="'.$audit->id.'" class="waves-effect white-text blue btn-flat modal-action">Submit</a>
+                                             <a href="#!" style="margin-left:5px;" class="waves-effect white-text amber btn-flat modal-action modal-close">Close</a>
+                                         </div>
+                                       </div></td>';
                                             }else{
                                                 echo"<a href='$temp_url' class='btn btn-floating small amber tooltipped' data-position='bottom' data-delay='50' data-tooltip='Launch'><i class='mdi-action-assignment'></i></a>";
                                             }

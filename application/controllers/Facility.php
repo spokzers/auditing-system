@@ -136,6 +136,7 @@ class Facility extends CI_Controller {
 		$this->load->view('base');
 		$this->load->view('facility_view', $data);
 		$this->load->view('footer');
+		$this->load->view('audit_view_js');
 	}
 
 	public function update($id){
