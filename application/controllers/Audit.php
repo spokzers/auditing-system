@@ -44,7 +44,7 @@ class Audit extends CI_Controller {
 		$this->load->view('base');
 		$this->load->view('audit_view', $data);
 		$this->load->view('footer');
-		$this->load->view('audit_view_js', $data);
+		$this->load->view('audit_view_js');
 	}
 
 	public function create(){
