@@ -19,7 +19,7 @@ class Pdf_tc extends TCPDF
 
     public function Footer()
     {
-    	$this->SetFont('aefurat', '', 18);
+    	// $this->SetFont('aefurat', '', 18);
     	$html = '<table style="font-size:10px;padding:5px;margin-bottom:50%;text-align: center;border: 1px solid black;border-collapse: collapse;">
             <tr>
                 <td style="border: 1px solid black;border-collapse: collapse;background-color:orange;">EPIC Address</td>

@@ -4,20 +4,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 class Tc_pdf extends CI_Controller {
 
 	public function create_pdf($id) {
-		    //============================================================+
-		    // File name   : example_001.php
-		    //
-		    // Description : Example 001 for TCPDF class
-		    //               Default Header and Footer
-		    //
-		    // Author: Muhammad Saqlain Arif
-		    //
-		    // (c) Copyright:
-		    //               Muhammad Saqlain Arif
-		    //               PHP Latest Tutorials
-		    //               http://www.phplatesttutorials.com/
-		    //               saqlain.sial@gmail.com
-		    //============================================================+
 		    $audit = $this->crud->get_row_by_parameter('audits','id',$id);
 			$facility = $this->crud->get_row_by_parameter('facilities','id',$audit[0]->id_facility);
 			$num_audit = $this->crud->get_row_count_by_parameter('audits','id_facility',$audit[0]->id_facility);
@@ -58,10 +44,10 @@ class Tc_pdf extends CI_Controller {
 
 		    // set document information
 		    $pdf->SetCreator(PDF_CREATOR);
-		    $pdf->SetAuthor('Muhammad Saqlain Arif');
-		    $pdf->SetTitle('TCPDF Example 001');
-		    $pdf->SetSubject('TCPDF Tutorial');
-		    $pdf->SetKeywords('TCPDF, PDF, example, test, guide');
+		    $pdf->SetAuthor('');
+		    $pdf->SetTitle('Audit Report');
+		    $pdf->SetSubject('Audit Report');
+		    $pdf->SetKeywords('');
 
 		    // set default header data
 		    // $pdf->SetHeaderData(PDF_HEADER_LOGO, PDF_HEADER_LOGO_WIDTH, PDF_HEADER_TITLE.' 001', PDF_HEADER_STRING, array(0,64,255), array(0,64,128));
@@ -100,25 +86,13 @@ class Tc_pdf extends CI_Controller {
 		    // dejavusans is a UTF-8 Unicode font, if you only need to
 		    // print standard ASCII chars, you can use core fonts like
 		    // helvetica or times to reduce file size.
-		    // $pdf->SetFont('dejavusans', '', 14, '', true);
+		    $pdf->SetFont('dejavusans', '', 14, '', true);
 		    // $pdf->SetFont('aealarabiya', '', 18);
-		    $pdf->SetFont('aefurat', '', 18, '' , true);
+		    // $pdf->SetFont('aefurat', '', 18, '' , true);
 
 		    // Add a page
 		    // This method has several options, check the source code documentation for more information.
 		    $pdf->AddPage();
-
-		    // set text shadow effect
-		    // $pdf->setTextShadow(array('enabled'=>true, 'depth_w'=>0.2, 'depth_h'=>0.2, 'color'=>array(196,196,196), 'opacity'=>1, 'blend_mode'=>'Normal'));
-
-		    // Set some content to print
-// 		    $html = <<<EOD
-// 		    <h1>Welcome to <a href="http://www.tcpdf.org" style="text-decoration:none;background-color:#CC0000;color:black;">&nbsp;<span style="color:black;">TC</span><span style="color:white;">PDF</span>&nbsp;</a>!</h1>
-// 		    <i>This is the first example of TCPDF library.</i>
-// 		    <p>This text is printed using the <i>writeHTMLCell()</i> method but you can also use: <i>Multicell(), writeHTML(), Write(), Cell() and Text()</i>.</p>
-// 		    <p>Please check the source code documentation and other examples for further information.</p>
-
-// EOD;
 
 			$html = $this->load->view('audit_report_template', $data, true);
 			// echo $html;
@@ -133,7 +107,7 @@ class Tc_pdf extends CI_Controller {
 
 		    // Close and output PDF document
 		    // This method has several options, check the source code documentation for more information.
-		    $pdf->Output('example_001.pdf', 'I');
+		    $pdf->Output('Audit Report', 'I');
 
     }
 }

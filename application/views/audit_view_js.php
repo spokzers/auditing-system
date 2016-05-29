@@ -42,8 +42,8 @@ $('a#submit_report').click(function() {
 
         console.log(data);
 
-        // var url = "<?php echo base_url(); ?>index.php/pdfdom/test_audit_report/" + audit_id + "?img=" + img +"&vio=" + vio + "&email=" + email;
-        var url = "<?php echo base_url(); ?>index.php/pdfdom/audit_report/" + audit_id;
+        var url = "<?php echo base_url(); ?>index.php/pdfdom/audit_report/" + audit_id + "?img=" + img +"&vio=" + vio + "&email=" + email;
+        // var url = "<?php echo base_url(); ?>index.php/pdfdom/audit_report/" + audit_id;
         console.log("url: " + url);
 
         window.location = url;

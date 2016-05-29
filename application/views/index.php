@@ -430,34 +430,44 @@
                             echo "<td><a href='$audit_launch_url' class='amber white-text' style='padding:10px;'>Launch</a></td>";
                         }
                         elseif ($audit->status == 2) {
+                        echo "<td>";
                             // $report_url
                             //#$audit->id
-                            echo "<td><a href='$report_url' class='blue white-text' style='padding:10px;'>Report</a></td>";
-                             // <!-- Modal Structure -->
-                            $report_url = base_url()."index.php/pdfdom/audit_report/".$audit->id;
-                                    echo "<div id='$audit->id' class='modal modal-fixed-footer'>
-                                         <div class='modal-content'>
-                                                <div>
-                                                    <div><div id='withImg' class='btn waves-effect orange'>With Images</div></div> <br>
-                                                    <div><div id='withoutImg' class='btn waves-effect yellow'>Without Images</div></div><br>
+                            echo"<a href='#$audit->id' class='modal-trigger green white-text' style='padding:10px'>Report</a>";
+                                    // <!-- Modal Structure -->
+                                     echo '<div id='.$audit->id.' class="modal modal-fixed-footer" style="width:33%;height:50%">
+                                        <div class="white-text teal center" style="top:0;border-bottom: 1px solid rgba(0, 0, 0, 0.1);padding:10px;">
+                                            <p style="font-weight: 300;">Audit Report Options</p>
+                                        </div>
+                                        <div class="modal-content">
+                                            <div class="row" style="margin-bottom:5px">
+                                                <div class="col s12">
+                                                    <button id="img" value="0" style="width:50%" class="active btn green left">Without Images</button>
+                                                    <button id="img" value="1" style="width:50%" class="btn grey">With Images</button>
                                                 </div>
-                                                  <div>
-                                                    <div><div id='withVio' class='btn waves-effect teal'>Violations Only</div></div><br>
-                                                    <div><div id='withoutVio' class='btn waves-effect purple'>Complete</div></div><br>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col s12" style="margin-bottom:15px">
+                                                    <button id="vio" value="0" style="width:50%" class="active btn blue left">Violations Only</button>
+                                                    <button id="vio" value="1" style="width:50%" class="btn grey">Complete</button>
                                                 </div>
-                                                <div>
-                                                    <p>Send Email To Client</p>
-                                                    <div><div id='withCli' class='btn waves-effect red'>Yes</div></div><br>
-                                                    <div><div id='withoutCli' class='btn waves-effect pink'>No</div></div><br>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col s6">
+                                                    <p>Send Email to Client</p>
                                                 </div>
+                                                <div class="col s6">
+                                                    <button id="email" value="0" style="width:50%" class="active btn indigo left">Yes</button>
+                                                    <button id="email" value="1" style="width:50%" class="btn grey">No</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                         <div class="modal-footer">
+                                             <a href="#!" id="submit_report" data-audit-id="'.$audit->id.'" class="waves-effect white-text blue btn-flat modal-action modal-close">Submit</a>
+                                             <a href="#!" style="margin-left:5px;" class="waves-effect white-text amber btn-flat modal-action modal-close">Close</a>
                                          </div>
-                                         <div class='modal-footer'>
-                                             <a href='$report_url' class='waves-effect waves-green btn-flat modal-action modal-close'>Submit</a>
-                                             <a href='#' class='waves-effect waves-green btn-flat modal-action modal-close'>Close</a>
-                                         </div>
-                                       </div>"; 
-                        }
-                        else {
+                                       </div></td>';
+                        } else {
                             echo "<td><a href='#!' class='red white-text' style='padding:10px;'>Undefined</a></td>";
                         }
                     echo "</tr>";
