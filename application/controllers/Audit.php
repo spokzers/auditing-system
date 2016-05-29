@@ -89,10 +89,12 @@ class Audit extends CI_Controller {
 		$submit = 'Schedule';
 		$inspectors = $this->crud->get_row_by_parameter('userprofiles', 'designation', 2);
 		$facilities = $this->crud->get_columns('facilities', 'id, name');
+		$checklists = $this->crud->get_columns('checklists', 'id, title');
 		$data = array(
 			'penalty' => get_empty_model('audits'),
 			'inspectors' => $inspectors,
 			'facilities' => $facilities,
+			'checklists' => $checklists,
 			'heading' => $heading,
 			'url' => $url,
 			'submit' => $submit
@@ -191,6 +193,7 @@ class Audit extends CI_Controller {
 		);
 		$this->load->view('base');
 		$this->load->view('audit_template', $data);
+		$this->load->view('signature');
 		$this->load->view('audit_template_js',  $data);
 		$this->load->view('footer');
 	}
@@ -272,6 +275,23 @@ class Audit extends CI_Controller {
 		}
 		// var_dump($this->input->post());
 		echo "Success! Viola!";
+	}
+
+	public function importfile(){
+		$this->load->helper('file');
+		$string = read_file('final.txt');
+		$string = explode("\n", $string);
+
+		for ($i=0; $i < count($string); $i++) { 
+			$temp = explode(",", $string[$i]); 
+			$id =  $temp[0];
+			$val =  $temp[1];
+			$data = array(
+				"statement" => $val,
+			);
+			$this->crud->update('questions', 'id', $id, $data);
+		}
+		
 	}
 
 	public function insert_violation(){

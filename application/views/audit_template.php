@@ -269,7 +269,14 @@
                 <textarea placeholder="Type any comments if any" class='materialize-textarea comments'></textarea>
                 <p>Penalty Deadline</p>
                 <input class='datepicker deadline'  placeholder="Penalty Deadline Date" type="date"></input>
+                   
             </div>
+               <div>
+                            <p>Client Signature</p>
+                            <button class="btn" onclick="reset_signature()" type="button">Reset Signature</button>
+                            <div id="signature"></div>
+                            <input class="file-path validate" style="display: none;" name='sign' type="text">
+                        </div>
                 <button class="btn blue right" id="submitScore">Submit Result</button>
             </div>
            
