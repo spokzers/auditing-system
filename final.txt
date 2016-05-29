@@ -1,112 +1,164 @@
-238,Operate the facility with license issues by Government - تشغيل المنشأة من دون ترخيص ممنوح من قبل الهيئة الملكية
-239,Last (Previous) health Inspection Report available. - تقرير التفتيش السابق متوفر
-240,Business activity is as per the license and not outside allocated premises - المهام مطابقة للنشاط الموضح بالرخصة و ضمن المساحة المعطى
-241,Worksite is as per the space allocation - مساحة العمل مطابق لكمية العمل
-242,Any other - أي شيء أخر
-243,Water used in all operation is of potable and approved quality. - الماء المستخدم في جميع العمليات صالح للشرب و بجودة عالية
-244,Hot/Cold water available in taps. - ماء حار- دافئ متوفر في الحنفيات
-245,Only correctly identified animals with all relevant documentation are accepted for slaughter or processing - فقط لحوم معروفة و موافق عليها،  و كل المستندات المتعلقة بها موجودة
-246,Animal health restrictions in disease control area are implemented by slaughterhouse  operator - ضوابط سلامة الحيوانات للسيطرة على الأمراض مطبقة في المسالخ
-247,Slaughterhouse operators transporting meat ensure suitable crates/modules are used. All equipment used for collecting/delivery are cleaned  washed and disinfected immediately after use and if necessary before re-use. - عند نقل الحيوانات المذبوحة، على مشغل المسالخ التأكد من كون السلال و الأدوات المستخدمة بحالة جيدة، سلال و أدوات النقل و التجميع نظيفة، مغسولة و معقمة بعد الإستخدام و قبل افستخدام إن لزم
-248,Cleansing and disinfection of livestock vehicles is done by slaughterhouse operator - تنظيف و تعقيم عربات نقل المواشي يتم عن طريق مشغل المسالخ
-249,Standard operating procedures  (SOPs) for killing and related operations in slaughterhouses are developed  implemented and maintained - لكل العمليات اللمتعلقة بالذبح و كافة العمليات الأخرى في المسلخ ، توجد لها إجرائات تشغبل معيارية موجودة و مطبقة بشكل صحيح
-250,Structures of the building safeguard animal welfare (adverse weather protection  adequate ventilation) - البناء مصمم لصون حياة الحيوان (من جهة المناخ و التهوية)
-251,Adequate unloading facilities are available (suitable ramps  containing rails  isolation pens) - تجهيزات تنزيل مناسبة متوفرة في المسلخ (كالرمبات، السكك و الزريبة)
-252,Restraining facilities and equipment are adequately designed  constructed and maintained  (including shackle lines) - ادوات تقييد الحيوانات مصممة بشكل جيد، بما في ذلك سير التعليق
-253,Restraining procedures ensure welfare of animals is protected. - القيود مصممة بطريقة لحفظ حقوق الحيوانات حسب التشريع الإسلامي
-254,Place where animals have  to be slaughtered is clean based on  HACCP procedures to avoid contamination of carcasses from dirty animals - أماكن ذبح الحيوانت نظيفة طبقا لنظام الهاسب، بهدف منع تلوث الحيوانات المذبوحة بالأخرى المتسخة
-255,All handling and processes from slaughtering to dispatch are done in a way that avoids the contamination of meat and offal entering the food chain - كل العمليات في المسلخ مصممة لمنع تلوث اللحم و منع دخول الفضلات بسلسلة تنقل اللحوم
-256,Any visible contamination removed without delay by trimming or alternative means having an equivalent effect - اي تلوث على اللحوم يزال بالقطع من دو تأخر أو اي إجراء مكافىء له نفس المفعول
-257,Where relevant  all edible co-products are handled hygienically and subject to relevant controls (including raw materials intended for further processing) - كل المواد الصالحة للأكل يتم التعامل معها بطريقة نظيفة و تحت السيطرة (يتضمن ذلك اللحم النيئ المستخدمة في مراحل لاحقة)
-258,Slaughtering in traditional kitchens - هل المسلخ في مطبخ تقليدي
-259,Any other - أي شيء أخر
-260,Carcass and offal are chilled  stored and received within the required temperatures and in a manner that avoids cross – contamination - جثث الحيوانات المذبوحة مبردة، مخزنة و مسلمة بدرجات حرارة صحيحة، و كل ذلك يتم بطريقة سليمة لمنع التلوث التبادلي
-261,All products have Health Mark  Identification Mark or approval mark  stamp or food card as appropriate - جميع المنتجات ذات مظهر طازج،بطاقات التعريف و أختام الموافقة واضحة،
-262,There is no sign of any rotten  expired meat item. - لا يوجد علامات فساد، تلف أو إنتهاء صلاحية منتج من اللحوم
-263,Any other - أي شيء أخر
-264,The temperature of all cold items is less than 5°C - كل البرادات على درجة حرارة اقل من 5م
-265,Temperature of refrigerator is not higher than 5°C   ±10 C - درجات البرادات على النحو التالي
-266,Temperature of freezer is not higher than -18°C   ± 20 C - 5°C   ±1 C
-267,Thermometer is in use and calibrated correctly - درجات الثلاجات على النحو التالي
-268,Any other - -18°C   ± 2 C
-269,Chemicals are properly labeled and stored - مقياس الحرارة مستخدم و معاير
-270,Chemical is not stored in food container - أي شيء أخر
-271,Food is not stored in chemical container - الكيماويات معرفة ببطاقة و مخزنة بشكل سليم
-272,Chemicals are stored away from food items  food preparation area and food contact surfaces. - الكيماويات ليست مخزنة في حاويات أو علب الطعام
-273,Any other - مواد الغذائية ليست مخزنة بحاويات أو علب المواد الكيميائية
-274,Legal temperature controls are maintained throughout the process from intake to dispatch for all products - الكيماويات مخزنة بعيداً عن المواد الغزائية و أماكن تصنيع الغذاء
-275,Frozen or chilled meat (Not Fresh) is being sold as fresh meat. - أي شيء أخر
-276,All equipment & tools are stored in proper place and no equipment or tool is rusty - تطبيق صحيح لدرجات الحرارة القانونية من مرحلة اللإستلام الى مرحلة تسليم المنتج
-277,Single use consumables including paper towels are not used again. - يباع اللحم المبرد أو المثلج (ليس طازج) على أنه لحم طازج
-278,Controls are in place to ensure that risk of cross contamination is minimized  prevented or reduced to acceptable levels during operation and appropriate action taken should contamination occur - كل مواد التحضير مخزنة بشلكل جيد و الأدوات جيدة و لا علامات صدأ
-279,Only permitted raw materials  including water and other ingredients  are used - المواد المستخدمة لمرة واحدة كالمناديل لا تستخدم مرتين
-280,Wrapping and Packaging materials are not a source of contamination  stored and handled in such a way that product contamination is avoided - الإجرائات متوفرة لمنع التلوث بلإنتقال و منع أو تقليل المخاطر لدرجة مقبولة أثناء العمل و غجرائات موجودة للتصحيح في حال ظهور تلوث
-281,Re-usable wrapping and packaging materials for foodstuffs are easy to clean and disinfect and are clean at point of use - فقط مواد مصرَحة بما في ذلك المياه مستخدمة في تحضير الغذاء
-282,Meat items are not directly stored on the floor. - مواد اللف و التغليف ليست مصدر للتلوث، و مخزنة بطريقة تمنع تلوث الغذاء
-283,Mincing machine is cleaned after use - مواد التغليف و اللف المتعددة الإستخدام نظيفة و معقمة عند الإستخدام
-284,No open meat is not left exposed and is in temperature controlled area. - عدم وضع اللحوم على الأرض مباشرة
-285,If required  defrosting/thawing is done properly and meat is not refrozen after thawing - مكائن الفرم تغسل بشكل جيد بعد الإستخدام
-286,Labeling of chilled or frozen meat and also the products that require cooking before eating complies with the legislation - لا يوجد لحم مكشوف، كل اللحوم في أمكنة مبردة
-287,Heading  gutting and filleting are carried out hygienically - عند الحاجة، يذاب اللحم بطريقة سليمة، و يمنع منعا باتاَ إعادة التثليج
-288,Products susceptible to parasite infestation are subject to the required temperature treatment - بطاقة التعليمات على اللحوم المثلجة و المبردة صحيحة، و اللحوم المحتاجة لطبخ قبل الأكل مطابقة لقوانين الهيئة الملكيه
-289,Health standards criteria for fishery products are met (e.g. organoleptic  histamine  TVN  parasite and toxins harmful to human health) - قطع الرأس، إزالة الأحشاء و صنع الشرائح يتم بطريقة سليمة و نظيفة
-290,Any other - المواد مشتبه تواجد طفيليات بها يجب أن تعالج بدرجات حرارة مطلوبة
-291,There is no sign of flies  insects  rodents or cockroaches or any other pest. - الشروط الصحية لمنتجات الأسماك مطبقة (مثل الشكل المظهري و الرائحة، الهيستامين،التي في إن، الطفيليات و السموم المؤثرة على صحة الإنسان)
-292,Pest controller is approved - أي شيء أخر
-293,Last two pest controlled reports are available for inspection - لا علامات تواجد ذباب، صراصير، قوارض، أو أي آفة اخرى
-294,Fly killers are installed in appropriate location and numbers - شركة مكافحة الحشرات موافق عليها من قبل الهيئة الملكية
-295,All fly killers are clean and tray is not full - التقريرين الماضيين لمكافخة الحشرات متوفرين
-296,Any other - مصائد الحشرات موضوعة بأماكن مناسبة و مرقمة
-297,All the walls  doors  ceilings  exhaust fans  fixtures and lights are clean with no buildup - كل مصائد الحشرات نظيفة و الصينية غير ممتلئة
-298,There are no broken floor tiles or ceiling tiles - أي شيء أخر
-299,All walls are in good condition and not in need of repair or painting - كل الجدران، الأبواب، السقف، شفاطات الهواء، اجهزة الإضائة نظيفة و لا يوجد عليها طبقات تكدس أوساخ
-300,There is no damage to any furniture or fixtures - لا يوجد سيراميك، برصلان، أو بلاط مكسر في الأرض ، السقف او الجدران
-301,All the Hoods and vents clean and free of buildup  rust or mold - كل الجدران بحالة جيدة ولا تحتاج صيانة
-302,There is sufficient light and all light guards are in place - لا كسور في  الثأثيث أو التركيبات
-303,Trash bins are not overflowing and waste segregation is in place - كل مراوح الشفط نظيفة من دون تكدس أوساخ، صدأ أو عفن
-304,Liquid waste is disposed of properly - توجد إضائة كافية، و كل لمبات الإضائة محمية
-305,There is no leakage or over flowing drain in the facility - حاويات القمامة  غير فائضة
-306,Ventilation or air conditioning does not contribute towards increased risk of employee hygiene - القمامة في اماكنها المخصصة
-307,Air curtains are installed on the door - التخلص من النفايات السائلة بطريقة صحيحة
-308,All windows have mesh or glass appropriate as per RC rules - لا تسرب و لا مصارف فائضة
-309,Any Other - أماكن التهوية و التبريد لا تزيد من الخطر على نظافة العاملين
-310,Sufficient waste containers are present  provided with lid  have plastic bags (liner) and are clean  intact and foot operated - ستائر هوائية مركبة على البواب
-311,Waste is collected  stored properly and disposed off timely - كل النوافذ لها شبك أو زجاج تبعا لقوانين الهيئة الملكية
-312,Floors are not dirty or smelly and there is no waste on the floor - أي شيء أخر
-313,Drains are not smelly - كمية حاويات النفايات كافية،مع غطاء،داخلها كيس بلاستيك (بربطة) و نظيفة،سليمة و تفتح بالقدم
-314,Wash rooms are clean  good ventilation  no foul smell  soap available and well maintained - النفايات تجمع،تخزن بشكل سليم، و يتخلص منها باوقات مجدولة
-315,Chillers  Freezer gaskets  shelves are clean and without any mold - الأرضيات نظيفة، لا توجد لها رائحة، ولا يوجد أوساخ على الأرضيات
-316,Mop buckets are clean and there is no standing water - لا توجد رائحة للمصارف
-317,Any other - الحمامات نظيفة، بتهوية جيدة، بدون رائحة سيئة، الصابون متوفر، و يتم الإعتناء بها بشكل جيد
-318,Criteria Description - البرادات و الثلاجات، الأرفف نظيفة دون وجود عفن
-319,Auditor Choice - ممسحة الأراضي نظيفة، لايوجد مياه على الأرض
-320,Pre-Defined - أي شيء أخر
-321,Yes - المعايير
-322,No - إختيار المدقق
-323,NA - التقييم
-324,Severity Value - نعم
-325,(H=5  M=3 L=1) - لا
-326,Hand washing is done after wiping hands on apron  handling trash  sneezing  coughing  touching face/hair/skin  eating drinking  after breaks  after handling dirty dishes or equipment  after cleaning tasks  before starting shift  before putting on glo - غير قابل للتطبيق
-327,Every worker washes hands using soap for at least 20 seconds - قيمة الخطورة
-328,There is a dedicated hand wash sink present - (ع=5  مت=3 من=1)
-329,Equipment is not Washed in hand wash sink - تم غسل اليدين بعد مسحهما على المريلة، التعامل مع النفايات، لمس الأنف\الفم\ الجلد،الأكل أو الشرب، بعد فترة الراحة، مسك أواني متسخة، بعد تنظيف، قبل العمل ، قبل وضع القفازات و بعد إستخدام المرحاض
-330,Soap and tissue dispenser is available at hand sink and are not empty - كل عامل يغسل يديه بستخدام الصابون بمدة لا تقل عن 20 ثانية
-331,All workers Attends Training course in environmental health - يوجد مغاسل يدين مخصصة داخل المخبز
-332,Hand wash sign is posted on hand wash sink  visible and clean - الأدوات لا تغسل في أماكن غسل اليدين
-333,Workers are wearing clean clothes  clean apron  hair net  beard mask and safety Shoes - موزع أتوماتيكي للمناديل و الصابون موجود عند المغاسل و غير فارغ
-334,Worker is ill and working - تعليمات غسيل اليدين معلقة بالقرب من المغسلة، واضحة و نظيفة
-335,Sanitizer for food contact surfaces is available and in proper concentration - العمال يرتدون ملابس نظيفة، مريلة نظيفة، غطاء للرأس، غطاء للذقن، و أحذية سلامة
-336,Workers wear uniforms - هل يوجد عامل مريض في المخبز؟
-337,There is no eating/drinking and no evidence of eating/drinking observed in areas that are not designated for eating/drinking - معقم لأسطح تحضير الأغذية متوفر بتركيز صحيح
-338,There is no smoking and no evidence of smoking observed in food service area - العمال يرتدون زي موحد
-339,There is no jewelry worn by food handlers - لا أكل أو شرب، أو اثار اكل أو شرب في اماكن غير مخصصة للأكل و الشرب
-340,There is no sign of any cross contamination - لا تدخين، ولا اثار تدخين في مناطق تحضير و تقديم الأغذية
-341,Any other - لا يرتدي عمال تحضير الأغذية المجوهرات
-342,Delaying the inspection  inspector entrance or no cooperation  not allowed to enter or any other misconduct - تعليمات غسيل اليدين معلقة بالقرب من المغسلة، واضحة و نظيفة
-343,Staff has valid medical Report. - لا أثار تلوث تبادلي
-344,Staff is already trained - أي شيء أخر
-345,Shop is used for noncommercial purpose or activity not in the license  for staff sleeping or for staff residence or staff is cooking food and eating - تأخير التفتيش، دخول المفتش، عدم التعاون، عدم السماح بالدخول أو أي إسائة تصرف
-346,Disengagement seals and re-open the shop before the end of the penalty decided by the closure of the municipality - العمال لديهم شهادات صحية سارية المفعول
-347,Owners or supervisors helps violated workers for escape - العمال تم تدريبهم
-348,Not observing the Islamic provisions and rules of slaughtering - المحل يقوم بنشاط غير تجاري أو غير مرخص، منامة للعمال داخل المحل، طبخ و أكل  للعمال داخل المحل،
-349,Any other - إزالة ختم الإغلاق و أعادة فتح المحل قبل نهاية العقوبة المفروضة من قبل الهيئة الملكية
+764,Operate the facility with license issues by Government - تشغيل المنشاة برخصة تصدرها السلطات الحكومية
+765,Last (Previous) health Inspection Report available. - أخر تقرير فحص صحي متاح
+766,Business activity is as per the license and not outside allocated premises - النشاط التجاري طبقاً للرخصة داخل حدود العقار المخصص
+767,Worksite is as per the space allocation - مكان العمل كما ورد في تخصيصالعمل
+768,Purchasing - هل توجد قائمة الموردين المصدق عليهم وهل يتم الالتزام بها؟
+769,Is a approved supplier list available and being adhered to? - استلام البضائع
+770,Receipt of Goods - هل يتم استلام الطعام في درجات حرارة مناسبة وهل توجد الوثائق الخااصة بذلك؟
+771,Is food received at proper temperatures and documentation present? - هل ييتم استلام عبوات الطعام  في حالة جيدة؟
+772,Are food packages received in good condition? - هل السائقين والشاحنات التي تجلب الطعام للمنشاة مناسبة وتخضع لصيانة دورية ونظيفة؟
+773,Are the vehicles and drivers bringing food materials to the premises  suitable  well maintained and clean? - هل انتهى تاريخ الصلاحية والإضل استخدام ام لا؟
+774,Is expiry date or best before date valid and not void? - هل الطعام المبرد يحفظ بدرجة حرارة أقل من 5 مئوية او 41 فهرنهايت؟
+775,Is chilled food stored below  5°C/41°F? - هل يحفظ الطعام النيء بعيداً عن او أسفل من الطعام الجاهز للاكل داخل الثلاجة؟
+776,Are raw foods stored away or below ready to eat foods inside the fridge? - هل يخزن الطعام المجمد اقل من -18 مئوية او 0 فهرنهايت؟
+777,Is frozen food stored at below -18°C/0°F? - هل يتم تغطية الطعام المخزن؟
+778,Is food stored covered? - هل يخزن الطعام في مستوى مرتفع عن الارض وبعيدا عن الحوائط؟
+779,Is food stored above the floor and away from the walls? - هل يتم الفصل بين الطعام والمواد الكيمائية بشكل مناسب؟
+780,Are food and chemicals adequately segregated? - ? هل يوجد أي أثر لدرجات حرارة غير مناسبة للغذاء؟
+781,Any sign of temperture abuse in food? - هل يتم رص رص حاويات الطعام بشكل غير صحيح؟
+782,Are food containers stacked incorrectly? - هل يخزن الطعام في منطاق ليست مخصصة كغرف للطعام؟
+783,Is food being stored in areas which are not designated food rooms? - هل يتم استخدام حاويات الطعام فقط لتخزين الطعام؟
+784,Are food containers  used solely to store food? - هل درجة الحرارة والحموضة مناسبة عندما يكون المتجر جافا؟ مثال     درجة الحرارة = 20-25 مئوية - درجة الحموضة =<65%
+785,Is temperature and RH of dry store is appropriate i.e.  T= 20-25 C and RH=<65% - هل توجد رفوف التخزين في مستوى مرتفع عن الأرض وبعيدا عن الجدران؟  المسافة المعيارية = >15 cm
+786,Are storage racks or pallats are above the floor and away from walls? Std= >15 cm - هل العبوات والصناديق ووسائل التعبئة الاخرى بحالة جيدة، وهل يتم الفصل بين بين المنتجات التالفة والمرتجعة؟
+787,Are cans  boxes and other packagings in good condition  damaged/recalled products segregated? - هل يتم تقييم غذائي لكل حاويات الطعام؟
+788,Are all food contaniers food graded? - هل يتم استخدام مقياس الحرارة للتحقق بالطريقة المعيارية؟
+789,Is usage of probe thermometer as per standard? - هل يتم معايرة مقياس الحرارةالخاص بالفحص؟
+790,Is probe thermometer being caliberated? - هل يتم تنظيف وتعقيم مقياس الحرارة الخاص بالفحص قبل وبعد الاستخدام؟
+791,Is probe thermometer been cleaned and sanitized between and before use? - هل يتاح المناديل المعقمة أو أي وسيلة أخرى موجودة؟
+792,Are Sanitiser wipes available or alternative method demonstrated? - هل يتم تدوير المخزون بمبدأ الوارد أولا يخرج اولا؟
+793,Is stock being rotated as per FIFO principle? - هل الطعام مازال ساري الصلاحية أو صالح للإستخدام؟
+794,Is food within  'use by' or 'best before' date? - هل يتم تسمية الطعام بشكل صحيح؟
+795,Is food being  labelled or Relabelled correctly? - هل يوجد أي طعام غير ملائم في المتجر؟
+796,Is there any unfit food in store? - اعداد الطعام
+797,Are any chilled foods being held above 8'C / 46 F for excessive periods of time in the kitchen? - هل يوجد أي طعام مجمد محفوظ في درجة أعلى من 8 مئوية أو 46 فهرنهايت لمدد طويلة في المطبخ؟
+798,Are raw salad leaves  herbs   fruits and vegetables thoroughly washed and sanitised prior to use? - هل يتم غسل الفواكه والأعشاب والخضروات الورقية بشكل جيد وتعقيمها قبل الاستخدام؟
+799,Are chlorine test strips available and being used correctly? - هل تتاح شرائط اختبار الكلور  وتستخدم بشكل صحيح؟
+800,Is ice used as a coolant used as a food ingredient? - هل يستخدم ثلج التبريد كمكون في الغذاء؟
+801,Are raw  whole shell eggs being pooled? - هل يتم نقع البيض النئ في حمام مائي؟
+802,Are colour coded chopping boards available? - هل توجد ألواح للتقطيع بألوان مختلفة لكل صنف؟
+803,Is there adequate separation of chopping boards? - هل يتم الفصل بين ألواح التقطيع بشكل ملائم؟
+804,Are kitchen team members able to explain the different uses for the different colour boards adequately? - هل يستطيع فريق العمل في المطبخ شرح الاستخدامات المختلفة لألواح التقطيع بألوانها المختلفة؟
+805,Is a chopping board stand available  and being used? - هل يوجد حامل لألواح التقطيع وهل يتم استخدامه؟
+806,Are colour coded knives  available? - هل توجد سكاكين بلون محدد لكل صنف؟
+807,Are colour coded knives being used correctly? - هل يتم استخدام السكاكين بألوانها بشكل صحيح مع الصنف المخصصة له؟
+808,Are disposable aprons and gloves being worn when handling raw meat? - هل يتم استخدام مآزر وقفازات لمرة واحدة عند التعامل مع اللحوم النيئة؟
+809,Is there adequate separation of preparation areas? - هل يوجد فصل كاف بين مناطق الإعداد؟
+810,Are food preparation and equipment sinks being used for other purposes? - هل يتم استخدام أحواض إعداد الطعام والمعدات لأغراض أخرى؟
+811,Is temperature of preparation area cool? Std= <15'C. - هل يوجد تبريد كاف في منطقة إعداد الطعام؟ الدرجة المثالية   = <15' مئوية
+812,Is there a risks of foreign bodies getting into food? - هل توجد مخاطر من وجود أجسام غريبة في الطعام؟
+813,Is food being  defrosted in a fridge at below 4'C or as per validated method? - هل يتم إذابة الجليد من الطعام في ثلاجة أقل من 4 ئوية كما هو متبع؟
+814,Is defrosted food not refreezed and handled properly? - هل يتم إعادة تجميد الطعام المذاب أو التعمال معه بطريقة صحيحة؟
+815,Is food being  cooked to a safe core temperature i.e.  75oC / 167°F? - "
+816,Is micro waved foods cooked uniformely to a minimum of 75oC/ 167°F - هل يتم طهي الطعام بدرجة حرارة آمنة داخلية 75 مئوية؟
+817,Is reheating done as quickly as possible? - هل يتم طبخ الطعام في الميكروويف بدرجة حرارة لا تقل عن 75 مئوية؟
+818,Products reheated for immediate service reach a minimum of 82C/ 180°F - هل يتم إعادة التسخين باسرع ما يمكن؟
+819,Is oil in good condition and no old oil is used? Oil change record is kept ? - المنتجات المعاد تسخينها للتقديم الفوري تصل لدرجة حرارة 82 مئوية-180 فهرنهايت
+820,Is food being cooled safely? Std= quickly cool at room temperature (< 20 'C) within 90 minutes and below 8 'C within 4 hours - هل الزيت في حالة جيدة ولا يتم استخدام زيوت قديمة؟ وهل يتم الإحتفاظ بسجل لتغيير الزيت؟
+821,Is cooling done safely and procedurely to avoid cross contamination? - التبريد
+822,Is hot food served at >63 'C for not more than 2 Hours? - هل يتم تبريد الطعام بطريقة آمنة؟ الطريقة المعيارية= تبريد سريع في درجة حرارة الغرفة أقل من 20 مئوية خلال 90 دقيقة واقل من 8 مئوية خلال أربع ساعات
+823,Is cold food served at <5 'C for not more than 2 Hours? - هل يتم التبريد بطريقة آمنة وحسب الإجراءات لتجنب التلوث؟
+824,Are all foods covered or well guarded while serving? - هل يقدم الطعام الساخن في درجة حرارة أعلى من 63 مئوية في مدة لا تزيد عن ساعتين؟
+825,Are cleaned and sanitized curtlery provided? - هل يقدم الطعام البارد في درجة حرارة 5 مئوية في مدة لا تزيد عن ساعتين؟
+826,Food Allergen Management - هل يغطي الطعام ويحفظ بشكل جيد خلال التقديم؟
+827,Are allergen products stored separately from non-allergen products? - هل تتوفر أدوات المائدة بشكل نظيف ومعقم؟
+828,Food Handler Awareness about Food Allergens? - هل يتم تخزين المنتجات المسببة للحساسية بشكل منفصل عن المنتجات غير المسببة للحساسية؟
+829,Are Food containing Allergens handled so that it doesn't cause corss contamination? - وعي القائمين على الطعام بشان الطعام المسبب للحساسية؟
+830,Is there any practical way to communicate allergens to consumers? - هل الطعام المسببب للحساسية يتم تخزينه بشكل لا يسبب تلوث بقية الأطعمة؟
+831,Is there hot water (45 'C) at the wash hand basin in kitchen? - هل توجد أي طريقة عملية لنقل مسببات الحساسية للزبائن؟
+832,Is there liquid antibacterial soap and  paper towels at the hand wash basin in the kitchen? - هل يوجد ماء ساخن درجة حرارته فوق 45 مئوية عند حوض غسيل اليدين في المطبخ؟
+833,Are locations and number of wash hand basins  adequate to  promote hand washing? - هل يوجد الصابون السائل  المضاد للبكتيريا  والمناشف الورقية في حوض غسل اليد في المطبخ؟
+834,Are hand washing sinks  being used for other purposes? - هل تكون مواقع وعدد  أحواض غسل اليد مناسبة لتشجيع غسل اليدين؟
+835,Are hand washing facilities dirty? - هل تستخدم أحواض غسل اليدين لأغراض أخرى؟
+836,Are  basins obstructed? - هل تكون احواض غسل اليدين قذرة؟
+837,Are hand free operated faucet are available  if not do food handler observe porper way to close faucet? - هل توجد عوائق عند احواض الغسيل؟
+838,Are all team members wearing clean  company approved uniform including hats? - هل توجد احواض لغسل اليدين لا تحتاج استعمال اليد لغلقها وإذا لم توجد هل يتبع العاملون الطريقة الصحيحة للغلق الصنبور؟
+839,Are all team members adhering to personal hygiene rules on nails? - هل يرتدي جميع اعضاء الفريق زي موحد نظيف متضمنا القبعات؟
+840,Are all team members adhering to personal hygiene rules on Jewellery? - هل يتبع جميع اعضاء الفريق قواعد النظافة الشخصية المتعلقة بالأظافر؟
+841,Are all cuts  sores covered by a non flesh colored  plaster? - هل يتبع جميع اعضاء الفريق قواعد النظافة الشخصية المتعلقة بالحلي والمجوهرات؟
+842,Is there an adequate supply of blue  or bold coloured plasters in the first aid kit? - هل يتم تغطية الجروح والقروح بشريط لاصق مختلف عن لون الجلد؟
+843,Are team members eating  drinking  chewing or smoking in food rooms? - هل هناك إمدادات كافية من االشريط اللاصق الأزرق في عدة الإسعافات الأولية؟
+844,Is effective hand washing being demonstrated by all team members in order to prevent control cross contamination? - هل يتناول الفريق الطعام او يمضغ او يدخن داخل غرف الطعام؟
+845,can two team members demonstrate  correct hand washing technique? - هل يقوم جميع اعضاء الفريق بغسل اليدين للسيطرة على تلوث الطعام؟
+846,Is the correct glove usage procedure in place? - هل يمكن أن يقوم اثنين من أعضاء الفريق بعرض الطريقة الصحيحة لغسل اليدين؟
+847,Are gloves being used safely? - هل يتم استخدام القفاز بطريقة صحيحة حسسب الإجراءات المتبعة؟
+848,Are there any  sick/symptomatic staff at work? - هل يتم استخدام القفازات بطريقة آمنة؟
+849,Are return to work forms being completed for team members who have been off  sick? - هل يوجد أي فرد من الفريق مريض او تظهر عليه علامات المرض خلال العمل؟
+850,Are team members reporting infectious diseases to the management team? - هل يتم استخدام استمارات العودة للعمل لأعضاء الفريق الذين كانوا في إجازة مرضية؟
+851,Are  team members following correct procedure after a team member or guests vomits (or similar) - هل يقوم أعضاء الفريق بالتبليغ عن الامراض المعدية لفريق الإدارة؟
+852,Is the  team members changing area clean and tidy? - هل يتبع أعضاء الفريق  الإجراء الصحيح بعد تقيأ أحد أعضاء الفريق أو الضيوف  (أو ما شابه)؟
+853,Are the  team members toilets clean and tidy? - هل تكون منطقة تغيير الملابس الخاصة بالفريق نظيفة ومرتبة؟
+854,Is there adequate hot water at the wash hand basin in the  team members toilets? - هل تكون المراحيض الخاصة بالفريق نظيفة ومرتبة؟
+855,Is there liquid antibacterial soap at the hand wash basin in the  team members toilets? - هل يتوفر الماء الساخن الكافي في حوض غسل اليد في مراحيض أعضاء الفريق؟
+856,Is there adequate means of hygienic hand drying at the wash hand basin in the  team members toilets? - هل يتوفر الصابون المضاد للبكتيريا السائل في حوض غسل اليد في مراحيض أعضاء الفريق؟
+857,Do any toilets open directly into a  food room? - هل يتوفر وسائل مناسبة لتجفيف اليد بطريقة صحية في حوض غسل اليد في مراحيض أعضاء الفريق؟
+858,Are  food contact surfaces clean? - Do any toilets open directly into a  food room?
+859,Are other hand contact surfaces clean? - هل تكون الأسطح الملامسة للأغذية نظيفة؟
+860,Are the shelves and storage unit clean? - هل تكون الأسطح الاخرى نظيفة؟
+861,Is all equipment including fridge and freezers clean? - هل تكون رفوف وحدة التخزين نظيفة؟
+862,Are the steak flags and the caddies they are stored in  clean? - هل جميع المعدات بما في ذلك الثلاجة والمجمدات نظيفة؟
+863,Are walls floors and wall floor junctions clean? - هل تكون شرائح اللحم والعلب التي يتم تخزينها فيها نظيفة؟
+864,Canopies and filters not clean with debris and grime - هل تكون الجدران والأرضيات وتقاطعات أرضية الجدار نظيفة؟
+865,Are dry storage areas clean? - الستائر والمرشحات ليست نظيفة ومليئة بالأنقاض والأوساخ
+866,Are all utensils clean? - هل تكون مناطق التخزين الجافة نظيفة؟
+867,Is the ice machine  and scoop clean? - هل كل الأدوات نظيفة؟
+868,Is the utensil bath clean? - هل آلة الجليد والمجرفه نظيفة؟
+869,Is the internal Ice Making and Water Tubes clean and in good repair? - هل يكون حوض  الأواني نظيفا؟
+870,Is the magnetic Knife Bar (Magna Bars) clean ? - هل يكون صانع الجليد الداخلي وأنابيب المياه نظيفة وبحالة جيدة؟
+871,Is equipment/utensils air-dried before stacking? - هل يكون حامل السكاكين الممغنط نظيفا؟
+872,Is there a sanitiser bottle/ bucket per station and made to correct dilution? - هل تجفف  المعدات  والأواني في الهواء قبل الرص؟
+873,Is an adequate supply of sanitiser available? - هل توجد مادة معقمة  في زجاجة / دلو بالتركيز الصحيح حسب الإجراءات؟
+874,Is there an adequate supply of sanitising wipes available? - هل تتوفر إمدادات كافية من المطهرات؟
+875,Is an adequate supply of dishwasher detergent and rinse aid available? - هل تتوفر إمدادات كافية من مناديل التعقيم؟
+876,Is the cleaning equipment clean ? - هل تتوفر إمدادات كافية من منظفات غسالة الصحون والمواد المساعدة في الشطف؟
+877,Is the cleaning equipment in good condition and sotred properly and separately? - هل تكون معدات التنظيف نظيفة؟
+878,Dishwashing and Glasswashing machine not operating? - هل تتوفر معدات التنظيف بحالة جيدة، ويتم تخزينها بشكل صحيح وبشكل منفصل؟
+879,Are test strips available? - آلة غسل الأطباق وآلة غسل الزجاج لا تعمل؟
+880,Is the temperature of hot water sanitizing for mechanical equipment is ?82.5’C / 180’F at utensil surface? - هل شرائط الاختبار المتاحة؟
+881,Is the dish machine fully functional? - هل تصل درجة حرارة  الماء الساخن لتعقيم  المعدات الميكانيكية إلى 82 مئوية على سطح الأواني؟
+882,Is the concentration of the sanitizer in the 3-part sink adequate for effective sanitization? - هل آلة الأطباق تعمل بكامل طاقتها؟
+883,Is the janitorial equipment washed and stored in designated areas? - هل تركيز المطهر في الحوض الثلاثي كافية للتعقيم الفعال؟
+884,Is the kitchen free from waste accumulations? - هل معدات النظافة يتم غسلها وتخزينها في الأماكن المخصصة لها؟
+885,Is the external waste/bin area clean and tidy? - هل المطبخ خالي من تراكمات النفايات؟
+886,Bin lids not kept closed? - هل تكون منطقة النفايات الخارجية نظيفة ومرتبة؟
+887,Are kitchen bins not clean or emptied at the end of each day? - أغطية  صناديق النفايات لا تبقى مغلقة؟
+888,Internal or external housekeeping issues - هل صناديق المطبخ ليست نظيفة أو يتم إفراغها في نهاية كل يوم؟
+889,Are all windows and doors to the food room  kept closed? - هل تكون أسقف غرف الطعام بحالة جيدة ويتم استخدام تغطية مناسبة؟
+890,Is pest activity present internally or externally? - هل الحوائط والجدران خالية من العفن؟
+891,Is the pest Infestation being managed? - هل الأرضيات المغطاة بحالة جيدة؟
+892,Are equipment and surfaces being sanitised when there is an infestation? - هل تكون الابواب والنوافذ بحالة جيدة؟
+893,Is a pest control contract available and report available? - هل تكون أماكن العمل داخل المطابخ بحالة جيدة؟
+894,Have all the pest  technician recommendations been completed from the last inspection? - هل الإضاءة كافية في غرفة الطعام؟
+895,Is the premises adequately pest proofed? - هل جميع أغطية الإضاءة في غرف الطعام محمية وغير قابلة للكسر؟
+896,Are Insect control devices located in areas to prevent contamination? - هل تكون التهوية  كافية؟
+897,Rodent bait is contained in a covered  tamper-resistant bait station - هل توجد أي بالوعات أو أنابيب مسدودة؟
+898,Pesticides applied by approved personnel only - هل يتوفر مصدر ماء مناسب لغرفة الطعام؟
+899,Are all walls in food rooms in good repair and suitable wall covering used? - هل يتوفر مصدر ماء ساخن مناسب لغرفة الطعام؟
+900,Are all ceilings in food rooms in good repair and suitable ceiling covering used? - كل الصنابير تعمل بحالة جيدة؟
+901,Are wall/ceilings  free of mould growth? - هل يوجد مرحاض واحد يعمل على الأقل في المنشاة؟
+902,Are all floor covering in good repair? - هل توجد ادوات لمنع إنسداد البالوعات في المنشأة
+903,Are all window/doors in good repair? - البالوعات ليست ذات رائحة كريهة وفوضوية؟
+904,Are work surfaces in the bar or kitchen in good repair? - هل تكون موانع التسريب في الثلاجة في حالة عمل جيدة؟
+905,Is the lighting adequate in food rooms? - هل هناك أي معدات مكسورة أو تالفة تشكل خطورة على الطعام؟
+906,Are all lighting covers in food rooms covered by shields or shatterproof ? - هل جميع أسطح إعداد الطعام يتم الحفاظ عليها في حالة سليمة؟
+907,Is the ventilation and  extraction adequate? - هل تكون فتاحات العلب حادة ونظيفة وتعمل بشكل صحيح؟
+908,Are any drains or pipes blocked? - هل ألواح التقطيع المميزة بالالوان في حالة جيدة وتعمل بشكل جيد؟
+909,Is there an adequate water supply to the food room? - لا يمكن تنظيف الأرفف بشكل سهل بسبب الاستخدام
+910,Is there an adequate hot water supply to the food room? - لا يتم استخدام أخشاب طرية لحفظ الطعام
+911,All taps in good working order? - لا توجد أواني مصنوعة من معادن سامة مثل الالومنيوم والنحاس؟
+912,Is there a minimum of one functioning toilet available in the facility? - هل يتاح دليل للمطبخ؟
+913,Are there sufficient backflow devices/prevention present? - هل يتم تسجيل جميع درجات الحرارة؟
+914,Draines are not smelly and messy? - هل يتم اتخاذ إجراءات تصحيحية بطريقة مناسبة وسريعة؟
+915,Are fridge seals in good working order? - هل يوجد سجل بالحالة الصحية للموظفين
+916,Is there any broken or damaged  equipment presenting a risk to food? - هل يتوفر سجل متابعة العمل من السلطات المحلية؟
+917,Are all food preparation surfaces  maintained in sound condition? - هل يتوفر جدول للتنظيف وهل يتم تنفيذه؟
+918,Are can openers  sharp  clean and functioning properly? - التدريب
+919,Are colour coded chopping boards in good condition and made of plastic? - هل جميع أفراد الفريق يحصلون على تدريب حول سلامة الأغذية الأساسية؟
+920,The shelving/ racking  is not easily cleanable due to the materials use - هل يتم تدريب المشرفين لأداء أدوارهم؟
+921,No soft wooden equipment is used for food preparation? - هل يتم تدريب المختصون بالطعام  لأداء مهامهم المحددة؟
+922,No cook ware are made of toxic metal like Cu  Al? - هل تم تدريب المدير على أساسيات سلامة الغذاء؟
+923,Is kitchen manual available? - الامتثال للقوانين المحلية
+924,Are all temperatures logs recorded? - هل يتم تحديد جميع متطلبات القوانين المحلية وتنفيذها؟
+925,Are corrective actions taken properly and recorded? - المراقبة الصحية
+926,Is staff health surveillance record available? - هل يخضع جميع الموظفين  لفحص طبي سنوي ويكون لهم شهادة طبية موثقة؟
+927,Is local enforcement inspection and follow up action record available? - هل  يخضع كل الموظفين لفحص طبي من أجل  استئناف عملهم بعد عطلة طويلة  في الخارج؟
