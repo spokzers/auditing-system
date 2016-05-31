@@ -221,26 +221,22 @@ class Training extends CI_Controller {
 	    echo json_encode($trainings_workers_data);
 	}
 
-	public function update_status()
+	public function update_status($id_training, $id_worker, $status)
 	{
-		// $id_t,$id_w,$status
 		$data = array(
-			'id_training' => $_POST['id_training'],
-			'id_worker' => $_POST['id_worker'],
-			'status' => $_POST['status']
-			);
-
-		// $data = array(
-		// 	'id_training' => $id_t,
-		// 	'id_worker' => $id_w,
-		// 	'status' => $status
-		// 	);
-
+			'id_training' => $id_training,
+			'id_worker' => $id_worker,
+			'status' => $status
+			 );
+		// echo "<pre>";
 		// print_r($data);
+		// echo "</pre>";
 
-		$result = $this->crud->update_by_two_parameters('trainings_workers','id_training',$_POST['id_training'],'id_worker',$_POST['id_worker'],$data );
-		// $result = $this->crud->update_by_two_parameters('trainings_workers','id_training',$id_t,'id_worker',$id_w,$data );
+		$result = $this->crud->update_by_two_parameters('trainings_workers','id_training',$id_training,'id_worker',$id_worker,$data );
 		return $result;
+
+		// $result = $this->crud->update_by_two_parameters('trainings_workers','id_training',$id_t,'id_worker',$id_w,$data );
+		// return $result;
 	}
 
 	public function delete($id){

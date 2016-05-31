@@ -153,13 +153,14 @@ var get_status = function(id_training) {
         status.push(data[i].status);
     };
     // console.log(status);
-    return status;
+    return status.reverse();
 }
 
 
 
 var get_workers = function(id) {
     var status = get_status(id);
+    // console.log(status);
     $.get("<?php echo base_url(); ?>index.php/training/get_workers/" + id, function(data) {
         var obj = jQuery.parseJSON(data);
         var c = [];
@@ -174,7 +175,7 @@ var get_workers = function(id) {
             console.log(f_name);
             // var remove_url = "<?php echo base_url(); ?>index.php/training/remove_worker/"+ id +"/"+ obj[i].id;
 
-            var options = "<button class='tooltipped btn btn-floating waves-effect blue' data-position='bottom' data-delay='50' data-tooltip='Present & Trained' data-id-training='"+ id +"' data-id-worker='"+ obj[i].id +"' data-s='1'  onclick='update_details(this);'><i class='mdi-action-done'></i> Trained</button>";
+            var options = "<button class='tooltipped btn btn-floating waves-effect blue' data-position='bottom' data-delay='50' data-tooltip='Present & Trained' data-id-training='"+ id +"' data-id-worker='"+ obj[i].id +"' data-s='1'  onclick='update_details(this);'><i class='mdi-action-done'></i></button>";
             options += "<button onclick='update_details(this);' class='btn btn-floating waves-effect amber' data-id-training='"+ id +"' data-id-worker='"+ obj[i].id +"' data-s='2'><i class='mdi-content-remove-circle-outline'></i> Absent</button>";
             options += "<button onclick='delete_worker(" + id + "," + obj[i].id + ");' class='btn btn-floating waves-effect red'><i class='mdi-content-clear'></i> Remove</button>";
 
@@ -269,18 +270,21 @@ var update_details = function(elem) {
 var update_status = function(id_t, id_w, s) {
 
     var update = function(id_training, id_worker, status) {
+          var  url = "<?php echo base_url(); ?>index.php/training/update_status/"+id_training+"/"+id_worker+"/"+status;
+          console.log("url: "+url);
         $.ajax({
-            type: "POST",
-            url: "<?php echo base_url(); ?>index.php/training/update_status/",
-            data: {
-                "id_worker": id_worker,
-                "id_training": id_training,
-                "status": status
-            },
+            // type: "POST",
+            url: "<?php echo base_url(); ?>index.php/training/update_status/"+id_training+"/"+id_worker+"/"+status,
+            // data: {
+            //     "id_worker": id_worker,
+            //     "id_training": id_training,
+            //     "status": status
+            // },
             dataType: "json",
             cache: "false",
             success: function(data) {
-                console.log("Data :" + data);
+                // console.log("Data :" + data);
+                swal("done");
             }
         });
     };

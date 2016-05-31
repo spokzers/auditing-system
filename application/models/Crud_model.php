@@ -101,8 +101,9 @@ class Crud_model extends CI_Model {
            $this->db->from($tablename);
            $this->db->where($key1, $val1);
            $this->db->where($key2, $val2);
-           unset($data[$key1]);
-           unset($data[$key2]);
+           // // unset($data[$key1]);
+           // // unset($data[$key2]);
+           // print_r($data);
            $this->db->update($tablename, $data);
          }
 
