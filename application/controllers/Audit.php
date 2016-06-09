@@ -118,6 +118,20 @@ class Audit extends CI_Controller {
 		echo $id;
 	}
 
+	public function insert_audits()
+	{
+		// var_dump($this->input->post());
+		auth_restrict($this, 6);
+		auth_restrict($this, 5);
+		auth_restrict($this, 3);
+		auth_restrict($this, 2);
+		$data = $this->input->post();
+		for ($i=0; $i < count($data); $i++) { 
+			$id = $this->crud->insert_v2('audits', $data[$i]);
+		}
+		echo "Success";
+	}
+
 	public function edit($id){
 		auth_restrict($this, 6);
 		auth_restrict($this, 5);

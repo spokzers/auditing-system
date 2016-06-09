@@ -135,7 +135,7 @@
                             
                         </tbody>
                     </table>
-            		<a href="#!" class="waves-effect btn teal">Schedule</a>
+            		<a href="#!" class="waves-effect btn teal" id="send">Schedule</a>
                     <a href="#!" class="waves-effect btn teal" id="show">Show Schedule</a>
             	</div>
             </div>

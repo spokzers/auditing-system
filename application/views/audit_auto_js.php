@@ -2,6 +2,7 @@
 $(document).ready(function(){
 	var facility = {};
 	var inspector = {};
+    var done = {};
     var template = {
         <?php foreach ($checklists as $checklist) {
             echo "'". $checklist->id . "'" . " : " . "'" . $checklist->title . "'" . ","; 
@@ -190,6 +191,7 @@ $(document).ready(function(){
 	}
 
 
+
 	$('#select_facility').click(function(){
 		facility[$('#pick_facility').val()] = {
                                                 facility: $('select#pick_facility').find(":selected").text(), 
@@ -216,18 +218,51 @@ $(document).ready(function(){
 		data_keys = Object.keys(data);
 		final = {};
 		for (var i = 0; i < data_keys.length; i++) {
+
+            temp_id = get_id(facility, data[data_keys[i]].facility);
+
 			final[i] = {	id_facility: get_id(facility, data[data_keys[i]].facility), 
 							id_inspector: get_id(inspector, data[data_keys[i]].inspector), 
 							doa:data[data_keys[i]].doa,
 							section: $('#audit_type').val(),
-							id_templates: get_id(template, data[data_keys[i]].template)
+							id_templates: get_id(template, facility[temp_id].template),
 						};
 			
 		}
+        done = final;
 		console.log(final);
-		// console.log(template);
-		// console.log(inspector);
 	});
+
+
+    $('#send').click(function(){
+        $('tbody.schedule_body').empty();
+        // console.log(get_table_data());
+        $('tbody.schedule_body').append(get_schedule(get_table_data())); 
+        var data = get_table_data();
+        data_keys = Object.keys(data);
+        final = {};
+        for (var i = 0; i < data_keys.length; i++) {
+
+            temp_id = get_id(facility, data[data_keys[i]].facility);
+
+            final[i] = {    id_facility: get_id(facility, data[data_keys[i]].facility), 
+                            id_inspector: get_id(inspector, data[data_keys[i]].inspector), 
+                            doa:data[data_keys[i]].doa,
+                            section: $('#audit_type').val(),
+                            id_templates: get_id(template, facility[temp_id].template),
+                        };
+            
+        }
+        done = final;
+        console.log(final);
+
+         $.post("<?php echo base_url();?>index.php/audit/insert_audits" ,final, function(url, data, status){
+                console.log("Data: " + data + "\nStatus: " + status);
+                // console.log($.parseJSON(status.responseText));
+            });
+
+         window.location = "<?php echo base_url();?>index.php/audit";
+    });
 
 });
 	
