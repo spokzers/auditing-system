@@ -12,7 +12,7 @@ class Pdf_tc extends TCPDF
     public function Header() {
     	$html .= '<table style="width:100%"><thead></thead><tr>';
         $html .= '<td><img width="80px"  src="'. base_url() . 'static/images/logo.png" alt="Logo"></td>';
-        $html .= '<td><img width="250px"  src="' . base_url() . 'static/images/pdf_imgs/header.jpg" alt="Logo2"></td>';
+        // $html .= '<td><img width="250px"  src="' . base_url() . 'static/images/pdf_imgs/header.jpg" alt="Logo2"></td>';
 	    $html .= '</tr></table>';
         $this->writeHTML($html, true, false, false, false, '');
     }

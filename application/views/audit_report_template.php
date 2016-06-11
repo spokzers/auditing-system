@@ -322,7 +322,39 @@
 
         }
     }
-    ?>
+
+?>
+
+<!-- Disposals start -->
+        <h4 class="color-brown" style="font-size:14px"></h4>
+
+
+            <table style="table-layout: auto;border: 1px solid black;border-collapse: collapse;padding: 5px;">
+                <thead>
+                    <tr class="bg-grey" style="text-align:center;vertical-align:middle;">
+                        <td style="border: 1px solid black;border-collapse: collapse;padding:5px;" class="cell1">S/N</td>
+                        <td style="border: 1px solid black;border-collapse: collapse;padding:5px;" class="cell2">Criteria Description</td>
+                        <td style="border: 1px solid black;border-collapse: collapse;padding:5px;" class="cell3">Auditor Choice</td>
+                        <td style="border: 1px solid black;border-collapse: collapse;padding:5px;" class="cell4">Fine Amount</td>
+                        <td style="border: 1px solid black;border-collapse: collapse;padding:5px;" class="cell5">Remarks</td>
+                    </tr>
+                </thead>
+                
+                <?php
+                foreach ($disposals as $disposal){
+                
+                    echo "<tr>";
+                        echo '<td class="cell1" style="border: 1px solid black;border-collapse: collapse;padding:5px;">' . $question_id. '</td>';
+                        echo '<td class="cell2" style="border: 1px solid black;border-collapse: collapse;padding:5px;">' . $statement . '</td>';
+                        echo '<td class="cell3" style="border: 1px solid black;border-collapse: collapse;padding:5px;text-align:center;valign:middle;">No</td>';
+                        echo '<td class="cell4" style="border: 1px solid black;border-collapse: collapse;padding:5px;text-align:center;valign:middle;">' . $pnlty . '</td>';
+                        echo '<td class="cell5" style="border: 1px solid black;border-collapse: collapse;padding:5px;">' . $remark . '</td>';
+                    echo "</tr>";
+                }
+                ?>
+            </table>
+<!-- Disposals end -->
+
         <!-- <br> -->
 
         <h1></h1>
@@ -351,19 +383,19 @@
                     </td>
             </tr>
             <tr>
-                <!-- <td style="border:1px solid black; border-collapse:collapse;" class="bg-grey">Site Status After Inspection</td>
+                <td style="border:1px solid black; border-collapse:collapse;" class="bg-grey">Site Status After Inspection</td>
                 <td style="border:1px solid black; border-collapse:collapse;">
                     <?php
 
-                /*switch (get_site_rank($audit->rank)) {
+                switch (get_site_rank($audit->rank)) {
                     case 'A':
-                        $s_status="Passed";
+                        $s_status="Passed with - High Compliance";
                         break;
                     case 'B':
-                        $s_status="Needs Improvement";
+                        $s_status="Passed with - Satisfactory Compliance";
                         break;
                     case 'C':
-                        $s_status="Needs Improvement";
+                        $s_status="Passed with - Needs Improvement";
                         break;
                     case 'D':
                         $s_status="Fail";
@@ -374,10 +406,10 @@
                 }
 
                 echo $s_status;
-                */
+                
 
                  ?>
-                </td> -->
+                </td>
                 <td style="border:1px solid black; border-collapse:collapse;" class="bg-grey">Site Ranking</td>
                 <td style="border:1px solid black; border-collapse:collapse;" colspan="3">
                     <?php echo get_site_rank($audit->rank); ?>
