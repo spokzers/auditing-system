@@ -326,10 +326,10 @@
 ?>
 
 <!-- Disposals start -->
-        <h4 class="color-brown" style="font-size:14px"></h4>
+        <h4 class="color-brown" style="font-size:14px">DISPOSAL DETAILS</h4>
 
 
-            <table style="table-layout: auto;border: 1px solid black;border-collapse: collapse;padding: 5px;">
+            <table width="100%" style="table-layout: auto;border: 1px solid black;border-collapse: collapse;padding: 5px;">
                 <thead>
                     <tr class="bg-grey" style="text-align:center;vertical-align:middle;">
                         <td style="border: 1px solid black;border-collapse: collapse;padding:5px;" class="cell1">S/N</td>
@@ -342,7 +342,7 @@
                 </thead>
                 
                 <?php
-                    $count = 0;
+                    $count = 1;
                 foreach ($disposals as $disposal){
 
                 
@@ -350,8 +350,8 @@
                         echo '<td class="cell1" style="border: 1px solid black;border-collapse: collapse;padding:5px;">' . $count . '</td>';
                         echo '<td style="border: 1px solid black;border-collapse: collapse;padding:5px;">' . $disposal->storage . '</td>';
                         echo '<td style="border: 1px solid black;border-collapse: collapse;padding:5px;text-align:center;valign:middle;">'. $disposal->category .'</td>';
-                        echo '<td style="border: 1px solid black;border-collapse: collapse;padding:5px;text-align:center;valign:middle;">' . $disposal->description . '</td>';
-                        echo '<td style="border: 1px solid black;border-collapse: collapse;padding:5px;">' . $disposal->qty . '</td>';
+                        echo '<td style="border: 1px solid black;border-collapse: collapse;padding:5px;">' . $disposal->description . '</td>';
+                        echo '<td style="border: 1px solid black;border-collapse: collapse;padding:5px;text-align:center;valign:middle;">' . $disposal->qty . '</td>';
                         echo '<td style="border: 1px solid black;border-collapse: collapse;padding:5px;">' . $disposal->reason . '</td>';
                     echo "</tr>";
 
@@ -361,7 +361,7 @@
             </table>
 <!-- Disposals end -->
 
-        <!-- <br> -->
+        <br pagebreak="true" />
 
         <h1></h1>
         <table style="width:100%;padding: 5px;">
