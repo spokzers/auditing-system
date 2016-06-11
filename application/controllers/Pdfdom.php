@@ -46,6 +46,7 @@ class Pdfdom extends CI_Controller {
 		$answers = $this->crud->get_row_by_parameter('answers', 'id_audit', $audit[0]->id);
 		$violations = $this->crud->get_row_by_parameter('violations', 'id_audit', $audit[0]->id);
 		// $answers = $this->crud->get_row_by_multiple_parameter('answers','id_audit', $audit[0]->id, 'answer', 3);
+		var_dump($this->db->error());
 		$disposals = $this->crud->get_row_by_parameter('disposals', 'id_audit', $audit[0]->id);
 
 		$categories = [];

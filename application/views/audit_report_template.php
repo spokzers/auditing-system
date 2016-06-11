@@ -333,23 +333,29 @@
                 <thead>
                     <tr class="bg-grey" style="text-align:center;vertical-align:middle;">
                         <td style="border: 1px solid black;border-collapse: collapse;padding:5px;" class="cell1">S/N</td>
-                        <td style="border: 1px solid black;border-collapse: collapse;padding:5px;" class="cell2">Criteria Description</td>
-                        <td style="border: 1px solid black;border-collapse: collapse;padding:5px;" class="cell3">Auditor Choice</td>
-                        <td style="border: 1px solid black;border-collapse: collapse;padding:5px;" class="cell4">Fine Amount</td>
-                        <td style="border: 1px solid black;border-collapse: collapse;padding:5px;" class="cell5">Remarks</td>
+                        <td style="border: 1px solid black;border-collapse: collapse;padding:5px;">Storage Type</td>
+                        <td style="border: 1px solid black;border-collapse: collapse;padding:5px;">Category</td>
+                        <td style="border: 1px solid black;border-collapse: collapse;padding:5px;">Description</td>
+                        <td style="border: 1px solid black;border-collapse: collapse;padding:5px;">Quantity</td>
+                        <td style="border: 1px solid black;border-collapse: collapse;padding:5px;">Reason</td>
                     </tr>
                 </thead>
                 
                 <?php
+                    $count = 0;
                 foreach ($disposals as $disposal){
+
                 
                     echo "<tr>";
-                        echo '<td class="cell1" style="border: 1px solid black;border-collapse: collapse;padding:5px;">' . $question_id. '</td>';
-                        echo '<td class="cell2" style="border: 1px solid black;border-collapse: collapse;padding:5px;">' . $statement . '</td>';
-                        echo '<td class="cell3" style="border: 1px solid black;border-collapse: collapse;padding:5px;text-align:center;valign:middle;">No</td>';
-                        echo '<td class="cell4" style="border: 1px solid black;border-collapse: collapse;padding:5px;text-align:center;valign:middle;">' . $pnlty . '</td>';
-                        echo '<td class="cell5" style="border: 1px solid black;border-collapse: collapse;padding:5px;">' . $remark . '</td>';
+                        echo '<td class="cell1" style="border: 1px solid black;border-collapse: collapse;padding:5px;">' . $count . '</td>';
+                        echo '<td style="border: 1px solid black;border-collapse: collapse;padding:5px;">' . $disposal->storage . '</td>';
+                        echo '<td style="border: 1px solid black;border-collapse: collapse;padding:5px;text-align:center;valign:middle;">'. $disposal->category .'</td>';
+                        echo '<td style="border: 1px solid black;border-collapse: collapse;padding:5px;text-align:center;valign:middle;">' . $disposal->description . '</td>';
+                        echo '<td style="border: 1px solid black;border-collapse: collapse;padding:5px;">' . $disposal->qty . '</td>';
+                        echo '<td style="border: 1px solid black;border-collapse: collapse;padding:5px;">' . $disposal->reason . '</td>';
                     echo "</tr>";
+
+                    $count++;
                 }
                 ?>
             </table>
