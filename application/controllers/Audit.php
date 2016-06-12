@@ -209,6 +209,7 @@ class Audit extends CI_Controller {
 		$this->load->view('audit_template', $data);
 		$this->load->view('signature');
 		$this->load->view('audit_template_js',  $data);
+		$this->load->view('audit_view_js',  $data);
 		$this->load->view('footer');
 	}
 
