@@ -285,5 +285,45 @@
     <!--end container-->
 </section>
 
+<?php
+  $temp_id = $audit[0]->id;
+  $temp_url = base_url() . "index.php/audit" ;
+  // echo"<a href='#$temp_id' class='modal-trigger'><button class='btn btn-floating small green'><i class='mdi-action-assignment'></i>View Report</button></a>";
+                                    // <!-- Modal Structure -->
+                                     echo '<div id='.$temp_id.' class="modal modal-fixed-footer" style="width:33%;height:50%">
+                                        <div class="white-text teal center" style="top:0;border-bottom: 1px solid rgba(0, 0, 0, 0.1);padding:10px;">
+                                            <p style="font-weight: 300;">Audit Report Options</p>
+                                        </div>
+                                        <div class="modal-content">
+                                            <div class="row" style="margin-bottom:5px">
+                                                <div class="col s12">
+                                                    <button id="img" value="0" style="width:50%" class="active btn green left">Without Images</button>
+                                                    <button id="img" value="1" style="width:50%" class="btn grey">With Images</button>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col s12" style="margin-bottom:15px">
+                                                    <button id="vio" value="0" style="width:50%" class="active btn blue left">Violations Only</button>
+                                                    <button id="vio" value="1" style="width:50%" class="btn grey">Complete</button>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col s6">
+                                                    <p>Send Email to Client</p>
+                                                </div>
+                                                <div class="col s6">
+                                                    <button id="email" value="0" style="width:50%" class="active btn indigo left">Yes</button>
+                                                    <button id="email" value="1" style="width:50%" class="btn grey">No</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                         <div class="modal-footer">
+                                             <a href="#!" id="submit_report" data-audit-id="'.$temp_id.'" class="waves-effect white-text blue btn-flat modal-action">Submit</a>
+                                             <a href="'.$temp_url.'" style="margin-left:5px;" class="waves-effect white-text amber btn-flat modal-action modal-close">Close</a>
+                                         </div>
+                                       </div>';
+
+?>
+
 <!-- END CONTENT -->
 <!-- //////////////////////////////////////////////////////////////////////////// -->

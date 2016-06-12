@@ -412,7 +412,10 @@
            get_disposal_data();
            get_sample_data();
            answer_data();
-        	window.location = "<?php echo base_url();?>index.php/audit";
+
+            $('#<?php echo  $audit[0]->id; ?>').openModal();
+
+        	// window.location = "<?php echo base_url();?>index.php/audit";
         });
          
 
