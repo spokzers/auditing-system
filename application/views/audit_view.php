@@ -264,8 +264,8 @@
                                                     <p>Send Email to Client</p>
                                                 </div>
                                                 <div class="col s6">
-                                                    <button id="email" value="0" style="width:50%" class="active btn indigo left">Yes</button>
-                                                    <button id="email" value="1" style="width:50%" class="btn grey">No</button>
+                                                    <button id="email" value="1" style="width:50%" class="btn indigo left">Yes</button>
+                                                    <button id="email" value="0" style="width:50%" class="active btn grey">No</button>
                                                 </div>
                                             </div>
                                         </div>
