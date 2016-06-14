@@ -262,11 +262,13 @@
                                             // echo "<td>$audit->ended_at</td>";
                                             echo "<td>". get_site_rank($audit->rank) ."</td>";
                                             $report_url = base_url()."index.php/pdfdom/audit_report/".$audit->id;
+                                            $disposal_url = base_url()."index.php/pdfdom/disposal_report/".$audit->id;
                                             $temp_url = base_url()."index.php/audit/audit_launch/".$audit->id;
                                             // echo "<td><button class='btn btn-floating'></button></td>";
                                             echo "<td>";
+                                            echo "<a href='$disposal_url' class='modal-trigger btn indigo btn-floating tooltipped' data-position='bottom' data-delay='50' data-tooltip='Disposals Report'><i class='mdi-action-assignment'></i></a>";
                                             if($audit->status == 2){
-                                                echo "<a href='#$audit->id' class='modal-trigger btn green btn-floating tooltipped' data-position='bottom' data-delay='50' data-tooltip='Report'><i class='mdi-action-assignment'></i></a>";
+                                                echo "<a href='#$audit->id' class='modal-trigger btn green btn-floating tooltipped' data-position='bottom' data-delay='50' data-tooltip='Audit Report'><i class='mdi-action-assignment'></i></a>";
                                                 // echo"<a href='#$audit->id' class='modal-trigger'><button class='btn btn-floating small green'><i class='mdi-action-assignment'></i>View Report</button></a>";
                                     // <!-- Modal Structure -->
                                      echo '<div id='.$audit->id.' class="modal modal-fixed-footer" style="width:33%;height:50%">
@@ -291,8 +293,8 @@
                                                     <p>Send Email to Client</p>
                                                 </div>
                                                 <div class="col s6">
-                                                    <button id="email" value="0" style="width:50%" class="active btn indigo left">Yes</button>
-                                                    <button id="email" value="1" style="width:50%" class="btn grey">No</button>
+                                                    <button id="email" value="1" style="width:50%" class="active btn indigo left">Yes</button>
+                                                    <button id="email" value="0" style="width:50%" class="btn grey">No</button>
                                                 </div>
                                             </div>
                                         </div>

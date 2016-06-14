@@ -150,7 +150,7 @@ class Pdfdom extends CI_Controller {
 		}
 		else{
 			$url = base_url()."pdfdom/audit_report/". $id. "?img=". $get_data['img'] . "&vio=" . $get_data['vio'] . "&email=0";
-			$this->sendmail($url);
+			$this->sendmail($url,$audit[0]->id_facility);
 		}
 
     }
@@ -180,7 +180,7 @@ class Pdfdom extends CI_Controller {
 
 	// EMAIL SEND FUNCTION
 
-	public function sendmail($url){
+	public function sendmail($url, $id_facility){
 		echo $url;
 		$this->load->library('email');
 		// set the admin email address
@@ -188,7 +188,7 @@ class Pdfdom extends CI_Controller {
 		$admin_name = 'EPIC Admin';
 		$this->email->from($admin_email, $admin_name);
 
-		$recievers = $this->crud->get_row_by_parameter('userprofiles','id_facility',6);
+		$recievers = $this->crud->get_row_by_multiple_parameter('userprofiles', 'designation', 6, 'id_facility', $id_facility);
 
 		foreach ($recievers as $reciever) {
 			// set the reciever email address
