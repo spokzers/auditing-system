@@ -113,8 +113,12 @@ class Inspector extends CI_Controller {
 		auth_restrict($this, 5);
 		auth_restrict($this, 3);
 		$data = get_post_data('userprofiles', $this);
+		$profile = $this->crud->get('userprofiles', 'id', $id);
 		if($data['designation'] != 6){
 			$data['id_facility'] = -1;
+		}
+		if($profile[0]->designation != 1){
+			unset($data['designation']);
 		}
 		$status = $this->crud->update('userprofiles', 'id', $id, $data);
 		$id = $id . '.jpg';
