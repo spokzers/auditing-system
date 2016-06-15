@@ -118,8 +118,12 @@ class Inspector extends CI_Controller {
 			$data['id_facility'] = -1;
 		}
 		if($profile[0]->designation != 1){
-			unset($data['designation']);
+			unset($data['designation']);	
 		}
+		if($profile[0]->password != $data['password']){
+			$data['password'] = sha1($data['password']);	
+		}
+
 		$status = $this->crud->update('userprofiles', 'id', $id, $data);
 		$id = $id . '.jpg';
 		$this->do_upload($id);
