@@ -14,7 +14,8 @@
     <meta name="msapplication-tap-highlight" content="no">
     <meta name="description" content="Materialize is a Material Design Admin Template,It's modern, responsive and based on Material Design by Google. ">
     <meta name="keywords" content="materialize, admin template, dashboard template, flat admin template, responsive admin template,">
-    <title>EPIC Auditing System</title>
+    <!-- <title>EPIC Auditing System</title> -->
+    <!-- <title>MENA Auditing System</title> -->
     <!-- Favicons-->
     <link rel="icon" href="<?php echo base_url(); ?>static/images/favicon/favicon-32x32.png" sizes="32x32">
     <!-- Favicons-->
@@ -57,11 +58,12 @@
                     <h1 class="logo-wrapper row">
                         <div class="col s1 left">
                         <a href="<?php echo base_url(); ?>index.php/" class="brand-logo darken-1">
-                            <img src="<?php echo base_url(); ?>static/images/logo.png" width="70px" alt="EPIC logo">
+                            <img src="<?php echo base_url(); ?>static/images/logo.png" width="78px" alt="EPIC logo">
                         </a>
                         </div>
                         <div class="col s11 right hide-on-med-and-down">
-                            <a href="<?php echo base_url(); ?>index.php/"  style="font-size: 40px"> EPIC Auditing System</a>
+                            <!-- <a href="<?php echo base_url(); ?>index.php/"  style="font-size: 40px"> EPIC Auditing System</a> -->
+                            <!-- <a href="<?php echo base_url(); ?>index.php/"  style="font-size: 40px"> MENA Auditing System</a> -->
                         </div>
                         <!-- <span class="logo-text">EPIC Auditing System</span> -->
                     </h1>
@@ -379,6 +381,12 @@
                             </li>
                             <li class="bold"><a class="collapsible-header waves-effect waves-cyan lang-selector" data-value=""><i class="mdi-action-language"></i></a>
                             </li>
+                            <li class="bold"><a href="http://teffiti.com/" class="collapsible-header waves-effect waves-cyan">
+                            <i class="mdi-action-language"></i><span>Teffiti</span></a>
+                            </li>
+                            <li class="bold"><a href="http://epic-e360.co.uk/" class="collapsible-header waves-effect waves-cyan"><i class="mdi-action-language"></i><span>EPIC</span></a>
+                            </li>
+
                         </ul>
                     </li>
                 </ul>

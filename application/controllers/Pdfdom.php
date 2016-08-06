@@ -149,8 +149,8 @@ class Pdfdom extends CI_Controller {
 		    $pdf->Output('Audit Report', 'I');
 		}
 		else{
-			$url = base_url()."pdfdom/audit_report/". $id. "?img=". $get_data['img'] . "&vio=" . $get_data['vio'] . "&email=0";
-			$this->sendmail($url,$audit[0]->id_facility);
+			$url = base_url()."index.php/pdfdom/audit_report/". $id. "?img=". $get_data['img'] . "&vio=" . $get_data['vio'] . "&email=0";
+			$this->sendmail($url,$audit[0]->id_facility, $id);
 		}
 
     }
@@ -180,10 +180,18 @@ class Pdfdom extends CI_Controller {
 
 	// EMAIL SEND FUNCTION
 
-	public function sendmail($url, $id_facility){
-		echo $url;
+	public function sendmail($url, $id_facility, $report_id){
+		// echo $url;
 		$this->load->library('email');
 		// set the admin email address
+		$config = Array(
+          'protocol' => 'sendmail',
+          'mailtype' => 'html', 
+          'charset' => 'utf-8',
+          'wordwrap' => TRUE
+
+      );
+     $this->email->initialize($config);
 		$admin_email = 'test1@epic-e360.co.uk';
 		$admin_name = 'EPIC Admin';
 		$this->email->from($admin_email, $admin_name);
@@ -196,12 +204,25 @@ class Pdfdom extends CI_Controller {
 			// $this->email->cc('another@another-example.com');
 			// $this->email->bcc('them@their-example.com');
 			$this->email->subject('Audit Report');
-			$this->email->message('Dear Sir,\n\nPlease click <a href="'. $url .'">here</a> to get the Report.\n\nRegards,\nEPIC ');
+			$this->email->message('Dear Sir, Please click <a href="'. $url .'">here</a> to get the Report. Regards, EPIC ');
 
 			// send the email
 			$this->email->send();
 		}
-		echo $this->email->print_debugger();
+
+		$reciever = $this->crud->get_row_by_parameter('facilities', 'id', $id_facility);
+		$this->email->to($reciever[0]->email);
+		// $this->email->cc('another@another-example.com');
+		// $this->email->bcc('them@their-example.com');
+		$this->email->subject('Audit Report');
+		$this->email->message('Dear Sir, Please click <a href="'. $url .'">here</a> to get the Report. Regards, EPIC ');
+		// send the email
+		$this->email->send();
+
+		// echo $reciever[0]->email;
+		mail($reciever[0]->email, 'Audit Report','Dear Sir,\n\nPlease click <a href="'. $url .'">here</a> to get the Report.\n\nRegards,\nEPIC ');
+		// echo $this->email->print_debugger();
+		redirect("/pdfdom/audit_report/$report_id");
 	}
 
 	public function disposal_report($id)

@@ -15,7 +15,7 @@
   <meta name="msapplication-tap-highlight" content="no">
   <meta name="description" content="Materialize is a Material Design Admin Template,It's modern, responsive and based on Material Design by Google. ">
   <meta name="keywords" content="materialize, admin template, dashboard template, flat admin template, responsive admin template,">
-  <title>Login Page | Materialize - Material Design Admin Template</title>
+  <title>Login Page | - Auditing Management System</title>
 
   <!-- Favicons-->
   <link rel="icon" href="images/favicon/favicon-32x32.png" sizes="32x32">
@@ -56,7 +56,7 @@
         <div class="row">
           <div class="input-field col s12 center">
             <img style="" src="<?php echo base_url(); ?>static/images/logo.png" alt="" class="circle responsive-img valign">
-            <p class="center login-form-text">EPIC Auditing System</p>
+            <!-- <p class="center login-form-text">MENA Auditing System</p> -->
           </div>
         </div>
         <div class="row margin">

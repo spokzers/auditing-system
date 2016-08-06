@@ -35,29 +35,6 @@
 		$facilities = $this->crud->get_columns('facilities', 'id, name');
 		$trainings_workers = $this->crud->get_table_data('trainings_workers');
 		$status = [];
-		// echo  "<pre>";
-		// var_dump($trainings_workers);
-		// echo "</pre>";
-		// foreach ($workers as $worker && $trainings_workers as $t_workers) {
-		// 	if ($t_workers->id_worker == $worker->id) {
-		// 		$status[] = $t_workers->status;
-		// 	}
-		// }
-
-		/*foreach($workers as $worker) {
-			foreach ($trainings_workers as $t_worker) {
-				if ($t_worker->id_worker == $worker->id){
-					$status[$worker->id] = $t_worker->status;
-					// echo $worker->id;
-				}
-			}
-
-		}*/
-			// echo  "<pre>";
-			// var_dump($status);
-			// echo "</pre>";
-
-
 		$data = array(
 			'workers' => $workers,
 			'facility' => 1,
@@ -171,6 +148,51 @@
 		$this->load->view('base');
 		$this->load->view('worker_view', $data);
 		$this->load->view('footer');
+	}
+
+	public function search(){
+		$data = $this->input->post();
+	
+
+		$db = $this->load->database('default', TRUE);
+
+		$db->select('*');
+		$db->from('workers');
+
+	
+	
+		if($data['name']){
+			$db->where('name', $data['name']);
+		}
+		if($data['status']){
+			$db->where('status', $data['status']);
+		}
+		if($data['license']){
+			$db->where('license', $data['license']);
+		}
+		if($data['iqama']){
+			// echo $data['iqama'];
+			$db->where('id_no', $data['iqama']);
+		}
+
+	
+		$result = $db->get()->result();
+
+		$facilities = $this->crud->get_columns('facilities', 'id, name');
+		$trainings_workers = $this->crud->get_table_data('trainings_workers');
+		$status = [];
+		$data = array(
+			'workers' => $result,
+			'facility' => 0,
+			'facilities'=> $facilities,
+			'trainings' => $trainings_workers,
+		);
+		// var_dump($data);
+		// var_dump($result);
+		$this->load->view('base');
+		$this->load->view('facility_workers', $data);
+		$this->load->view('footer');
+
 	}
 
 

@@ -142,5 +142,22 @@ class  Checklist extends CI_Controller {
 
 	}
 
+	public function edit_question($id){
+		$question = $this->crud->get_row_by_parameter('questions', 'id', $id);
+		$data['question'] = $question[0];
+		$this->load->view('base');
+		$this->load->view('checklist_edit', $data);
+		$this->load->view('footer');
+	}
+
+	public function update_question(){
+		$data = $this->input->post();
+		$id = $data['id'];
+		unset($data['id']);
+		var_dump($data);
+		$this->crud->update('questions', 'id', $id, $data);
+		redirect('/checklist');
+	}
+
 
 }

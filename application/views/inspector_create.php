@@ -103,10 +103,12 @@
                                             <div class="input-field col s12">
                                               <?php
                                               $options = [];
+                                              echo "<select name='id_facility'>";
                                               foreach ($facilities as $facility) {
-                                                  $options[$facility->id] = $facility->name;
+                                                  echo "<option value='$facility->id'>$facility->name</option>";
                                               }
-                                                print_select('id_facility', -1, $options, "id_facility");
+                                              echo "</select>";
+                                                // print_select('id_facility', , $options, "id_facility");
                                               ?>
                                                 
                                                 <label>Facility</label>

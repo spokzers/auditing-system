@@ -22,37 +22,37 @@
                 </div>
                 <div class="col s6 m6 l3">
                     <div class="card">
-                        <div class="card-content  purple white-text">
+                        <div class="card-content  teal accent-2 white-text">
                             <p class="card-stats-title"><i class="mdi-toggle-check-box" style="font-size: 75px;"></i>
                                 <br>Total Audits</p>
                             <h5></h5>
                             <h4 class="card-stats-number"><?php echo $total_audits; ?></h4>
                         </div>
-                        <div class="card-action purple darken-2">
+                        <div class="card-action teal  darken-2">
                         </div>
                     </div>
                 </div>
                 <div class="col s6 m6 l3">
                     <div class="card">
-                        <div class="card-content  blue-grey white-text">
+                        <div class="card-content  amber lighten-2 white-text">
                             <p class="card-stats-title"><i class="mdi-toggle-check-box" style="font-size: 75px;"></i>
                                 <br>Completed Audits</p>
                             <h5></h5>
                             <h4 class="card-stats-number"><?php echo $completed_audits; ?></h4>
                         </div>
-                        <div class="card-action blue-grey darken-2">
+                        <div class="card-action amber darken-2">
                         </div>
                     </div>
                 </div>
                 <div class="col s6 m6 l3">
                     <div class="card">
-                        <div class="card-content  deep-purple white-text">
+                        <div class="card-content  teal accent-2 white-text">
                             <p class="card-stats-title"><i class="mdi-toggle-check-box" style="font-size: 75px;"></i>
                                 <br>Pending Audits</p>
                             <h5></h5>
                             <h4 class="card-stats-number"><?php echo $pending_audits; ?></h4>
                         </div>
-                        <div class="card-action deep-purple darken-2">
+                        <div class="card-action teal darken-1">
                         </div>
                     </div>
                 </div>
@@ -78,13 +78,13 @@
                 </div>
                 <div class="col s6 m6 l3">
                     <div class="card">
-                        <div class="card-content  orange white-text">
+                        <div class="card-content  lime white-text">
                             <p class="card-stats-title"><i class="mdi-social-group-add" style="font-size: 75px;"></i>
                                 <br><span class='trn' data-trn-key='Workers Trained'>Workers Trained</span></p>
                             <h5></h5>
                             <h4 class="card-stats-number"><?php echo $trained_workers; ?></h4>
                         </div>
-                        <div class="card-action orange darken-2">
+                        <div class="card-action lime darken-2">
                         </div>
                     </div>
                 </div>

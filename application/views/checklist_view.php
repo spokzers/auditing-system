@@ -16,7 +16,9 @@
                 echo "<h3>$category</h3>";
                 foreach ($questions as $question) {
                   if($question->category == $category){
+                    $url_edit = base_url()."index.php/checklist/edit_question/".$question->id; 
                     echo "<section>";
+                    echo "<a class='btn waves-effect waves-light blue accent-3 right' href='$url_edit' >Edit</a>";
                     echo "<h5>Statement:</h5>";
                     echo "<p>$question->statement</p>";
                     echo "<div class='row'>";

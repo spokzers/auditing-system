@@ -28,6 +28,16 @@
                                                 <label for="nationality">Nationality</label>
                                             </div>
                                         </div>
+                                         <!-- Owner Name -->
+                                        <div class="row">
+                                            <div class="input-field col s12">
+                                                <?php
+                                                $levels = get_language();
+                                                print_select('language', $worker[0]->language, $levels, "");
+                                                ?>
+                                            <label>Language</label>
+                                            </div>
+                                        </div>
                                         <!-- National Identification Number -->
                                         <div class="input-field">
                                             <?php
@@ -51,7 +61,7 @@
                                         <!-- Business Activity -->
                                         <div class="input-field">
                                             <select name="status">
-                                                <option value="" selected disabled>Select Status</option>
+                                                <!-- <option value="" selected disabled>Select Status</option> -->
                                                 <?php
                                                 $statuses = get_training_status();
 

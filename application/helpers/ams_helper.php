@@ -212,6 +212,19 @@ if ( ! function_exists('test_method'))
       return $status;
     }
 
+    function get_language(){
+      $status[1] = "English";
+      $status[2] = "Urdu";
+      $status[3] = "Hindi";
+      $status[4] = "Bengali";
+      $status[5] = "Arabic";
+      $status[6] = "Tagalog";
+      $status[7] = "Bahasa";
+      $status[8] = "Indonesian";
+      $status[9] = "Other";
+      return $status;
+    }
+
     function get_worker_level($id){
         $status[1] = "Level 1";
         $status[2] = "Level 2";

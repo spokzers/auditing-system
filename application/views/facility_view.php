@@ -6,28 +6,19 @@
         <div class="card-panel">
             <div class="row">
                 <div class="col s12 m12 l12">
-                    <h6>Search</h6>
-                    <div class="divider"></div>
+                   <!--  <h6>Search</h6> -->
+                    <!-- <div class="divider"></div> -->
+                    <!-- <div id="qrcode"></div> -->
+                    <?php
+                    $url =  base_url().'uploads/tes.png';
+                    echo "<img src='$url' style='max-width:25%'/>";
+                    echo "<br>";
+                    echo "<a href='$url' class='btn' download>Download</a>";
+
+                    ?>
                 </div>
                 <div class="container" style="padding: 10px">
-                    <div class="row" style="margin-top: 30px;">
-                        <div class="col s2">
-                            <p>Start Date</p>
-                        </div>
-                        <div class="col s2">
-                            <input type="date" value="<?php echo date('Y-m-d', strtotime(" last month ")); ?>">
-                        </div>
-                        <div class="col s2">
-                            <p>End Date</p>
-                        </div>
-                        <div class="col s2">
-                            <input type="date" value="<?php echo date('Y-m-d', strtotime(" today ")); ?>">
-                        </div>
-                        <div class="col s2">
-                            <button class="btn waves-effect">Search</button>
-                        </div>
-                        <div class="col s2"></div>
-                    </div>
+                  
                 </div>
             </div>
         </div>

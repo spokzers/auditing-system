@@ -58,61 +58,44 @@
                                 <div class="divider"></div>
                             </div>
                             <div class="container">
-                                <form>
+                                <form method="post" action="<?php echo base_url();?>index.php/facility/search">
                                     <div class="row">
                                         <div class="input-field col s4">
-                                            <input type="text" class="validate">
+                                            <input type="text" class="validate" name="name">
                                             <label>Facility Name</label>
                                         </div>
                                         <div class="input-field col s4">
-                                            <input type="text" class="validate">
-                                            <label>License Name</label>
+                                            <input type="text" class="validate" name="license">
+                                            <label>License Number</label>
                                         </div>
                                         <div class="input-field col s4">
-                                            <input type="text" class="validate">
+                                            <input type="text" class="validate" name="owner">
                                             <label>Owner Name</label>
                                         </div>
                                     </div>
                                     <div class="row">
-                                        <div class="input-field col s4">
-                                            <select>
-                                                <option value="" disabled selected>Select an Activity</option>
-                                                <option value="1">Manager</option>
-                                                <option value="2">Developer</option>
-                                                <option value="3">Business</option>
-                                            </select>
-                                            <label>Business Activity</label>
-                                        </div>
-                                        <div class="input-field col s4">
-                                            <select>
-                                                <option value="1" selected>All</option>
-                                                <option value="2">Expired</option>
-                                                <option value="3">Not Issued</option>
-                                                <option value="4">Validity Ending 30-04-2016</option>
+                                       
+                                        <div class="input-field col s6">
+                                            <select name="status">
+                                                <option value="0" selected>All</option>
+                                                <option value="1">Expired</option>
+                                                <option value="2">Not Expired</option>
                                             </select>
                                             <label>License Status</label>
                                         </div>
-                                        <div class="input-field col s4">
-                                            <select>
-                                                <option value="1" selected>All</option>
-                                                <option value="2">Manager</option>
-                                                <option value="3">Developer</option>
-                                                <option value="4">Business</option>
-                                            </select>
-                                            <label>Department</label>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="input-field col s4">
-                                            <select>
-                                                <option value="1" selected>A</option>
+                                        <div class="input-field col s6">
+                                            <select name="rank">
+                                                <option value="0" selected>All</option>
+                                                <option value="1">A</option>
                                                 <option value="2">B</option>
                                                 <option value="3">C</option>
                                                 <option value="4">D</option>
                                             </select>
                                             <label>Site Rank</label>
+                                
+                                    <div class="row">
                                         </div>
-                                        <div class="input-field col s8">
+                                        <div class="input-field col s12">
                                             <button class="btn cyan waves-effect waves-light right" type="submit" name="action">Search</button>
                                         </div>
                                     </div>
