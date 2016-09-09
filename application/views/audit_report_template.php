@@ -468,10 +468,12 @@
                         // echo '</div>';
 
                         $vio_num = "";
+                        $ques_statement = "";
 
                         foreach ($questions as $question) {
                             if ($violation->id_question==$question->id) {
                                 $vio_num = $question->id;
+                                $ques_statement = $question->statement;
                             }
                         }
 
@@ -479,10 +481,12 @@
                         <table style="width:100%;table-layout:fixed;margin:20px;padding:5px;">
                             <tr>';
                                 if ($get_data['img'] != 0 ) {
-                                    echo '<td style="border: 1px solid black;overflow: hidden;width: 45%;padding:2.5%;"><img width="250px" src="'.$image_path.'" alt="violation"></td>';
+                                    echo '<td style="border: 1px solid black;overflow: hidden;width: 35%;padding:2.5%;"><img width="250px" src="'.$image_path.'" alt="violation"></td>';
                                 }
-                                echo '<td style="border: 1px solid black;overflow: hidden;width: 50%;padding:2.5%;"><h4>VIOLATION</h4>
-                                <p>'.$vio_num.'</p><h4>VIOLATION COMMENT:</h4><p>'.$violation->comments.'</p></td>
+                                echo '<td style="border: 1px solid black;overflow: hidden;width: 30%;padding:2.5%;"><h4>VIOLATION</h4>
+                                <p>'.$vio_num.'</p><h4>VIOLATION COMMENT:</h4><p>'.$violation->comments.'</p></td>';
+                                echo '<td style="border: 1px solid black;overflow: hidden;width: 30%;padding:2.5%;"><h4>QUESTION</h4>
+                                <p>'.$vio_num.'</p><h4>QUESTION STATEMENT:</h4><p>'.$ques_statement.'</p></td>
                             </tr>
                         </table>';
 
