@@ -2,10 +2,10 @@
 <html lang="en">
 
 <!--================================================================================
-    Item Name: Materialize - Material Design Admin Template
-    Version: 1.0
-    Author: GeeksLabs
-    Author URL: http://www.themeforest.net/user/geekslabs
+	Item Name: Materialize - Material Design Admin Template
+	Version: 1.0
+	Author: GeeksLabs
+	Author URL: http://www.themeforest.net/user/geekslabs
 ================================================================================ -->
 
 <head>
@@ -15,7 +15,7 @@
   <meta name="msapplication-tap-highlight" content="no">
   <meta name="description" content="Materialize is a Material Design Admin Template,It's modern, responsive and based on Material Design by Google. ">
   <meta name="keywords" content="materialize, admin template, dashboard template, flat admin template, responsive admin template,">
-  <title>Helpers | Materialize - Material Design Admin Template</title>
+  <title>Modals | Materialize - Material Design Admin Template</title>
 
   <!-- Favicons-->
   <link rel="icon" href="images/favicon/favicon-32x32.png" sizes="32x32">
@@ -42,9 +42,9 @@
 <body>
   <!-- Start Page Loading -->
   <div id="loader-wrapper">
-    <div id="loader"></div>
-    <div class="loader-section section-left"></div>
-    <div class="loader-section section-right"></div>
+      <div id="loader"></div>        
+      <div class="loader-section section-left"></div>
+      <div class="loader-section section-right"></div>
   </div>
   <!-- End Page Loading -->
 
@@ -265,13 +265,13 @@
           <div class="container">
             <div class="row">
               <div class="col s12 m12 l12">
-                <h5 class="breadcrumbs-title">Helpers</h5>
+                <h5 class="breadcrumbs-title">Modals</h5>
                 <ol class="breadcrumb">
                   <li><a href="index.html">Dashboard</a>
                   </li>
-                  <li><a href="#">CSS</a>
+                  <li><a href="#">UI Elements</a>
                   </li>
-                  <li class="active">Helpers</li>
+                  <li class="active">Modals</li>
                 </ol>
               </div>
             </div>
@@ -282,146 +282,152 @@
 
         <!--start container-->
         <div class="container">
-          <div class="section">
+          <p class="caption">Use a modal for dialog boxes, confirmation messages, or other content that can be called up. In order for the modal to work you have to add the Modal ID to the link of the trigger.</p>
+          <div class="divider"></div>
+          <!--Modal Demo-->
+          <div id="modals-demo" class="section">
+            <h4 class="header">Modal Demo</h4>
+            <div class="row">
+              <div class="col s12 m4 l3">
+                <p>To add a close button, just add the class <code class=" language-css">.modal-close</code> to your button.</p>
+              </div>
+              <div class="col s12 m8 l9">
+                <p><a class="waves-effect waves-light btn modal-trigger  light-blue" href="#modal1">Modal</a>
+                </p>
+                <p><a class="waves-effect waves-light btn modal-trigger  teal " href="#modal3">Modal with Color</a>
+                </p>
 
-            <p class="caption">You don't need to create new css class for simple edits.We already did it for you.</p>
-            <div class="divider"></div>
+                <div id="modal1" class="modal">
+                  <div class="modal-content">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                      Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+                  </div>
+                  <div class="modal-footer">
+                    <a href="#" class="waves-effect waves-red btn-flat modal-action modal-close">Disagree</a>
+                    <a href="#" class="waves-effect waves-green btn-flat modal-action modal-close">Agree</a>
+                  </div>
+                </div>
 
-            <div class="divider"></div>
-            <div id="text-align" class="section">
-              <h4 class="header">Text Align</h4>
-              <div class="row">
-                <div class="col s12 m4 l3">
-                  <p>Right Aligned</p>
-                  <code class="language-markup">class="right-align"</code>
-                </div>
-                <div class="col s12 m8 l9">
-                  <div class="card-panel">
-                    <p class="right-align">This text is right aligned. Set in the year 0 F.E. ("Foundation Era"), The Psychohistorians opens on Trantor, the capital of the 12,000-year-old Galactic Empire. Though the empire appears stable and powerful, it is slowly decaying
-                      in ways that parallel the decline of the Western Roman Empire.</p>
+                <div id="modal3" class="modal">
+                  <div class="modal-content teal white-text">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                      Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+                  </div>
+                  <div class="modal-footer  teal lighten-4">
+                    <a href="#" class="waves-effect waves-red btn-flat modal-action modal-close">Disagree</a>
+                    <a href="#" class="waves-effect waves-green btn-flat modal-action modal-close">Agree</a>
                   </div>
                 </div>
-              </div>
-              <div class="row">
-                <div class="col s12 m4 l3">
-                  <p>Left Aligned</p>
-                  <code class="language-markup">class="left-align"</code>
-                </div>
-                <div class="col s12 m8 l9">
-                  <div class="card-panel">
-                    <p class="left-align">In English and most European languages where words are read left-to-right, text is usually aligned "flush left", meaning that the text of a paragraph is aligned on the left-hand side with the right-hand side ragged. This is the default
-                      style of text alignment on the World Wide Web for left-to-right text Quotations are often indented.</p>
-                  </div>
-                </div>
-              </div>
-              <div class="row">
-                <div class="col s12 m4 l3">
-                  <p>Center Aligned</p>
-                  <code class="language-markup">class="center-align"</code>
-                </div>
-                <div class="col s12 m8 l9">
-                  <div class="card-panel">
-                    <p class="center-align">Text can also be "centered", or symmetrically aligned along an axis in the middle of a column. This is often used for the title of a work, headlines, and for poems and songs. As with flush-right alignment, centered text is often used
-                      to present data in tables. Centered text is considered less readable for a body of text made up of multiple lines because the ragged starting edges make it difficult for the reader to track from one line to the next.</p>
-                  </div>
-                </div>
-              </div>
-              <div class="row">
-                <div class="col s12 m4 l3">
-                  <h4 class="header">Vertical Align</h4>
-                  <p>You can easily vertically center things by adding the class <code class="language-markup">class="valign-wrapper"</code> to the container holding the items you want to vertically align.</p>
-                </div>
-                <div class="col s12 m8 l9">
-                  
-                    <div class="valign-demo valign-wrapper">
-                      <h5 class="valign center" style="width: 100%;">This should be vertically aligned</h5>
-                  </div>
-                </div>
+
+
               </div>
             </div>
-            <div class="divider"></div>
-
-            <div id="hiding-content" class="section">
-              <h4 class="header">Hiding Content</h4>
-              <div class="row">
-                <div class="col s12 m4 l3">
-                  <p>We provide easy to use classes to hide content on specific screen sizes.</p>
-                </div>
-                <div class="col s12 m8 l9">
-                  <div class="card-panel">
-                    <table class="striped">
-                      <thead>
-                        <tr>
-                          <th></th>
-                          <th>Screen Range</th>
-                          <th>Display Test</th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        <tr>
-                          <td><code class="language-markup">.hide-on-small-only</code>
-                          </td>
-                          <td>Hidden for Mobile Only</td>
-                          <td>
-                            <p class="hide-on-small-only">Check Me !</p>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td><code class="language-markup">.hide-on-med-only</code>
-                          </td>
-                          <td>Hidden for Tablet Only</td>
-                          <td>
-                            <p class="hide-on-med-only">Check Me !</p>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td><code class="language-markup">.hide-on-med-and-down</code>
-                          </td>
-                          <td>Hidden for Tablet and Below</td>
-                          <td>
-                            <p class="hide-on-med-and-down">Check Me !</p>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td><code class="language-markup">.hide-on-med-and-up</code>
-                          </td>
-                          <td>Hidden for Tablet and Above</td>
-                          <td>
-                            <p class="hide-on-med-and-up">Check Me !</p>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td><code class="language-markup">.hide-on-large-only</code>
-                          </td>
-                          <td>Hidden for Desktop Only</td>
-                          <td>
-                            <p class="hide-on-large-only">Check Me !</p>
-                          </td>
-                        </tr>
-                      </tbody>
-                    </table>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="divider"></div>
-            <div id="truncation" class="section">
-              <h4 class="header">Truncation</h4>
-              <div class="row">
-                <div class="col s12 m4 l3">
-                  <p>To truncate long lines of text in an ellipsis, add the <code class="language-markup">class="truncate"</code> to the tag which contains the text. See an exaple below of a header being truncated inside a card.</p>
-                </div>
-                <div class="col s12 m8 l9">
-                  <div class="card-panel">
-                    <p>Normal: This is a paragraph. Paragraphs are preset with a font size, line height and spacing to match the overall vertical rhythm.</p>
-                    <p class="truncate">Truncate: This is a paragraph. Paragraphs are preset with a font size, line height and spacing to match the overall vertical rhythm.</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-
           </div>
+
+          <!--Modal With Fixed Footer-->
+          <div class="divider"></div>
+          <div id="modal-fixed-footer">
+            <h4 class="header">Modal With Fixed Footer</h4>
+            <div class="row">
+              <div class="col s12 m4 l3">
+                <p>If you have content that is very long and you want the action buttons to be visible all the time, you can add the <code class=" language-markup">modal-fixed-footer</code> class to the modal. </p>
+              </div>
+              <div class="col s12 m8 l9">
+            <p></p>
+            <p><a class="waves-effect waves-light btn modal-trigger  light-blue" href="#modal2">Modal With Fixed Footer</a>
+            </p>
+            <p><a class="waves-effect waves-light btn modal-trigger  green" href="#modal4">Modal With Fixed Footer & Color</a>
+            </p>
+            <div id="modal2" class="modal modal-fixed-footer">
+              <div class="modal-content">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis
+                  aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis
+                  aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis
+                  aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis
+                  aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+              </div>
+              <div class="modal-footer">
+                <a href="#" class="waves-effect waves-red btn-flat modal-action modal-close">Disagree</a>
+                <a href="#" class="waves-effect waves-green btn-flat modal-action modal-close">Agree</a>
+              </div>
+            </div>
+            <div id="modal4" class="modal modal-fixed-footer green white-text">
+              <div class="modal-content">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis
+                  aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis
+                  aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis
+                  aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis
+                  aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+              </div>
+              <div class="modal-footer green lighten-4">
+                <a href="#" class="waves-effect waves-red btn-flat modal-action modal-close">Disagree</a>
+                <a href="#" class="waves-effect waves-green btn-flat modal-action modal-close">Agree</a>
+              </div>
+            </div>
+          </div>
+          </div>
+          </div>
+          <!--Modal Bottom Sheet Style-->
+          <div class="divider"></div>
+          <div id="modal-bottom-sheet">
+            <h4 class="header">Modal Bottom Sheet Style</h4>
+            <div class="row">
+              <div class="col s12 m4 l3">
+                &nbsp;
+              </div>
+              <div class="col s12 m8 l9">
+                <a class="waves-effect waves-light btn modal-trigger" href="#modal5">Modal Bottom Sheet Style</a>
+                <div id="modal5" class="modal bottom-sheet">
+                  <div class="modal-content">
+                    <h4>Modal Header</h4>
+                    <ul class="collection">
+                      <li class="collection-item avatar">
+                        <img src="images/yuna.jpg" alt="" class="circle">
+                        <span class="title">Title</span>
+                        <p>First Line
+                          <br> Second Line
+                        </p>
+                        <a href="#!" class="secondary-content"><i class="mdi-action-grade"></i></a>
+                      </li>
+                      <li class="collection-item avatar">
+                        <i class="mdi-file-folder circle"></i>
+                        <span class="title">Title</span>
+                        <p>First Line
+                          <br> Second Line
+                        </p>
+                        <a href="#!" class="secondary-content"><i class="mdi-action-grade"></i></a>
+                      </li>
+                      <li class="collection-item avatar">
+                        <i class="mdi-action-assessment circle green"></i>
+                        <span class="title">Title</span>
+                        <p>First Line
+                          <br> Second Line
+                        </p>
+                        <a href="#!" class="secondary-content"><i class="mdi-action-grade"></i></a>
+                      </li>
+                      <li class="collection-item avatar">
+                        <i class="mdi-av-play-arrow circle red"></i>
+                        <span class="title">Title</span>
+                        <p>First Line
+                          <br> Second Line
+                        </p>
+                        <a href="#!" class="secondary-content"><i class="mdi-action-grade"></i></a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+
         </div>
         <!--end container-->
 

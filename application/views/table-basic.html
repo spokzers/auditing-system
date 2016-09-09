@@ -2,10 +2,10 @@
 <html lang="en">
 
 <!--================================================================================
-    Item Name: Materialize - Material Design Admin Template
-    Version: 1.0
-    Author: GeeksLabs
-    Author URL: http://www.themeforest.net/user/geekslabs
+	Item Name: Materialize - Material Design Admin Template
+	Version: 1.0
+	Author: GeeksLabs
+	Author URL: http://www.themeforest.net/user/geekslabs
 ================================================================================ -->
 
 <head>
@@ -15,7 +15,7 @@
   <meta name="msapplication-tap-highlight" content="no">
   <meta name="description" content="Materialize is a Material Design Admin Template,It's modern, responsive and based on Material Design by Google. ">
   <meta name="keywords" content="materialize, admin template, dashboard template, flat admin template, responsive admin template,">
-  <title>Helpers | Materialize - Material Design Admin Template</title>
+  <title>Basic Tables | Materialize - Material Design Admin Template</title>
 
   <!-- Favicons-->
   <link rel="icon" href="images/favicon/favicon-32x32.png" sizes="32x32">
@@ -42,9 +42,9 @@
 <body>
   <!-- Start Page Loading -->
   <div id="loader-wrapper">
-    <div id="loader"></div>
-    <div class="loader-section section-left"></div>
-    <div class="loader-section section-right"></div>
+      <div id="loader"></div>        
+      <div class="loader-section section-left"></div>
+      <div class="loader-section section-right"></div>
   </div>
   <!-- End Page Loading -->
 
@@ -259,169 +259,306 @@
 
       <!-- START CONTENT -->
       <section id="content">
-
+        
         <!--breadcrumbs start-->
         <div id="breadcrumbs-wrapper" class=" grey lighten-3">
           <div class="container">
             <div class="row">
               <div class="col s12 m12 l12">
-                <h5 class="breadcrumbs-title">Helpers</h5>
+                <h5 class="breadcrumbs-title">Basic Tables</h5>
                 <ol class="breadcrumb">
-                  <li><a href="index.html">Dashboard</a>
-                  </li>
-                  <li><a href="#">CSS</a>
-                  </li>
-                  <li class="active">Helpers</li>
+                    <li><a href="index.html">Dashboard</a></li>
+                    <li><a href="#">Tables</a></li>
+                    <li class="active">Basic Tables</li>
                 </ol>
               </div>
             </div>
           </div>
         </div>
         <!--breadcrumbs end-->
-
+        
 
         <!--start container-->
         <div class="container">
           <div class="section">
 
-            <p class="caption">You don't need to create new css class for simple edits.We already did it for you.</p>
+            <p class="caption">Tables are a nice way to organize a lot of data. We provide a few utility classes to help you style your table as easily as possible. In addition, to improve mobile experience, all tables on mobile-screen widths are centered automatically.</p>
             <div class="divider"></div>
+            
+            <!--Borderless Table-->
+            <div id="borderless-table">
+              <h4 class="header">Borderless Table</h4>
+              <div class="row">
+                <div class="col s12 m4 l3">
+                  <p>Tables are borderless by default.</p>
+                </div>
+                <div class="col s12 m8 l9">
+                  <table>
+                    <thead>
+                      <tr>
+                        <th data-field="id">Name</th>
+                        <th data-field="name">Item Name</th>
+                        <th data-field="price">Item Price</th>
+                      </tr>
+                    </thead>
 
-            <div class="divider"></div>
-            <div id="text-align" class="section">
-              <h4 class="header">Text Align</h4>
-              <div class="row">
-                <div class="col s12 m4 l3">
-                  <p>Right Aligned</p>
-                  <code class="language-markup">class="right-align"</code>
-                </div>
-                <div class="col s12 m8 l9">
-                  <div class="card-panel">
-                    <p class="right-align">This text is right aligned. Set in the year 0 F.E. ("Foundation Era"), The Psychohistorians opens on Trantor, the capital of the 12,000-year-old Galactic Empire. Though the empire appears stable and powerful, it is slowly decaying
-                      in ways that parallel the decline of the Western Roman Empire.</p>
-                  </div>
-                </div>
-              </div>
-              <div class="row">
-                <div class="col s12 m4 l3">
-                  <p>Left Aligned</p>
-                  <code class="language-markup">class="left-align"</code>
-                </div>
-                <div class="col s12 m8 l9">
-                  <div class="card-panel">
-                    <p class="left-align">In English and most European languages where words are read left-to-right, text is usually aligned "flush left", meaning that the text of a paragraph is aligned on the left-hand side with the right-hand side ragged. This is the default
-                      style of text alignment on the World Wide Web for left-to-right text Quotations are often indented.</p>
-                  </div>
-                </div>
-              </div>
-              <div class="row">
-                <div class="col s12 m4 l3">
-                  <p>Center Aligned</p>
-                  <code class="language-markup">class="center-align"</code>
-                </div>
-                <div class="col s12 m8 l9">
-                  <div class="card-panel">
-                    <p class="center-align">Text can also be "centered", or symmetrically aligned along an axis in the middle of a column. This is often used for the title of a work, headlines, and for poems and songs. As with flush-right alignment, centered text is often used
-                      to present data in tables. Centered text is considered less readable for a body of text made up of multiple lines because the ragged starting edges make it difficult for the reader to track from one line to the next.</p>
-                  </div>
-                </div>
-              </div>
-              <div class="row">
-                <div class="col s12 m4 l3">
-                  <h4 class="header">Vertical Align</h4>
-                  <p>You can easily vertically center things by adding the class <code class="language-markup">class="valign-wrapper"</code> to the container holding the items you want to vertically align.</p>
-                </div>
-                <div class="col s12 m8 l9">
-                  
-                    <div class="valign-demo valign-wrapper">
-                      <h5 class="valign center" style="width: 100%;">This should be vertically aligned</h5>
-                  </div>
+                    <tbody>
+                      <tr>
+                        <td>Alvin</td>
+                        <td>Eclair</td>
+                        <td>$0.87</td>
+                      </tr>
+                      <tr>
+                        <td>Alan</td>
+                        <td>Jellybean</td>
+                        <td>$3.76</td>
+                      </tr>
+                      <tr>
+                        <td>Jonathan</td>
+                        <td>Lollipop</td>
+                        <td>$7.00</td>
+                      </tr>
+                    </tbody>
+                  </table>
                 </div>
               </div>
             </div>
+            
             <div class="divider"></div>
-
-            <div id="hiding-content" class="section">
-              <h4 class="header">Hiding Content</h4>
+            
+            <!--Bordered Table-->
+            <div id="bordered-table">
+              <h4 class="header">Headers</h4>
               <div class="row">
                 <div class="col s12 m4 l3">
-                  <p>We provide easy to use classes to hide content on specific screen sizes.</p>
+                  <p>Add <code class=" language-markup">class="bordered"</code> to the table tag for a bordered table</p>
                 </div>
                 <div class="col s12 m8 l9">
-                  <div class="card-panel">
-                    <table class="striped">
-                      <thead>
-                        <tr>
-                          <th></th>
-                          <th>Screen Range</th>
-                          <th>Display Test</th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        <tr>
-                          <td><code class="language-markup">.hide-on-small-only</code>
-                          </td>
-                          <td>Hidden for Mobile Only</td>
-                          <td>
-                            <p class="hide-on-small-only">Check Me !</p>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td><code class="language-markup">.hide-on-med-only</code>
-                          </td>
-                          <td>Hidden for Tablet Only</td>
-                          <td>
-                            <p class="hide-on-med-only">Check Me !</p>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td><code class="language-markup">.hide-on-med-and-down</code>
-                          </td>
-                          <td>Hidden for Tablet and Below</td>
-                          <td>
-                            <p class="hide-on-med-and-down">Check Me !</p>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td><code class="language-markup">.hide-on-med-and-up</code>
-                          </td>
-                          <td>Hidden for Tablet and Above</td>
-                          <td>
-                            <p class="hide-on-med-and-up">Check Me !</p>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td><code class="language-markup">.hide-on-large-only</code>
-                          </td>
-                          <td>Hidden for Desktop Only</td>
-                          <td>
-                            <p class="hide-on-large-only">Check Me !</p>
-                          </td>
-                        </tr>
-                      </tbody>
-                    </table>
-                  </div>
+                  <table class="bordered">
+                    <thead>
+                      <tr>
+                        <th data-field="id">Name</th>
+                        <th data-field="name">Item Name</th>
+                        <th data-field="price">Item Price</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>Alvin</td>
+                        <td>Eclair</td>
+                        <td>$0.87</td>
+                      </tr>
+                      <tr>
+                        <td>Alan</td>
+                        <td>Jellybean</td>
+                        <td>$3.76</td>
+                      </tr>
+                      <tr>
+                        <td>Jonathan</td>
+                        <td>Lollipop</td>
+                        <td>$7.00</td>
+                      </tr>
+                      <tr>
+                        <td>Shannon</td>
+                        <td>KitKat</td>
+                        <td>$9.99</td>
+                      </tr>
+                    </tbody>
+                  </table>
                 </div>
               </div>
             </div>
 
+            <!--Striped Table-->
             <div class="divider"></div>
-            <div id="truncation" class="section">
-              <h4 class="header">Truncation</h4>
+            <div id="striped-table">
+              <h4 class="header">Striped Table</h4>
               <div class="row">
                 <div class="col s12 m4 l3">
-                  <p>To truncate long lines of text in an ellipsis, add the <code class="language-markup">class="truncate"</code> to the tag which contains the text. See an exaple below of a header being truncated inside a card.</p>
+                  <p>Add <code class=" language-markup">class="striped"</code> to the table tag for a striped table</p>
                 </div>
                 <div class="col s12 m8 l9">
-                  <div class="card-panel">
-                    <p>Normal: This is a paragraph. Paragraphs are preset with a font size, line height and spacing to match the overall vertical rhythm.</p>
-                    <p class="truncate">Truncate: This is a paragraph. Paragraphs are preset with a font size, line height and spacing to match the overall vertical rhythm.</p>
-                  </div>
+                  <table class="striped">
+                    <thead>
+                      <tr>
+                        <th data-field="id">Name</th>
+                        <th data-field="name">Item Name</th>
+                        <th data-field="price">Item Price</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>Alvin</td>
+                        <td>Eclair</td>
+                        <td>$0.87</td>
+                      </tr>
+                      <tr>
+                        <td>Alan</td>
+                        <td>Jellybean</td>
+                        <td>$3.76</td>
+                      </tr>
+                      <tr>
+                        <td>Jonathan</td>
+                        <td>Lollipop</td>
+                        <td>$7.00</td>
+                      </tr>
+                      <tr>
+                        <td>Shannon</td>
+                        <td>KitKat</td>
+                        <td>$9.99</td>
+                      </tr>
+                    </tbody>
+                  </table>
                 </div>
               </div>
             </div>
+
+            <!--Hoverable Table-->
+            <div class="divider"></div>
+            <div id="hoverable-table">
+              <h4 class="header">Hoverable Table</h4>
+              <div class="row">
+                <div class="col s12 m4 l3">
+                  <p>Add <code class=" language-markup">class="hoverable"</code> to the table tag for a hoverable table</p>
+                </div>
+                <div class="col s12 m8 l9">
+                  <table class="hoverable">
+                    <thead>
+                      <tr>
+                        <th data-field="id">Name</th>
+                        <th data-field="name">Item Name</th>
+                        <th data-field="price">Item Price</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>Alvin</td>
+                        <td>Eclair</td>
+                        <td>$0.87</td>
+                      </tr>
+                      <tr>
+                        <td>Alan</td>
+                        <td>Jellybean</td>
+                        <td>$3.76</td>
+                      </tr>
+                      <tr>
+                        <td>Jonathan</td>
+                        <td>Lollipop</td>
+                        <td>$7.00</td>
+                      </tr>
+                      <tr>
+                        <td>Shannon</td>
+                        <td>KitKat</td>
+                        <td>$9.99</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+
+            <!--Centered Table-->
+            <div class="divider"></div>
+            <div id="centered-table">
+              <h4 class="header">Centered Table</h4>
+              <div class="row">
+                <div class="col s12 m4 l3">
+                  <p>Add <code class=" language-markup">class="centered"</code> to the table tag to center align all the text in the table</p>
+                </div>
+                <div class="col s12 m8 l9">
+                  <table class="centered">
+                    <thead>
+                      <tr>
+                        <th data-field="id">Name</th>
+                        <th data-field="name">Item Name</th>
+                        <th data-field="price">Item Price</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>Alvin</td>
+                        <td>Eclair</td>
+                        <td>$0.87</td>
+                      </tr>
+                      <tr>
+                        <td>Alan</td>
+                        <td>Jellybean</td>
+                        <td>$3.76</td>
+                      </tr>
+                      <tr>
+                        <td>Jonathan</td>
+                        <td>Lollipop</td>
+                        <td>$7.00</td>
+                      </tr>
+                      <tr>
+                        <td>Shannon</td>
+                        <td>KitKat</td>
+                        <td>$9.99</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+
+            <!--Responsive Table-->
+            <div class="divider"></div>
+            <div id="responsive-table">
+              <h4 class="header">Responsive Table</h4>
+              <div class="row">
+                <div class="col s12 m4 l3">
+                  <p>Add <code class=" language-markup">class="responsive-table"</code> to the table tag to make the table horizontally scrollable on smaller screen widths.</p>
+                </div>
+                <div class="col s12 m8 l9">
+                  <table class="responsive-table">
+                  <thead>
+                    <tr>
+                        <th data-field="id">Name</th>
+                        <th data-field="name">Item Name</th>
+                        <th data-field="price">Item Price</th>
+                        <th data-field="total">Total</th>
+                        <th data-field="status">Status</th>
+                    </tr>
+                  </thead>
+                    <tbody><tr>
+                      <td>Alvin</td>
+                      <td>Eclair</td>
+                      <td>$0.87</td>
+                      <td>$1.87</td>
+                      <td>Yes</td>
+                    </tr>
+                    <tr>
+                      <td>Alan</td>
+                      <td>Jellybean</td>
+                      <td>$3.76</td>
+                      <td>$10.87</td>
+                      <td>No</td>
+                    </tr>
+                    <tr>
+                      <td>Jonathan</td>
+                      <td>Lollipop</td>
+                      <td>$7.00</td>
+                      <td>$12.87</td>
+                      <td>Yes</td>
+                    </tr>
+                    <tr>
+                      <td>Shannon</td>
+                      <td>KitKat</td>
+                      <td>$9.99</td>
+                      <td>$14.87</td>
+                      <td>No</td>
+                    </tr>
+                  </tbody>
+                </table>
+                </div>
+              </div>
+            </div>
+
 
           </div>
+
+
+
         </div>
         <!--end container-->
 

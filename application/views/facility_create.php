@@ -94,6 +94,7 @@
                                         <!-- Commercial Centers -->
                                         <div class="input-field">
                                             <?php
+                                            $options = "";   
                                             foreach ($centres as $centre) {
                                               $options[$centre->id] = $centre->name;
                                             }

@@ -2,10 +2,10 @@
 <html lang="en">
 
 <!--================================================================================
-    Item Name: Materialize - Material Design Admin Template
-    Version: 1.0
-    Author: GeeksLabs
-    Author URL: http://www.themeforest.net/user/geekslabs
+	Item Name: Materialize - Material Design Admin Template
+	Version: 1.0
+	Author: GeeksLabs
+	Author URL: http://www.themeforest.net/user/geekslabs
 ================================================================================ -->
 
 <head>
@@ -15,7 +15,7 @@
   <meta name="msapplication-tap-highlight" content="no">
   <meta name="description" content="Materialize is a Material Design Admin Template,It's modern, responsive and based on Material Design by Google. ">
   <meta name="keywords" content="materialize, admin template, dashboard template, flat admin template, responsive admin template,">
-  <title>Helpers | Materialize - Material Design Admin Template</title>
+  <title>Navbar | Materialize - Material Design Admin Template</title>
 
   <!-- Favicons-->
   <link rel="icon" href="images/favicon/favicon-32x32.png" sizes="32x32">
@@ -42,9 +42,9 @@
 <body>
   <!-- Start Page Loading -->
   <div id="loader-wrapper">
-    <div id="loader"></div>
-    <div class="loader-section section-left"></div>
-    <div class="loader-section section-right"></div>
+      <div id="loader"></div>        
+      <div class="loader-section section-left"></div>
+      <div class="loader-section section-right"></div>
   </div>
   <!-- End Page Loading -->
 
@@ -265,13 +265,13 @@
           <div class="container">
             <div class="row">
               <div class="col s12 m12 l12">
-                <h5 class="breadcrumbs-title">Helpers</h5>
+                <h5 class="breadcrumbs-title">Navbar</h5>
                 <ol class="breadcrumb">
                   <li><a href="index.html">Dashboard</a>
                   </li>
-                  <li><a href="#">CSS</a>
+                  <li><a href="#">UI Elements</a>
                   </li>
-                  <li class="active">Helpers</li>
+                  <li class="active">Navbar</li>
                 </ol>
               </div>
             </div>
@@ -282,146 +282,251 @@
 
         <!--start container-->
         <div class="container">
-          <div class="section">
+          <p class="caption">The navbar is fully contained by an HTML5 Nav tag. Inside a recommended container div, there are 2 main parts of the navbar. A logo or brand link, and the navigations links. You can align these links to the left or right.</p>
+          <div class="divider"></div>
 
-            <p class="caption">You don't need to create new css class for simple edits.We already did it for you.</p>
-            <div class="divider"></div>
-
-            <div class="divider"></div>
-            <div id="text-align" class="section">
-              <h4 class="header">Text Align</h4>
-              <div class="row">
-                <div class="col s12 m4 l3">
-                  <p>Right Aligned</p>
-                  <code class="language-markup">class="right-align"</code>
-                </div>
-                <div class="col s12 m8 l9">
-                  <div class="card-panel">
-                    <p class="right-align">This text is right aligned. Set in the year 0 F.E. ("Foundation Era"), The Psychohistorians opens on Trantor, the capital of the 12,000-year-old Galactic Empire. Though the empire appears stable and powerful, it is slowly decaying
-                      in ways that parallel the decline of the Western Roman Empire.</p>
-                  </div>
-                </div>
+          <!--Right Aligned Links-->
+          <div id="right-aligned-links" class="section">
+            <h4 class="header">Right Aligned Links</h4>
+            <div class="row">
+              <div class="col s12 m4 l3">
+                <p>To right align your navbar links, just add a <code class=" language-markup">right</code> class to your <code class=" language-markup"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>ul</span><span class="token punctuation">&gt;</span></span></code>                  that contains them.</p>
               </div>
-              <div class="row">
-                <div class="col s12 m4 l3">
-                  <p>Left Aligned</p>
-                  <code class="language-markup">class="left-align"</code>
-                </div>
-                <div class="col s12 m8 l9">
-                  <div class="card-panel">
-                    <p class="left-align">In English and most European languages where words are read left-to-right, text is usually aligned "flush left", meaning that the text of a paragraph is aligned on the left-hand side with the right-hand side ragged. This is the default
-                      style of text alignment on the World Wide Web for left-to-right text Quotations are often indented.</p>
+              <div class="col s12 m8 l9">
+                <nav class="light-blue">
+                  <div class="nav-wrapper">
+                    <div class="col s12">
+                      <a href="#!" class="brand-logo">LOGO</a>
+                      <ul class="right hide-on-med-and-down">
+                        <li><a href="sass.html">Sass</a>
+                        </li>
+                        <li><a href="components.html">Components</a>
+                        </li>
+                        <li><a href="javascript.html">JavaScript</a>
+                        </li>
+                      </ul>
+                    </div>
                   </div>
-                </div>
-              </div>
-              <div class="row">
-                <div class="col s12 m4 l3">
-                  <p>Center Aligned</p>
-                  <code class="language-markup">class="center-align"</code>
-                </div>
-                <div class="col s12 m8 l9">
-                  <div class="card-panel">
-                    <p class="center-align">Text can also be "centered", or symmetrically aligned along an axis in the middle of a column. This is often used for the title of a work, headlines, and for poems and songs. As with flush-right alignment, centered text is often used
-                      to present data in tables. Centered text is considered less readable for a body of text made up of multiple lines because the ragged starting edges make it difficult for the reader to track from one line to the next.</p>
-                  </div>
-                </div>
-              </div>
-              <div class="row">
-                <div class="col s12 m4 l3">
-                  <h4 class="header">Vertical Align</h4>
-                  <p>You can easily vertically center things by adding the class <code class="language-markup">class="valign-wrapper"</code> to the container holding the items you want to vertically align.</p>
-                </div>
-                <div class="col s12 m8 l9">
-                  
-                    <div class="valign-demo valign-wrapper">
-                      <h5 class="valign center" style="width: 100%;">This should be vertically aligned</h5>
-                  </div>
-                </div>
+                </nav>
               </div>
             </div>
-            <div class="divider"></div>
-
-            <div id="hiding-content" class="section">
-              <h4 class="header">Hiding Content</h4>
-              <div class="row">
-                <div class="col s12 m4 l3">
-                  <p>We provide easy to use classes to hide content on specific screen sizes.</p>
-                </div>
-                <div class="col s12 m8 l9">
-                  <div class="card-panel">
-                    <table class="striped">
-                      <thead>
-                        <tr>
-                          <th></th>
-                          <th>Screen Range</th>
-                          <th>Display Test</th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        <tr>
-                          <td><code class="language-markup">.hide-on-small-only</code>
-                          </td>
-                          <td>Hidden for Mobile Only</td>
-                          <td>
-                            <p class="hide-on-small-only">Check Me !</p>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td><code class="language-markup">.hide-on-med-only</code>
-                          </td>
-                          <td>Hidden for Tablet Only</td>
-                          <td>
-                            <p class="hide-on-med-only">Check Me !</p>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td><code class="language-markup">.hide-on-med-and-down</code>
-                          </td>
-                          <td>Hidden for Tablet and Below</td>
-                          <td>
-                            <p class="hide-on-med-and-down">Check Me !</p>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td><code class="language-markup">.hide-on-med-and-up</code>
-                          </td>
-                          <td>Hidden for Tablet and Above</td>
-                          <td>
-                            <p class="hide-on-med-and-up">Check Me !</p>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td><code class="language-markup">.hide-on-large-only</code>
-                          </td>
-                          <td>Hidden for Desktop Only</td>
-                          <td>
-                            <p class="hide-on-large-only">Check Me !</p>
-                          </td>
-                        </tr>
-                      </tbody>
-                    </table>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="divider"></div>
-            <div id="truncation" class="section">
-              <h4 class="header">Truncation</h4>
-              <div class="row">
-                <div class="col s12 m4 l3">
-                  <p>To truncate long lines of text in an ellipsis, add the <code class="language-markup">class="truncate"</code> to the tag which contains the text. See an exaple below of a header being truncated inside a card.</p>
-                </div>
-                <div class="col s12 m8 l9">
-                  <div class="card-panel">
-                    <p>Normal: This is a paragraph. Paragraphs are preset with a font size, line height and spacing to match the overall vertical rhythm.</p>
-                    <p class="truncate">Truncate: This is a paragraph. Paragraphs are preset with a font size, line height and spacing to match the overall vertical rhythm.</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-
           </div>
+
+
+          <div class="divider"></div>
+          <!--Left Aligned Links-->
+          <div id="left-aligned-links" class="section">
+            <h4 class="header">Left Aligned Links</h4>
+            <div class="row">
+              <div class="col s12 m4 l3">
+                <p>To left align your navbar links, just add a <code class=" language-markup">left</code> class to your <code class=" language-markup"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>ul</span><span class="token punctuation">&gt;</span></span></code>                  that contains them.</p>
+              </div>
+              <div class="col s12 m8 l9">
+                <nav class="indigo">
+                  <div class="nav-wrapper">
+                    <div class="col s12">
+                      <a href="#!" class="brand-logo right">Logo</a>
+                      <ul class="left hide-on-med-and-down">
+                        <li><a href="sass.html">Sass</a>
+                        </li>
+                        <li><a href="components.html">Components</a>
+                        </li>
+                        <li><a href="javascript.html">JavaScript</a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </nav>
+              </div>
+            </div>
+          </div>
+
+          <div class="divider"></div>
+          <!--Centering the logo-->
+          <div id="centering-the-logo" class="section">
+            <h4 class="header">Centering the logo</h4>
+            <div class="row">
+              <div class="col s12 m4 l3">
+                <p>The logo will center itself on medium and down screens, but if you want the logo to always be centered, add the <code class=" language-markup">center</code> class to your <code class=" language-markup"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>brand-logo<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span></code>.
+                  You will have to make sure yourself that links do not overlap if you use this.</p>
+              </div>
+              <div class="col s12 m8 l9">
+                <nav class="purple">
+
+                  <div class="nav-wrapper">
+                    <div class="col s12">
+                    <a href="#!" class="brand-logo center">Logo</a>
+                    <ul class="left hide-on-med-and-down">
+                      <li><a href="sass.html">Sass</a>
+                      </li>
+                      <li><a href="components.html">Components</a>
+                      </li>
+                    </ul>
+                    </div>
+                  </div>
+
+                </nav>
+              </div>
+            </div>
+          </div>
+
+          <div class="divider"></div>
+          <!--Fixed Navbar-->
+          <div id="fixed-navbar">
+
+            <h4 class="header">Fixed Navbar</h4>
+            <p>To make the navbar fixed, you have to add an outer wrapping div with the class <code class=" language-markup">navbar-fixed</code>. This will offset your other content while making your nav fixed. You can adjust the height of this outer div
+              to change how much offset is on your content.</p>
+            <p>DEMO: You can see the theme top nav is fixed.</p>
+          </div>
+
+          <div class="divider"></div>
+          <!--Navbar Dropdown Menu-->
+          <div id="navbar-dropdown-menu" class="section">
+            <h4 class="header">Navbar Dropdown Menu</h4>
+            <div class="row">
+              <div class="col s12 m4 l3">
+                <p>To add a navbar dropdown menu, add the <code class=" language-markup">ul</code> dropdown structure into the page.Then, add an element to trigger the dropdown menu. Make sure to supply the id of the dropdown structure to the
+                  <code class=" language-markup">data-activates</code> attribute of the dropdown trigger.</p>
+              </div>
+              <div class="col s12 m8 l9">
+                <nav class="teal">
+                  <div class="nav-wrapper">
+                    <div class="col s12">
+                    <a href="#!" class="brand-logo">Logo</a>
+                    <ul class="right hide-on-med-and-down">
+                      <li><a href="sass.html">Sass</a>
+                      </li>
+                      <li><a href="components.html">Components</a>
+                      </li>
+                      <!-- Dropdown Trigger -->
+                      <li><a class="dropdown-button" href="#!" data-activates="dropdown1">Dropdown<i class="mdi-navigation-arrow-drop-down right"></i></a>
+                      </li>
+                    </ul>
+                    </div>
+                  </div>
+                </nav>
+              </div>
+            </div>
+          </div>
+
+          <div class="divider"></div>
+          <!--Icon Links-->
+          <div id="icon-links" class="section">
+            <h4 class="header">Icon Links</h4>
+            <div class="row">
+              <div class="col s12 m4 l3">
+                <p>You can add icons into links. For icon only links you don't need any additional class. Just pop the <code class=" language-markup">i</code> tag in and it will work.</p>
+              </div>
+              <div class="col s12 m8 l9">
+                <nav class="cyan">
+                  <div class="nav-wrapper">
+                    <div class="col s12">
+                    <a href="#!" class="brand-logo">Logo</a>
+                    <ul class="right hide-on-med-and-down">
+                      <li><a href="sass.html"><i class="mdi-action-search"></i></a>
+                      </li>
+                      <li><a href="components.html"><i class="mdi-action-view-module"></i></a>
+                      </li>
+                      <li><a href="javascript.html"><i class="mdi-navigation-refresh"></i></a>
+                      </li>
+                      <li><a href="mobile.html"><i class="mdi-navigation-more-vert"></i></a>
+                      </li>
+                    </ul>
+                    </div>
+                  </div>
+                </nav>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col s12 m4 l3">
+                <p>For adding an icon to a text link you need to add either a <code class=" language-markup">left</code> or <code class=" language-markup">right</code> class to the icon depending on where you want the icon to be.</p>
+              </div>
+              <div class="col s12 m8 l9">
+                <nav class="green">
+                  <div class="nav-wrapper">
+                    <div class="col s12">
+                    <a href="#!" class="brand-logo">Logo</a>
+                    <ul class="right hide-on-med-and-down">
+                      <li><a href="sass.html"><i class="mdi-action-search left"></i>Link with Left Icon</a>
+                      </li>
+                      <li><a href="components.html"><i class="mdi-action-view-module right"></i>Link with Right Icon</a>
+                      </li>
+                    </ul>
+                    </div>
+                  </div>
+                </nav>
+              </div>
+            </div>
+          </div>
+
+          <div class="divider"></div>
+          <!--Search Bar-->
+          <div id="search-bar" class="section">
+            <h4 class="header">Search Bar</h4>
+            <div class="row">
+              <div class="col s12 m4 l3">
+                <p>You can add a search form in the navbar.</p>
+              </div>
+              <div class="col s12 m8 l9">
+                <nav class="amber darken-4">
+                  <div class="nav-wrapper">
+                    <div class="col s12">
+                    <form class="row">
+                      <div class="input-field">
+                        <input id="search" type="text" required="">
+                        <label for="search" class=""><i class="mdi-action-search"></i>
+                        </label>
+                      </div>
+                    </form>
+                    </div>
+                  </div>
+                </nav>
+              </div>
+            </div>
+          </div>
+
+          <div class="divider"></div>
+          <!--Mobile Collapse Button-->
+          <div id="mobile-collapse-button" class="section">
+            <h4 class="header">Mobile Collapse Button</h4>
+            <div class="row">
+              <div class="col s12 m4 l3">
+                <p>When your nav bar is resized, you will see that the links on the right turn into a hamburger icon <i class="mdi-navigation-menu"></i>. Take a look at the example below to get this functionality. Add the entire <code class=" language-markup">button-collapse</code>                  line to your <code class=" language-markup">nav</code>.</p>
+              </div>
+              <div class="col s12 m8 l9">
+                <nav class="deep-orange">
+                  <div class="nav-wrapper">
+                    <div class="col s12">
+                    <a href="#!" class="brand-logo">Logo</a>
+                    <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
+                    <ul class="right hide-on-med-and-down">
+                      <li><a href="sass.html">Sass</a>
+                      </li>
+                      <li><a href="components.html">Components</a>
+                      </li>
+                      <li><a href="javascript.html">Javascript</a>
+                      </li>
+                      <li><a href="mobile.html">Mobile</a>
+                      </li>
+                    </ul>
+                    <ul class="side-nav" id="mobile-demo">
+                      <li><a href="sass.html">Sass</a>
+                      </li>
+                      <li><a href="components.html">Components</a>
+                      </li>
+                      <li><a href="javascript.html">Javascript</a>
+                      </li>
+                      <li><a href="mobile.html">Mobile</a>
+                      </li>
+                    </ul>
+                    </div>
+                  </div>
+                </nav>
+              </div>
+            </div>
+          </div>
+
         </div>
         <!--end container-->
 
@@ -604,7 +709,6 @@
     <script type="text/javascript" src="js/plugins/perfect-scrollbar/perfect-scrollbar.min.js"></script>
     <!-- chartist -->
     <script type="text/javascript" src="js/plugins/chartist-js/chartist.min.js"></script>   
-    
     <!--plugins.js - Some Specific JS codes for Plugin Settings-->
     <script type="text/javascript" src="js/plugins.js"></script>
     

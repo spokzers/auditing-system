@@ -2,10 +2,10 @@
 <html lang="en">
 
 <!--================================================================================
-    Item Name: Materialize - Material Design Admin Template
-    Version: 1.0
-    Author: GeeksLabs
-    Author URL: http://www.themeforest.net/user/geekslabs
+	Item Name: Materialize - Material Design Admin Template
+	Version: 1.0
+	Author: GeeksLabs
+	Author URL: http://www.themeforest.net/user/geekslabs
 ================================================================================ -->
 
 <head>
@@ -15,7 +15,7 @@
   <meta name="msapplication-tap-highlight" content="no">
   <meta name="description" content="Materialize is a Material Design Admin Template,It's modern, responsive and based on Material Design by Google. ">
   <meta name="keywords" content="materialize, admin template, dashboard template, flat admin template, responsive admin template,">
-  <title>Helpers | Materialize - Material Design Admin Template</title>
+  <title>Accordions | Materialize - Material Design Admin Template</title>
 
   <!-- Favicons-->
   <link rel="icon" href="images/favicon/favicon-32x32.png" sizes="32x32">
@@ -42,9 +42,9 @@
 <body>
   <!-- Start Page Loading -->
   <div id="loader-wrapper">
-    <div id="loader"></div>
-    <div class="loader-section section-left"></div>
-    <div class="loader-section section-right"></div>
+      <div id="loader"></div>        
+      <div class="loader-section section-left"></div>
+      <div class="loader-section section-right"></div>
   </div>
   <!-- End Page Loading -->
 
@@ -265,13 +265,13 @@
           <div class="container">
             <div class="row">
               <div class="col s12 m12 l12">
-                <h5 class="breadcrumbs-title">Helpers</h5>
+                <h5 class="breadcrumbs-title">Accordions</h5>
                 <ol class="breadcrumb">
                   <li><a href="index.html">Dashboard</a>
                   </li>
-                  <li><a href="#">CSS</a>
+                  <li><a href="#">UI Elements</a>
                   </li>
-                  <li class="active">Helpers</li>
+                  <li class="active">Accordions</li>
                 </ol>
               </div>
             </div>
@@ -282,145 +282,234 @@
 
         <!--start container-->
         <div class="container">
-          <div class="section">
+          <p class="caption">Accordion elements that expand when clicked on. They allow you to hide content that is not immediately relevant to the user.</p>
 
-            <p class="caption">You don't need to create new css class for simple edits.We already did it for you.</p>
-            <div class="divider"></div>
-
-            <div class="divider"></div>
-            <div id="text-align" class="section">
-              <h4 class="header">Text Align</h4>
-              <div class="row">
-                <div class="col s12 m4 l3">
-                  <p>Right Aligned</p>
-                  <code class="language-markup">class="right-align"</code>
-                </div>
-                <div class="col s12 m8 l9">
-                  <div class="card-panel">
-                    <p class="right-align">This text is right aligned. Set in the year 0 F.E. ("Foundation Era"), The Psychohistorians opens on Trantor, the capital of the 12,000-year-old Galactic Empire. Though the empire appears stable and powerful, it is slowly decaying
-                      in ways that parallel the decline of the Western Roman Empire.</p>
-                  </div>
-                </div>
+          <!--Accordion-->
+          <div class="divider"></div>
+          <div id="accordion" class="section">
+            <div class="row">
+              <div class="col s12 m4 l3">
+                <p>Accordion elements only need initialization if they are added dynamically. You can also pass in options inside the initialization, however this can be done in the HTML markup as well.</p>
               </div>
-              <div class="row">
-                <div class="col s12 m4 l3">
-                  <p>Left Aligned</p>
-                  <code class="language-markup">class="left-align"</code>
-                </div>
-                <div class="col s12 m8 l9">
-                  <div class="card-panel">
-                    <p class="left-align">In English and most European languages where words are read left-to-right, text is usually aligned "flush left", meaning that the text of a paragraph is aligned on the left-hand side with the right-hand side ragged. This is the default
-                      style of text alignment on the World Wide Web for left-to-right text Quotations are often indented.</p>
-                  </div>
-                </div>
-              </div>
-              <div class="row">
-                <div class="col s12 m4 l3">
-                  <p>Center Aligned</p>
-                  <code class="language-markup">class="center-align"</code>
-                </div>
-                <div class="col s12 m8 l9">
-                  <div class="card-panel">
-                    <p class="center-align">Text can also be "centered", or symmetrically aligned along an axis in the middle of a column. This is often used for the title of a work, headlines, and for poems and songs. As with flush-right alignment, centered text is often used
-                      to present data in tables. Centered text is considered less readable for a body of text made up of multiple lines because the ragged starting edges make it difficult for the reader to track from one line to the next.</p>
-                  </div>
-                </div>
-              </div>
-              <div class="row">
-                <div class="col s12 m4 l3">
-                  <h4 class="header">Vertical Align</h4>
-                  <p>You can easily vertically center things by adding the class <code class="language-markup">class="valign-wrapper"</code> to the container holding the items you want to vertically align.</p>
-                </div>
-                <div class="col s12 m8 l9">
-                  
-                    <div class="valign-demo valign-wrapper">
-                      <h5 class="valign center" style="width: 100%;">This should be vertically aligned</h5>
-                  </div>
-                </div>
+              <div class="col s12 m8 l9">
+                <ul class="collapsible collapsible-accordion" data-collapsible="accordion">
+                  <li>
+                    <div class="collapsible-header ">First Header</div>
+                    <div class="collapsible-body">
+                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="collapsible-header ">Second Header</div>
+                    <div class="collapsible-body">
+                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                      </p>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="collapsible-header ">Third Header</div>
+                    <div class="collapsible-body">
+                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                      </p>
+                    </div>
+                  </li>
+                </ul>
               </div>
             </div>
-            <div class="divider"></div>
+            <div class="row">
+              <div class="col s12 m4 l3">
+                <h4 class="header">Preselected Section</h4>
+                <p>If you want a collapsible with a preopened section just add the <code class=" language-markup">active</code> class to the collapsible-header. </p>
+              </div>
+              <div class="col s12 m8 l9">
+                <ul class="collapsible collapsible-accordion" data-collapsible="accordion">
+                  <li>
+                    <div class="collapsible-header ">First Header</div>
+                    <div class="collapsible-body">
+                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="collapsible-header active ">Preselected Section</div>
+                    <div class="collapsible-body">
+                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="collapsible-header ">Third Header</div>
+                    <div class="collapsible-body">
+                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <!--Accordion Options-->
+          <div class="divider"></div>
+          <div id="accordion-options">
+            <h4 class="header">Options</h4>
+            <p class="caption">There are two ways a collapsible can behave. It can either allow multiple sections to stay open, or it can only allow one section to stay open at a time, which is called an accordion. See below for a demo of each type</p>
+            <div class="row">
+              <div class="col s12 m4 l3">
+                <h4 class="header">Accordion</h4>
+                <p>This is default behavior, but you can explicitly set it by setting the <code class=" language-markup">data-collapsible="accordion"</code> attribute in HTML.</p>
+              </div>
+              <div class="col s12 m8 l9">
 
-            <div id="hiding-content" class="section">
-              <h4 class="header">Hiding Content</h4>
-              <div class="row">
-                <div class="col s12 m4 l3">
-                  <p>We provide easy to use classes to hide content on specific screen sizes.</p>
-                </div>
-                <div class="col s12 m8 l9">
-                  <div class="card-panel">
-                    <table class="striped">
-                      <thead>
-                        <tr>
-                          <th></th>
-                          <th>Screen Range</th>
-                          <th>Display Test</th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        <tr>
-                          <td><code class="language-markup">.hide-on-small-only</code>
-                          </td>
-                          <td>Hidden for Mobile Only</td>
-                          <td>
-                            <p class="hide-on-small-only">Check Me !</p>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td><code class="language-markup">.hide-on-med-only</code>
-                          </td>
-                          <td>Hidden for Tablet Only</td>
-                          <td>
-                            <p class="hide-on-med-only">Check Me !</p>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td><code class="language-markup">.hide-on-med-and-down</code>
-                          </td>
-                          <td>Hidden for Tablet and Below</td>
-                          <td>
-                            <p class="hide-on-med-and-down">Check Me !</p>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td><code class="language-markup">.hide-on-med-and-up</code>
-                          </td>
-                          <td>Hidden for Tablet and Above</td>
-                          <td>
-                            <p class="hide-on-med-and-up">Check Me !</p>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td><code class="language-markup">.hide-on-large-only</code>
-                          </td>
-                          <td>Hidden for Desktop Only</td>
-                          <td>
-                            <p class="hide-on-large-only">Check Me !</p>
-                          </td>
-                        </tr>
-                      </tbody>
-                    </table>
-                  </div>
-                </div>
+                <ul class="collapsible collapsible-accordion" data-collapsible="accordion">
+                  <li>
+                    <div class="collapsible-header "><i class="mdi-editor-insert-chart"></i> First Header</div>
+                    <div class="collapsible-body">
+                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="collapsible-header "><i class="mdi-editor-insert-comment"></i> Second Header</div>
+                    <div class="collapsible-body">
+                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                      </p>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="collapsible-header "><i class="mdi-editor-insert-emoticon"></i> Third Header</div>
+                    <div class="collapsible-body">
+                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                      </p>
+                    </div>
+                  </li>
+                </ul>
+
               </div>
             </div>
 
-            <div class="divider"></div>
-            <div id="truncation" class="section">
-              <h4 class="header">Truncation</h4>
-              <div class="row">
-                <div class="col s12 m4 l3">
-                  <p>To truncate long lines of text in an ellipsis, add the <code class="language-markup">class="truncate"</code> to the tag which contains the text. See an exaple below of a header being truncated inside a card.</p>
-                </div>
-                <div class="col s12 m8 l9">
-                  <div class="card-panel">
-                    <p>Normal: This is a paragraph. Paragraphs are preset with a font size, line height and spacing to match the overall vertical rhythm.</p>
-                    <p class="truncate">Truncate: This is a paragraph. Paragraphs are preset with a font size, line height and spacing to match the overall vertical rhythm.</p>
-                  </div>
-                </div>
+            <div class="row">
+              <div class="col s12 m4 l3">
+                <h4 class="header">Expandable</h4>
+                <p>Use as expandable option by setting the <code class=" language-markup">data-collapsible="expandable"</code> attribute in HTML.</p>
+              </div>
+              <div class="col s12 m8 l9">
+
+                <ul class="collapsible collapsible-accordion" data-collapsible="expandable">
+                  <li>
+                    <div class="collapsible-header "><i class="mdi-file-cloud-download"></i> First Header</div>
+                    <div class="collapsible-body">
+                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="collapsible-header "><i class="mdi-hardware-desktop-windows"></i> Second Header</div>
+                    <div class="collapsible-body">
+                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                      </p>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="collapsible-header "><i class="mdi-hardware-gamepad"></i> Third Header</div>
+                    <div class="collapsible-body">
+                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                      </p>
+                    </div>
+                  </li>
+                </ul>
+
+              </div>
+            </div>
+          </div>
+          <!--Using Color-->
+          <div class="divider"></div>
+          <div id="using-color">
+            <h4 class="header">Using Color</h4>
+            <p class="caption">This theme has various <a href="colors.html" target="_blank">color palette</a> based on the material design base colors, you can use any of theme just need to add color class.</p>
+            <div class="row">
+              <div class="col s12 m4 l3">
+                <p>Single color with icons</p>
+              </div>
+              <div class="col s12 m8 l9">
+
+                <ul class="collapsible collapsible-accordion" data-collapsible="accordion">
+                  <li>
+                    <div class="collapsible-header light-blue light-blue-text text-lighten-5"><i class="mdi-communication-business"></i> First Header</div>
+                    <div class="collapsible-body light-blue lighten-5">
+                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="collapsible-header light-blue light-blue-text text-lighten-5"><i class="mdi-communication-dialpad"></i> Second Header</div>
+                    <div class="collapsible-body light-blue lighten-5">
+                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                      </p>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="collapsible-header light-blue light-blue-text text-lighten-5"><i class="mdi-communication-invert-colors-on"></i> Third Header</div>
+                    <div class="collapsible-body light-blue lighten-5">
+                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                      </p>
+                    </div>
+                  </li>
+                </ul>
+
               </div>
             </div>
 
+            <div class="row">
+              <div class="col s12 m4 l3">
+                <p>Multiple colors with icons</p>
+              </div>
+              <div class="col s12 m8 l9">
+
+                <ul class="collapsible collapsible-accordion" data-collapsible="expandable">
+                  <li>
+                    <div class="collapsible-header purple white-text"><i class="mdi-device-access-alarms"></i> First Header</div>
+                    <div class="collapsible-body purple lighten-5">
+                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="collapsible-header red white-text"><i class="mdi-device-battery-charging-20"></i> Second Header</div>
+                    <div class="collapsible-body red lighten-5 lighten-5">
+                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                      </p>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="collapsible-header teal white-text"><i class="mdi-device-dvr"></i> Third Header</div>
+                    <div class="collapsible-body teal lighten-5">
+                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                      </p>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="collapsible-header lime darken-4 white-text"><i class="mdi-device-bluetooth-searching"></i> Forth Header</div>
+                    <div class="collapsible-body lime lighten-5">
+                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                      </p>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="collapsible-header orange white-text"><i class="mdi-device-now-widgets"></i> Fifth Header</div>
+                    <div class="collapsible-body orange lighten-5">
+                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                      </p>
+                    </div>
+                  </li>
+                </ul>
+
+              </div>
+            </div>
           </div>
         </div>
         <!--end container-->
@@ -602,9 +691,9 @@
     <script type="text/javascript" src="js/prism.js"></script>
     <!--scrollbar-->
     <script type="text/javascript" src="js/plugins/perfect-scrollbar/perfect-scrollbar.min.js"></script>
+    
     <!-- chartist -->
     <script type="text/javascript" src="js/plugins/chartist-js/chartist.min.js"></script>   
-    
     <!--plugins.js - Some Specific JS codes for Plugin Settings-->
     <script type="text/javascript" src="js/plugins.js"></script>
     

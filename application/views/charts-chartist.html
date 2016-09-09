@@ -15,7 +15,7 @@
   <meta name="msapplication-tap-highlight" content="no">
   <meta name="description" content="Materialize is a Material Design Admin Template,It's modern, responsive and based on Material Design by Google. ">
   <meta name="keywords" content="materialize, admin template, dashboard template, flat admin template, responsive admin template,">
-  <title>Calendar | Materialize - Material Design Admin Template</title>
+  <title>Chartist Chart | Materialize - Material Design Admin Template</title>
 
   <!-- Favicons-->
   <link rel="icon" href="images/favicon/favicon-32x32.png" sizes="32x32">
@@ -35,9 +35,9 @@
 
   <!-- INCLUDED PLUGIN CSS ON THIS PAGE -->
   <link href="css/prism.css" type="text/css" rel="stylesheet" media="screen,projection">
-  <link href="js/plugins/chartist-js/chartist.min.css" type="text/css" rel="stylesheet" media="screen,projection">
   <link href="js/plugins/perfect-scrollbar/perfect-scrollbar.css" type="text/css" rel="stylesheet" media="screen,projection">
-  <link href="js/plugins/fullcalendar/css/fullcalendar.min.css" type="text/css" rel="stylesheet" media="screen,projection">
+  
+  <link href="js/plugins/chartist-js/chartist.min.css" type="text/css" rel="stylesheet" media="screen,projection">
 </head>
 
 <body>
@@ -239,7 +239,7 @@
             <li><a href="css-helpers.html"><i class="mdi-communication-live-help"></i> Helpers</a>
             </li>
             <li><a href="changelogs.html"><i class="mdi-action-swap-vert-circle"></i> Changelogs</a>
-            </li>            
+            </li>
             <li class="li-hover"><div class="divider"></div></li>
             <li class="li-hover"><p class="ultra-small margin more-text">Daily Sales</p></li>
             <li class="li-hover">
@@ -260,55 +260,164 @@
 
       <!-- START CONTENT -->
       <section id="content">
-        
+
         <!--breadcrumbs start-->
         <div id="breadcrumbs-wrapper" class=" grey lighten-3">
           <div class="container">
             <div class="row">
               <div class="col s12 m12 l12">
-                <h5 class="breadcrumbs-title">Calendar</h5>
+                <h5 class="breadcrumbs-title">Chartist</h5>
                 <ol class="breadcrumb">
-                    <li><a href="index.html">Dashboard</a></li>
-                    <li><a href="#">Pages</a></li>
-                    <li class="active">Calendar</li>
+                  <li><a href="index.html">Dashboard</a>
+                  </li>
+                  <li><a href="#">Chart</a>
+                  </li>
+                  <li class="active">Chartist</li>
                 </ol>
               </div>
             </div>
           </div>
         </div>
         <!--breadcrumbs end-->
-        
+
 
         <!--start container-->
         <div class="container">
           <div class="section">
+            <p class="caption">Chartist - Simple Responsive Charts.</p>
+            <p><a href="http://gionkunz.github.io/chartist-js/index.html" class="btn waves-effect pink accent-2 white-text" target="_blank"></a>
+            </p>
 
-            <p class="caption">FullCalendar is a jQuery plugin that provides a full-sized, drag & drop event calendar like the one below. It uses AJAX to fetch events on-the-fly and is easily configured to use your own feed format. It is visually customizable with a rich API.</p>
             <div class="divider"></div>
-            <div id="full-calendar">              
+            <!--LINE CHART WITH TOOLTIPS-->
+            <div id="chartist-line-chart" class="section">
+              <h4 class="header">SIMPLE LINE CHART</h4>
               <div class="row">
                 <div class="col s12 m4 l3">
-                  <div id='external-events'>    
-                    <h4 class="header">Draggable Events</h4>
-                    <div class='fc-event cyan'>March Invoices</div>
-                    <div class='fc-event teal'>Call Emy</div>
-                    <div class='fc-event cyan darken-1'>Dinner with Team</div>
-                    <div class='fc-event cyan accent-4'>Meeting with Support Team</div>
-                    <div class='fc-event teal accent-4'>Meeting with Sales Team</div>
-                    <div class='fc-event light-blue accent-3'>Design an iOS App</div>
-                    <div class='fc-event light-blue accent-4'>Company Party</div>
-                    <p>
-                      <input type='checkbox' id='drop-remove' />
-                      <label for='drop-remove'>remove after drop</label>
-                    </p>
-                  </div>
+                  <p>An example of a simple line chart with three series. You can edit this example in realtime.</p>
                 </div>
                 <div class="col s12 m8 l9">
-                  <div id='calendar'></div>
+                  <div class="sample-chart-wrapper">
+                    <div  class="ct-chart ct-golden-section" id="ct1-chart"></div>
+                  </div>
                 </div>
               </div>
             </div>
+
+            <div class="divider"></div>
+            <!--Bar Chart-->
+            <div id="chartist-chart-1" class="section">
+              <h4 class="header">LINE CHART WITH AREA</h4>
+              <div class="row">
+                <div class="col s12 m4 l3">
+                  <p>This chart uses the showArea option to draw line, dots but also an area shape. Use the low option to specify a fixed lower bound that will make the area expand. You can also use the areaBase property to specify a data value that will be used to determine the area shape base position (this is 0 by default).</p>
+                </div>
+                <div class="col s12 m8 l9">
+                  <div class="sample-chart-wrapper">
+                    <div class="ct-chart ct-golden-section" id="ct2-chart-bar"></div>
+                  </div>
+                </div>
+              </div>
             </div>
+
+            <div class="divider"></div>
+            <!--Radar Chart-->
+            <div id="chartjs-chart" class="section">
+              <h4 class="header">BI-POLAR LINE CHART WITH AREA ONLY</h4>
+              <div class="row">
+                <div class="col s12 m4 l3">
+                  <p>You can also only draw the area shapes of the line chart. Area shapes will always be constructed around their areaBase (that can be configured in the options) which also allows you to draw nice bi-polar areas.</p>
+                </div>
+                <div class="col s12 m8 l9">
+                  <div class="sample-chart-wrapper">
+                    <div class="ct-chart ct-golden-section" id="ct3-chart"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="divider"></div>
+            <!--Polar Area Chart-->
+            <div id="chartist-chart-2" class="section">
+              <h4 class="header">ADVANCED SMIL ANIMATIONS</h4>
+              <div class="row">
+                <div class="col s12 m4 l3">
+                  <p>Chartist provides a simple API to animate the elements on the Chart using SMIL. Usually you can achieve most animation with CSS3 animations but in some cases you'd like to animate SVG properties that are not available in CSS.</p>
+                </div>
+                <div class="col s12 m8 l9">
+                  <div class="sample-chart-wrapper">
+                    <div class="ct-chart ct-golden-section" id="ct4-chart"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="divider"></div>
+            <!--STACKED BAR CHART-->
+            <div id="chartist-chart-3" class="section">
+              <h4 class="header">STACKED BAR CHART</h4>
+              <div class="row">
+                <div class="col s12 m4 l3">
+                  <p>You can also set your bar chart to stack the series bars on top of each other easily by using the stackBars property in your configuration.</p>
+                </div>
+                <div class="col s12 m8 l9">
+                  <div class="sample-chart-wrapper">
+                    <div class="ct-chart ct-golden-section" id="ct5-chart"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+
+            <div class="divider"></div>
+            <!--MULTI-LINE LABELS-->
+            <div id="chartist-chart-4" class="section">
+              <h4 class="header">MULTI-LINE LABELS</h4>
+              <div class="row">
+                <div class="col s12 m4 l3">
+                  <p>Chartist will figure out if your browser supports foreignObject and it will use them to create labels that re based on regular HTML text elements. Multi-line and regular CSS styles are just two of many benefits while using foreignObjects!</p>
+                </div>
+                <div class="col s12 m8 l9">
+                  <div class="sample-chart-wrapper">
+                    <div class="ct-chart ct-golden-section" id="ct6-chart"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="divider"></div>
+            <!--MULTI-LINE LABELS-->
+            <div id="chartist-chart-5" class="section">
+              <h4 class="header">SIMPLE PIE CHART</h4>
+              <div class="row">
+                <div class="col s12 m4 l3">
+                  <p>A very simple pie chart with label interpolation to show percentage instead of the actual data series value.</p>
+                </div>
+                <div class="col s12 m8 l9">
+                  <div class="sample-chart-wrapper">
+                    <div class="ct-chart ct-golden-section" id="ct7-chart"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="divider"></div>
+            <!--GAUGE CHART-->
+            <div id="chartist-chart" class="section">
+              <h4 class="header">GAUGE CHART</h4>
+              <div class="row">
+                <div class="col s12 m4 l3">
+                  <p>This pie chart uses donut, startAngle and total to draw a gauge chart.</p>
+                </div>
+                <div class="col s12 m8 l9">
+                  <div class="sample-chart-wrapper">
+                    <div class="ct-chart ct-golden-section" id="ct8-chart"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
         </div>
         <!--end container-->
 
@@ -473,7 +582,7 @@
         </div>
     </div>
   </footer>
-    <!-- END FOOTER -->
+  <!-- END FOOTER -->
 
 
 
@@ -484,25 +593,18 @@
     <!-- jQuery Library -->
     <script type="text/javascript" src="js/jquery-1.11.2.min.js"></script>    
     <!--materialize js-->
-    <script type="text/javascript" src="js/materialize.js"></script>
-    <!--prism-->
-    <script type="text/javascript" src="js/prism.js"></script>
+    <script type="text/javascript" src="js/materialize.min.js"></script>
     <!--scrollbar-->
     <script type="text/javascript" src="js/plugins/perfect-scrollbar/perfect-scrollbar.min.js"></script>
     
-    <!-- chartist -->
-    <script type="text/javascript" src="js/plugins/chartist-js/chartist.min.js"></script>   
+    
+    <!-- chartjs -->
+    <script type="text/javascript" src="js/plugins/chartist-js/chartist.min.js"></script>
+    <script type="text/javascript" src="js/plugins/chartist-js/chartist-script.js"></script>
 
-    <!-- Calendar Script -->
-    <script type="text/javascript" src="js/plugins/fullcalendar/lib/jquery-ui.custom.min.js"></script>
-    <script type="text/javascript" src="js/plugins/fullcalendar/lib/moment.min.js"></script>
-    <script type="text/javascript" src="js/plugins/fullcalendar/js/fullcalendar.min.js"></script>
-    <script type="text/javascript" src="js/plugins/fullcalendar/fullcalendar-script.js"></script>
 
     <!--plugins.js - Some Specific JS codes for Plugin Settings-->
     <script type="text/javascript" src="js/plugins.js"></script>
-
-    
 </body>
 
 </html>

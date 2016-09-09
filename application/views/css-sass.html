@@ -2,10 +2,10 @@
 <html lang="en">
 
 <!--================================================================================
-    Item Name: Materialize - Material Design Admin Template
-    Version: 1.0
-    Author: GeeksLabs
-    Author URL: http://www.themeforest.net/user/geekslabs
+	Item Name: Materialize - Material Design Admin Template
+	Version: 1.0
+	Author: GeeksLabs
+	Author URL: http://www.themeforest.net/user/geekslabs
 ================================================================================ -->
 
 <head>
@@ -15,7 +15,7 @@
   <meta name="msapplication-tap-highlight" content="no">
   <meta name="description" content="Materialize is a Material Design Admin Template,It's modern, responsive and based on Material Design by Google. ">
   <meta name="keywords" content="materialize, admin template, dashboard template, flat admin template, responsive admin template,">
-  <title>Helpers | Materialize - Material Design Admin Template</title>
+  <title>SASS | Materialize - Material Design Admin Template</title>
 
   <!-- Favicons-->
   <link rel="icon" href="images/favicon/favicon-32x32.png" sizes="32x32">
@@ -42,9 +42,9 @@
 <body>
   <!-- Start Page Loading -->
   <div id="loader-wrapper">
-    <div id="loader"></div>
-    <div class="loader-section section-left"></div>
-    <div class="loader-section section-right"></div>
+      <div id="loader"></div>        
+      <div class="loader-section section-left"></div>
+      <div class="loader-section section-right"></div>
   </div>
   <!-- End Page Loading -->
 
@@ -265,13 +265,13 @@
           <div class="container">
             <div class="row">
               <div class="col s12 m12 l12">
-                <h5 class="breadcrumbs-title">Helpers</h5>
+                <h5 class="breadcrumbs-title">SASS</h5>
                 <ol class="breadcrumb">
                   <li><a href="index.html">Dashboard</a>
                   </li>
                   <li><a href="#">CSS</a>
                   </li>
-                  <li class="active">Helpers</li>
+                  <li class="active">SASS</li>
                 </ol>
               </div>
             </div>
@@ -282,146 +282,172 @@
 
         <!--start container-->
         <div class="container">
-          <div class="section">
+          <p class="caption">Media can be styled in different ways using Materialize.</p>
+          
+          <!--SASS Variables-->
+          <div class="divider"></div>
+          <div id="sass-variables" class="section">
+            <h4 class="header">Variables</h4>
+            <div class="row">
+              <div class="col s12 m4 l3">
+                <p>When using Sass, you can change the color scheme of your site extremely quickly. Below is a very small sample of what you can change through sass in <code class=" language-scss">_variables.scss</code>.</p>
+              </div>
+              <div class="col s12 m8 l9">
+<pre><code class="language-scss">
+$primary-color: color("materialize-red", "lighten-2") !default;
+$primary-color-light: false !default;
+$primary-color-dark: false !default;
+@if not $primary-color-light {
+  $primary-color-light: lighten($primary-color, 15%);
+}
+@if not $primary-color-dark {
+  $primary-color-dark: darken($primary-color, 15%);
+}
+$secondary-color: color("teal", "lighten-1") !default;
+$success-color: color("green", "base") !default;
+$error-color: color("red", "base") !default;
 
-            <p class="caption">You don't need to create new css class for simple edits.We already did it for you.</p>
-            <div class="divider"></div>
+$link-color: color("light-blue", "darken-1") !default;
 
-            <div class="divider"></div>
-            <div id="text-align" class="section">
-              <h4 class="header">Text Align</h4>
-              <div class="row">
-                <div class="col s12 m4 l3">
-                  <p>Right Aligned</p>
-                  <code class="language-markup">class="right-align"</code>
-                </div>
-                <div class="col s12 m8 l9">
-                  <div class="card-panel">
-                    <p class="right-align">This text is right aligned. Set in the year 0 F.E. ("Foundation Era"), The Psychohistorians opens on Trantor, the capital of the 12,000-year-old Galactic Empire. Though the empire appears stable and powerful, it is slowly decaying
-                      in ways that parallel the decline of the Western Roman Empire.</p>
-                  </div>
-                </div>
-              </div>
-              <div class="row">
-                <div class="col s12 m4 l3">
-                  <p>Left Aligned</p>
-                  <code class="language-markup">class="left-align"</code>
-                </div>
-                <div class="col s12 m8 l9">
-                  <div class="card-panel">
-                    <p class="left-align">In English and most European languages where words are read left-to-right, text is usually aligned "flush left", meaning that the text of a paragraph is aligned on the left-hand side with the right-hand side ragged. This is the default
-                      style of text alignment on the World Wide Web for left-to-right text Quotations are often indented.</p>
-                  </div>
-                </div>
-              </div>
-              <div class="row">
-                <div class="col s12 m4 l3">
-                  <p>Center Aligned</p>
-                  <code class="language-markup">class="center-align"</code>
-                </div>
-                <div class="col s12 m8 l9">
-                  <div class="card-panel">
-                    <p class="center-align">Text can also be "centered", or symmetrically aligned along an axis in the middle of a column. This is often used for the title of a work, headlines, and for poems and songs. As with flush-right alignment, centered text is often used
-                      to present data in tables. Centered text is considered less readable for a body of text made up of multiple lines because the ragged starting edges make it difficult for the reader to track from one line to the next.</p>
-                  </div>
-                </div>
-              </div>
-              <div class="row">
-                <div class="col s12 m4 l3">
-                  <h4 class="header">Vertical Align</h4>
-                  <p>You can easily vertically center things by adding the class <code class="language-markup">class="valign-wrapper"</code> to the container holding the items you want to vertically align.</p>
-                </div>
-                <div class="col s12 m8 l9">
-                  
-                    <div class="valign-demo valign-wrapper">
-                      <h5 class="valign center" style="width: 100%;">This should be vertically aligned</h5>
-                  </div>
-                </div>
+/*** More variables not shown here.. ***/
+</code></pre>
               </div>
             </div>
-            <div class="divider"></div>
-
-            <div id="hiding-content" class="section">
-              <h4 class="header">Hiding Content</h4>
-              <div class="row">
-                <div class="col s12 m4 l3">
-                  <p>We provide easy to use classes to hide content on specific screen sizes.</p>
-                </div>
-                <div class="col s12 m8 l9">
-                  <div class="card-panel">
-                    <table class="striped">
-                      <thead>
-                        <tr>
-                          <th></th>
-                          <th>Screen Range</th>
-                          <th>Display Test</th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        <tr>
-                          <td><code class="language-markup">.hide-on-small-only</code>
-                          </td>
-                          <td>Hidden for Mobile Only</td>
-                          <td>
-                            <p class="hide-on-small-only">Check Me !</p>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td><code class="language-markup">.hide-on-med-only</code>
-                          </td>
-                          <td>Hidden for Tablet Only</td>
-                          <td>
-                            <p class="hide-on-med-only">Check Me !</p>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td><code class="language-markup">.hide-on-med-and-down</code>
-                          </td>
-                          <td>Hidden for Tablet and Below</td>
-                          <td>
-                            <p class="hide-on-med-and-down">Check Me !</p>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td><code class="language-markup">.hide-on-med-and-up</code>
-                          </td>
-                          <td>Hidden for Tablet and Above</td>
-                          <td>
-                            <p class="hide-on-med-and-up">Check Me !</p>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td><code class="language-markup">.hide-on-large-only</code>
-                          </td>
-                          <td>Hidden for Desktop Only</td>
-                          <td>
-                            <p class="hide-on-large-only">Check Me !</p>
-                          </td>
-                        </tr>
-                      </tbody>
-                    </table>
-                  </div>
-                </div>
+            </div>
+            
+          <!--Media Queries-->
+          <div class="divider"></div>
+          <div id="media-queries" class="section">
+            <h4 class="header">Media Queries</h4>
+            <p class="caption">We have 3 media queries for the 3 standard screen sizes you can use in your custom Sass files. This also includes media query variables that will define the range.</p>
+            <div class="row">
+              <div class="col s12 m4 l3">
+                  <h4 class="header">CSS</h4>
+                  <p>
+                    Small screens are defined as having a max-width of 600px
+                    <br>
+                    Medium screens are defined as having a max-width of 992px
+                    <br>
+                    Large screen are defined as having a min-width of 992px
+                  </p>
+              </div>
+              <div class="col s12 m8 l9">
+<pre><code class="language-scss">
+  /* These classes can be added to HTML Elements
+   * to affect visibility on certain displays.
+   */
+  .hide-on-small-only
+  .hide-on-small-and-down
+  .hide-on-med-and-down
+  .hide-on-med-and-up
+  .hide-on-med-only
+  .hide-on-large-only
+  .show-on-large
+  .show-on-medium
+  .show-on-small
+  .show-on-medium-and-up
+  .show-on-medium-and-down
+</code></pre>
               </div>
             </div>
-
-            <div class="divider"></div>
-            <div id="truncation" class="section">
-              <h4 class="header">Truncation</h4>
-              <div class="row">
-                <div class="col s12 m4 l3">
-                  <p>To truncate long lines of text in an ellipsis, add the <code class="language-markup">class="truncate"</code> to the tag which contains the text. See an exaple below of a header being truncated inside a card.</p>
-                </div>
-                <div class="col s12 m8 l9">
-                  <div class="card-panel">
-                    <p>Normal: This is a paragraph. Paragraphs are preset with a font size, line height and spacing to match the overall vertical rhythm.</p>
-                    <p class="truncate">Truncate: This is a paragraph. Paragraphs are preset with a font size, line height and spacing to match the overall vertical rhythm.</p>
-                  </div>
-                </div>
+            
+            <div class="row">
+              <div class="col s12 m4 l3">
+                  <h4 class="header">Sass</h4>
+              </div>
+              <div class="col s12 m8 l9">
+<pre><code class="language-scss">
+  @media #{$small-and-down} {
+    // styles for small screens and down
+  }
+  @media #{$medium-and-up} {
+    // styles for medium screens and larger
+  }
+  @media #{$medium-and-down} {
+    // styles for medium screens and down
+  }
+  @media #{$large-and-up} {
+    // styles for large screens and up
+  }
+</code></pre>
               </div>
             </div>
-
           </div>
+          
+          <!--Prefixer-->
+          <div class="divider"></div>
+          <div id="sass-prefixer" class="section">
+            <h4 class="header">Prefixer</h4>
+            <p class="caption">One major goal of this framework is to be as adaptable as possible which includes cross browser compatibility. We have adapted a prefixer script to Sass which will automatically add all browser prefixes for certain CSS properties.</p>
+            <div class="row">
+              <div class="col s12 m4 l3">
+                  <p>For Example: Using this Sass mixin</p>
+                  <pre><code class="language-scss">  @include transition(.3s);</code></pre>
+              </div>
+              <div class="col s12 m8 l9">
+                  <p>Will Output This</p>
+                  <pre><code class="language-scss">
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -o-transition: 0.3s;
+  -ms-transition: 0.3s;
+  transition: 0.3s;
+                  </code></pre>
+              </div>
+            </div>
+            
+            <div class="row">
+              <div class="col s12 m4 l3">
+                  <p>Here is the full list of mixins</p>
+              </div>
+              <div class="col s12 m8 l9">
+                  <pre><code class="language-scss">
+ animation($args)
+  animation-delay($delay)
+  animation-direction($direction)
+  animation-duration($duration)
+  animation-fill-mode($mode)
+  animation-iteration-count($count)
+  animation-name($name)
+  animation-play-state($state)
+  animation-timing-function($function)
+  background-size($args)
+  border-radius($args)
+  box-shadow($args)
+      inner-shadow($args)
+  box-sizing($args)
+      border-box()
+      content-box()
+  columns($args)
+      column-count($count)
+      column-gap($gap)
+      column-rule($args)
+      column-width($width)
+  gradient($default,$start,$stop)
+      linear-gradient-top($default,$color1,$stop1,$color2,$stop2,[$color3,$stop3,$color4,$stop4])
+      linear-gradient-left($default,$color1,$stop1,$color2,$stop2,[$color3,$stop3,$color4,$stop4])
+  opacity($factor)
+  transform($args)
+      transform-origin($args)
+      transform-style($style)
+      rotate($deg)
+      scale($factor)
+      translate($x,$y)
+      translate3d($x,$y,$z)
+      translateHardware($x,$y)
+  text-shadow($args)
+  transition($args)
+      transition-delay($delay)
+      transition-duration($duration)
+      transition-property($property)
+      transition-timing-function($function)
+        
+                  </code></pre>
+              </div>
+            </div>
+          </div>
+
+            
         </div>
         <!--end container-->
 

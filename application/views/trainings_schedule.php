@@ -46,18 +46,11 @@
                             <label>Training Level</label>
                         </div>
                         <div class="input-field col s6">
-                            <select name="language">
-                                <option value="all">All</option>
-                                <option value="english">English</option>
-                                <option value="arabic">Arabic</option>
-                                <option value="hindi">Hindi</option>
-                                <option value="urdu">Urdu</option>
-                                <option value="bengali">Bengali</option>
-                                <option value="tagalog">Tagalog</option>
-                                <option value="bahasa">Bahasa</option>
-                                <option value="indonesian">Indonesian</option>
-                                <option value="other">Other</option>
-                            </select>
+
+                                     <?php
+                                        $levels = get_language();
+                                        print_select('language',1, $levels, "");
+                                        ?>
                             <label>Language</label>
                         </div>
                     </div>

@@ -2,10 +2,10 @@
 <html lang="en">
 
 <!--================================================================================
-    Item Name: Materialize - Material Design Admin Template
-    Version: 1.0
-    Author: GeeksLabs
-    Author URL: http://www.themeforest.net/user/geekslabs
+	Item Name: Materialize - Material Design Admin Template
+	Version: 1.0
+	Author: GeeksLabs
+	Author URL: http://www.themeforest.net/user/geekslabs
 ================================================================================ -->
 
 <head>
@@ -15,7 +15,7 @@
   <meta name="msapplication-tap-highlight" content="no">
   <meta name="description" content="Materialize is a Material Design Admin Template,It's modern, responsive and based on Material Design by Google. ">
   <meta name="keywords" content="materialize, admin template, dashboard template, flat admin template, responsive admin template,">
-  <title>Helpers | Materialize - Material Design Admin Template</title>
+  <title>ChartJS | Materialize - Material Design Admin Template</title>
 
   <!-- Favicons-->
   <link rel="icon" href="images/favicon/favicon-32x32.png" sizes="32x32">
@@ -41,12 +41,12 @@
 
 <body>
   <!-- Start Page Loading -->
-  <div id="loader-wrapper">
-    <div id="loader"></div>
-    <div class="loader-section section-left"></div>
-    <div class="loader-section section-right"></div>
-  </div>
-  <!-- End Page Loading -->
+    <div id="loader-wrapper">
+        <div id="loader"></div>        
+        <div class="loader-section section-left"></div>
+        <div class="loader-section section-right"></div>
+    </div>
+    <!-- End Page Loading -->
 
   <!-- //////////////////////////////////////////////////////////////////////////// -->
 
@@ -265,13 +265,13 @@
           <div class="container">
             <div class="row">
               <div class="col s12 m12 l12">
-                <h5 class="breadcrumbs-title">Helpers</h5>
+                <h5 class="breadcrumbs-title">ChartJS</h5>
                 <ol class="breadcrumb">
                   <li><a href="index.html">Dashboard</a>
                   </li>
-                  <li><a href="#">CSS</a>
+                  <li><a href="#">Chart</a>
                   </li>
-                  <li class="active">Helpers</li>
+                  <li class="active">ChartJS</li>
                 </ol>
               </div>
             </div>
@@ -283,139 +283,97 @@
         <!--start container-->
         <div class="container">
           <div class="section">
+            <p class="caption">Chart.js provides simple, responsive, clean and engaging charts for designers and developers.</p>
+            <p><a href="http://www.chartjs.org/docs/#getting-started" class="btn waves-effect pink accent-2 white-text" target="_blank"></a>
+            </p>
 
-            <p class="caption">You don't need to create new css class for simple edits.We already did it for you.</p>
             <div class="divider"></div>
-
-            <div class="divider"></div>
-            <div id="text-align" class="section">
-              <h4 class="header">Text Align</h4>
+            <!--chartjs-->
+            <div id="chartjs" class="section">
+              <h4 class="header">Line Chart</h4>
               <div class="row">
                 <div class="col s12 m4 l3">
-                  <p>Right Aligned</p>
-                  <code class="language-markup">class="right-align"</code>
+                  <p>A line chart is a way of plotting data points on a line. Often, it is used to show trend data, and the comparison of two data sets.</p>
                 </div>
                 <div class="col s12 m8 l9">
-                  <div class="card-panel">
-                    <p class="right-align">This text is right aligned. Set in the year 0 F.E. ("Foundation Era"), The Psychohistorians opens on Trantor, the capital of the 12,000-year-old Galactic Empire. Though the empire appears stable and powerful, it is slowly decaying
-                      in ways that parallel the decline of the Western Roman Empire.</p>
-                  </div>
-                </div>
-              </div>
-              <div class="row">
-                <div class="col s12 m4 l3">
-                  <p>Left Aligned</p>
-                  <code class="language-markup">class="left-align"</code>
-                </div>
-                <div class="col s12 m8 l9">
-                  <div class="card-panel">
-                    <p class="left-align">In English and most European languages where words are read left-to-right, text is usually aligned "flush left", meaning that the text of a paragraph is aligned on the left-hand side with the right-hand side ragged. This is the default
-                      style of text alignment on the World Wide Web for left-to-right text Quotations are often indented.</p>
-                  </div>
-                </div>
-              </div>
-              <div class="row">
-                <div class="col s12 m4 l3">
-                  <p>Center Aligned</p>
-                  <code class="language-markup">class="center-align"</code>
-                </div>
-                <div class="col s12 m8 l9">
-                  <div class="card-panel">
-                    <p class="center-align">Text can also be "centered", or symmetrically aligned along an axis in the middle of a column. This is often used for the title of a work, headlines, and for poems and songs. As with flush-right alignment, centered text is often used
-                      to present data in tables. Centered text is considered less readable for a body of text made up of multiple lines because the ragged starting edges make it difficult for the reader to track from one line to the next.</p>
-                  </div>
-                </div>
-              </div>
-              <div class="row">
-                <div class="col s12 m4 l3">
-                  <h4 class="header">Vertical Align</h4>
-                  <p>You can easily vertically center things by adding the class <code class="language-markup">class="valign-wrapper"</code> to the container holding the items you want to vertically align.</p>
-                </div>
-                <div class="col s12 m8 l9">
-                  
-                    <div class="valign-demo valign-wrapper">
-                      <h5 class="valign center" style="width: 100%;">This should be vertically aligned</h5>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="divider"></div>
-
-            <div id="hiding-content" class="section">
-              <h4 class="header">Hiding Content</h4>
-              <div class="row">
-                <div class="col s12 m4 l3">
-                  <p>We provide easy to use classes to hide content on specific screen sizes.</p>
-                </div>
-                <div class="col s12 m8 l9">
-                  <div class="card-panel">
-                    <table class="striped">
-                      <thead>
-                        <tr>
-                          <th></th>
-                          <th>Screen Range</th>
-                          <th>Display Test</th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        <tr>
-                          <td><code class="language-markup">.hide-on-small-only</code>
-                          </td>
-                          <td>Hidden for Mobile Only</td>
-                          <td>
-                            <p class="hide-on-small-only">Check Me !</p>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td><code class="language-markup">.hide-on-med-only</code>
-                          </td>
-                          <td>Hidden for Tablet Only</td>
-                          <td>
-                            <p class="hide-on-med-only">Check Me !</p>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td><code class="language-markup">.hide-on-med-and-down</code>
-                          </td>
-                          <td>Hidden for Tablet and Below</td>
-                          <td>
-                            <p class="hide-on-med-and-down">Check Me !</p>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td><code class="language-markup">.hide-on-med-and-up</code>
-                          </td>
-                          <td>Hidden for Tablet and Above</td>
-                          <td>
-                            <p class="hide-on-med-and-up">Check Me !</p>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td><code class="language-markup">.hide-on-large-only</code>
-                          </td>
-                          <td>Hidden for Desktop Only</td>
-                          <td>
-                            <p class="hide-on-large-only">Check Me !</p>
-                          </td>
-                        </tr>
-                      </tbody>
-                    </table>
+                  <div class="sample-chart-wrapper">
+                    <canvas id="line-chart-sample" height="120"></canvas>
                   </div>
                 </div>
               </div>
             </div>
 
             <div class="divider"></div>
-            <div id="truncation" class="section">
-              <h4 class="header">Truncation</h4>
+            <!--Bar Chart-->
+            <div id="chartjs-bar-chart" class="section">
+              <h4 class="header">Bar Chart</h4>
               <div class="row">
                 <div class="col s12 m4 l3">
-                  <p>To truncate long lines of text in an ellipsis, add the <code class="language-markup">class="truncate"</code> to the tag which contains the text. See an exaple below of a header being truncated inside a card.</p>
+                  <p>A bar chart is a way of showing data as bars. It is sometimes used to show trend data, and the comparison of multiple data sets side by side.</p>
                 </div>
                 <div class="col s12 m8 l9">
-                  <div class="card-panel">
-                    <p>Normal: This is a paragraph. Paragraphs are preset with a font size, line height and spacing to match the overall vertical rhythm.</p>
-                    <p class="truncate">Truncate: This is a paragraph. Paragraphs are preset with a font size, line height and spacing to match the overall vertical rhythm.</p>
+                  <div class="sample-chart-wrapper">
+                    <canvas id="bar-chart-sample" height="120"></canvas>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="divider"></div>
+            <!--Radar Chart-->
+            <div id="chartjs-radar-chart" class="section">
+              <h4 class="header">Radar Chart</h4>
+              <div class="row">
+                <div class="col s12 m4 l3">
+                  <p>A radar chart is a way of showing multiple data points and the variation between them.They are often useful for comparing the points of two or more different data sets.</p>
+                </div>
+                <div class="col s12 m8 l9">
+                  <div class="sample-chart-wrapper">
+                    <canvas id="radar-chart-sample" height="120"></canvas>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="divider"></div>
+            <!--Polar Area Chart-->
+            <div id="chartjs-polor-chart" class="section">
+              <h4 class="header">Polar Area Chart</h4>
+              <div class="row">
+                <div class="col s12 m4 l3">
+                  <p>Polar area charts are similar to pie charts, but each segment has the same angle - the radius of the segment differs depending on the value.</p>
+                </div>
+                <div class="col s12 m8 l9">
+                  <div class="sample-chart-wrapper">
+                    <canvas id="polar-chart-sample" height="120"></canvas>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="divider"></div>
+            <!--Pie & Doughnut Charts-->
+            <div id="chartjs-pie-chart" class="section">
+              <h4 class="header">Pie & Doughnut Charts</h4>
+              <div class="row">
+                <div class="col s12 m4 l3">
+                  <p>Pie and doughnut charts are probably the most commonly used chart there are. They are divided into segments, the arc of each segment shows the proportional value of each piece of data.</p>
+                </div>
+                <div class="col s12 m8 l9">
+                  <div class="row">
+                    <div class="col s12 m6 l6">
+                      
+                      <div class="sample-chart-wrapper">
+                        <canvas id="pie-chart-sample" ></canvas>
+                      </div>
+                      <p class="header center">Pie Charts</p>
+                    </div>
+                    <div class="col s12 m6 l6">
+                      <div class="sample-chart-wrapper">
+                        <canvas id="doughnut-chart-sample" ></canvas>
+                      </div>
+                      <p class="header center">Doughnut Charts</p>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -586,7 +544,7 @@
         </div>
     </div>
   </footer>
-    <!-- END FOOTER -->
+  <!-- END FOOTER -->
 
 
 
@@ -597,17 +555,20 @@
     <!-- jQuery Library -->
     <script type="text/javascript" src="js/jquery-1.11.2.min.js"></script>    
     <!--materialize js-->
-    <script type="text/javascript" src="js/materialize.js"></script>
-    <!--prism-->
-    <script type="text/javascript" src="js/prism.js"></script>
+    <script type="text/javascript" src="js/materialize.min.js"></script>
     <!--scrollbar-->
     <script type="text/javascript" src="js/plugins/perfect-scrollbar/perfect-scrollbar.min.js"></script>
+    
     <!-- chartist -->
     <script type="text/javascript" src="js/plugins/chartist-js/chartist.min.js"></script>   
     
+    <!-- chartjs -->
+    <script type="text/javascript" src="js/plugins/chartjs/chart.min.js"></script>
+    <script type="text/javascript" src="js/plugins/chartjs/chartjs-sample-chart.js"></script>
+
+
     <!--plugins.js - Some Specific JS codes for Plugin Settings-->
     <script type="text/javascript" src="js/plugins.js"></script>
-    
 </body>
 
 </html>

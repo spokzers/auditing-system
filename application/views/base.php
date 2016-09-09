@@ -58,7 +58,7 @@
                     <h1 class="logo-wrapper row">
                         <div class="col s1 left">
                         <a href="<?php echo base_url(); ?>index.php/" class="brand-logo darken-1">
-                            <img src="<?php echo base_url(); ?>static/images/logo.png" width="78px" alt="EPIC logo">
+                            <img src="<?php echo base_url(); ?>static/images/logo.png" style="max-width:35%;" alt="EPIC logo">
                         </a>
                         </div>
                         <div class="col s11 right hide-on-med-and-down">

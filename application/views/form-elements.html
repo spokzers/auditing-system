@@ -2,10 +2,10 @@
 <html lang="en">
 
 <!--================================================================================
-    Item Name: Materialize - Material Design Admin Template
-    Version: 1.0
-    Author: GeeksLabs
-    Author URL: http://www.themeforest.net/user/geekslabs
+	Item Name: Materialize - Material Design Admin Template
+	Version: 1.0
+	Author: GeeksLabs
+	Author URL: http://www.themeforest.net/user/geekslabs
 ================================================================================ -->
 
 <head>
@@ -15,7 +15,7 @@
   <meta name="msapplication-tap-highlight" content="no">
   <meta name="description" content="Materialize is a Material Design Admin Template,It's modern, responsive and based on Material Design by Google. ">
   <meta name="keywords" content="materialize, admin template, dashboard template, flat admin template, responsive admin template,">
-  <title>Helpers | Materialize - Material Design Admin Template</title>
+  <title>Materialize - Material Design Admin Template</title>
 
   <!-- Favicons-->
   <link rel="icon" href="images/favicon/favicon-32x32.png" sizes="32x32">
@@ -42,9 +42,9 @@
 <body>
   <!-- Start Page Loading -->
   <div id="loader-wrapper">
-    <div id="loader"></div>
-    <div class="loader-section section-left"></div>
-    <div class="loader-section section-right"></div>
+      <div id="loader"></div>        
+      <div class="loader-section section-left"></div>
+      <div class="loader-section section-right"></div>
   </div>
   <!-- End Page Loading -->
 
@@ -265,13 +265,13 @@
           <div class="container">
             <div class="row">
               <div class="col s12 m12 l12">
-                <h5 class="breadcrumbs-title">Helpers</h5>
+                <h5 class="breadcrumbs-title">Forms</h5>
                 <ol class="breadcrumb">
                   <li><a href="index.html">Dashboard</a>
                   </li>
-                  <li><a href="#">CSS</a>
+                  <li><a href="#">Forms</a>
                   </li>
-                  <li class="active">Helpers</li>
+                  <li class="active">Forms Elements</li>
                 </ol>
               </div>
             </div>
@@ -284,153 +284,404 @@
         <div class="container">
           <div class="section">
 
-            <p class="caption">You don't need to create new css class for simple edits.We already did it for you.</p>
-            <div class="divider"></div>
+            <p class="caption">Forms are the standard way to receive user inputted data. The transitions and smoothness of these elements are very important because of the inherent user interaction associated with forms.</p>
 
             <div class="divider"></div>
-            <div id="text-align" class="section">
-              <h4 class="header">Text Align</h4>
-              <div class="row">
-                <div class="col s12 m4 l3">
-                  <p>Right Aligned</p>
-                  <code class="language-markup">class="right-align"</code>
-                </div>
-                <div class="col s12 m8 l9">
-                  <div class="card-panel">
-                    <p class="right-align">This text is right aligned. Set in the year 0 F.E. ("Foundation Era"), The Psychohistorians opens on Trantor, the capital of the 12,000-year-old Galactic Empire. Though the empire appears stable and powerful, it is slowly decaying
-                      in ways that parallel the decline of the Western Roman Empire.</p>
-                  </div>
-                </div>
-              </div>
-              <div class="row">
-                <div class="col s12 m4 l3">
-                  <p>Left Aligned</p>
-                  <code class="language-markup">class="left-align"</code>
-                </div>
-                <div class="col s12 m8 l9">
-                  <div class="card-panel">
-                    <p class="left-align">In English and most European languages where words are read left-to-right, text is usually aligned "flush left", meaning that the text of a paragraph is aligned on the left-hand side with the right-hand side ragged. This is the default
-                      style of text alignment on the World Wide Web for left-to-right text Quotations are often indented.</p>
-                  </div>
-                </div>
-              </div>
-              <div class="row">
-                <div class="col s12 m4 l3">
-                  <p>Center Aligned</p>
-                  <code class="language-markup">class="center-align"</code>
-                </div>
-                <div class="col s12 m8 l9">
-                  <div class="card-panel">
-                    <p class="center-align">Text can also be "centered", or symmetrically aligned along an axis in the middle of a column. This is often used for the title of a work, headlines, and for poems and songs. As with flush-right alignment, centered text is often used
-                      to present data in tables. Centered text is considered less readable for a body of text made up of multiple lines because the ragged starting edges make it difficult for the reader to track from one line to the next.</p>
-                  </div>
-                </div>
-              </div>
-              <div class="row">
-                <div class="col s12 m4 l3">
-                  <h4 class="header">Vertical Align</h4>
-                  <p>You can easily vertically center things by adding the class <code class="language-markup">class="valign-wrapper"</code> to the container holding the items you want to vertically align.</p>
-                </div>
-                <div class="col s12 m8 l9">
-                  
-                    <div class="valign-demo valign-wrapper">
-                      <h5 class="valign center" style="width: 100%;">This should be vertically aligned</h5>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="divider"></div>
 
-            <div id="hiding-content" class="section">
-              <h4 class="header">Hiding Content</h4>
+            <!--Input fields-->
+            <div id="input-fields">
+              <h4 class="header">Input fields</h4>
               <div class="row">
                 <div class="col s12 m4 l3">
-                  <p>We provide easy to use classes to hide content on specific screen sizes.</p>
+                  <p>Text fields allow user input. The border should light up simply and clearly indicating which field the user is currently editing. You must have a <code class=" language-markup">.input-field</code> div wrapping your input and label. This
+                    helps our jQuery animate the label. This is only used in our Input and Textarea form elements.</p>
+                  <p>If you don't want the Green and Red validation states, just remove the <code class=" language-markup">validate</code> class from your inputs.</p>
                 </div>
                 <div class="col s12 m8 l9">
-                  <div class="card-panel">
-                    <table class="striped">
-                      <thead>
-                        <tr>
-                          <th></th>
-                          <th>Screen Range</th>
-                          <th>Display Test</th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        <tr>
-                          <td><code class="language-markup">.hide-on-small-only</code>
-                          </td>
-                          <td>Hidden for Mobile Only</td>
-                          <td>
-                            <p class="hide-on-small-only">Check Me !</p>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td><code class="language-markup">.hide-on-med-only</code>
-                          </td>
-                          <td>Hidden for Tablet Only</td>
-                          <td>
-                            <p class="hide-on-med-only">Check Me !</p>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td><code class="language-markup">.hide-on-med-and-down</code>
-                          </td>
-                          <td>Hidden for Tablet and Below</td>
-                          <td>
-                            <p class="hide-on-med-and-down">Check Me !</p>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td><code class="language-markup">.hide-on-med-and-up</code>
-                          </td>
-                          <td>Hidden for Tablet and Above</td>
-                          <td>
-                            <p class="hide-on-med-and-up">Check Me !</p>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td><code class="language-markup">.hide-on-large-only</code>
-                          </td>
-                          <td>Hidden for Desktop Only</td>
-                          <td>
-                            <p class="hide-on-large-only">Check Me !</p>
-                          </td>
-                        </tr>
-                      </tbody>
-                    </table>
+                  <div class="row">
+                    <form class="col s12">
+                      <div class="row">
+                        <div class="input-field col s6">
+                          <input placeholder="Placeholder" id="first_name" type="text" class="validate">
+                          <label for="first_name">First Name</label>
+                        </div>
+                        <div class="input-field col s6">
+                          <input id="last_name" type="text" class="validate">
+                          <label for="last_name">Last Name</label>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="input-field col s12">
+                          <input disabled value="I am not editable" id="disabled" type="text" class="validate">
+                          <label for="disabled">Disabled</label>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="input-field col s12">
+                          <input id="password" type="password" class="validate">
+                          <label for="password">Password</label>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="input-field col s12">
+                          <input id="email" type="email" class="validate">
+                          <label for="email">Email</label>
+                        </div>
+                      </div>
+                    </form>
                   </div>
                 </div>
               </div>
             </div>
 
             <div class="divider"></div>
-            <div id="truncation" class="section">
-              <h4 class="header">Truncation</h4>
+
+            <!--Prefilling Text Inputs-->
+            <div id="prefilling-text" class="section">
+              <h4 class="header">Prefilling Text Inputs</h4>
               <div class="row">
                 <div class="col s12 m4 l3">
-                  <p>To truncate long lines of text in an ellipsis, add the <code class="language-markup">class="truncate"</code> to the tag which contains the text. See an exaple below of a header being truncated inside a card.</p>
+                  <p>If you are having trouble with the labels overlapping prefilled content, Try adding <code class=" language-markup">class="active"</code> to the label</p>
                 </div>
                 <div class="col s12 m8 l9">
-                  <div class="card-panel">
-                    <p>Normal: This is a paragraph. Paragraphs are preset with a font size, line height and spacing to match the overall vertical rhythm.</p>
-                    <p class="truncate">Truncate: This is a paragraph. Paragraphs are preset with a font size, line height and spacing to match the overall vertical rhythm.</p>
+                  <div class="row">
+                    <div class="input-field col s6">
+                      <input value="Dr." id="first_name2" type="text" class="validate">
+                      <label class="active" for="first_name2">First Name</label>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
 
-          </div>
+            <div class="divider"></div>
+
+            <!--Icon Prefixes-->
+            <div id="icon-prefixes" class="section">
+              <h4 class="header">Icon Prefixes</h4>
+              <div class="row">
+                <div class="col s12 m4 l3">
+                  <p>You can add an icon prefix to make the form input label even more clear. Just add an icon with the class <code class=" language-markup">prefix</code> before the input and label.</p>
+                </div>
+                <div class="col s12 m8 l9">
+                  <div class="row">
+                    <form class="col s12">
+                      <div class="row">
+                        <div class="input-field col s6">
+                          <i class="mdi-action-account-circle prefix"></i>
+                          <input id="icon_prefix3" type="text" class="validate">
+                          <label for="icon_prefix3">First Name</label>
+                        </div>
+                        <div class="input-field col s6">
+                          <i class="mdi-communication-phone prefix"></i>
+                          <input id="icon_telephone" type="tel" class="validate">
+                          <label for="icon_telephone">Telephone</label>
+                        </div>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="divider"></div>
+            <!--Input Textarea-->
+            <div id="input-textarea" class="section">
+              <h4 class="header">Textarea</h4>
+              <div class="row">
+                <div class="col s12 m4 l3">
+                  <p>Textareas allow larger expandable user input. The border should light up simply and clearly indicating which field the user is currently editing. You must have a <code class=" language-markup">.input-field</code> div wrapping your input
+                    and label. This helps our jQuery animate the label. This is only used in our Input and Textarea form elements.</p>
+                  <p><strong>Textareas will auto resize to the text inside.</strong>
+                  </p>
+                </div>
+                <div class="col s12 m8 l9">
+                  <div class="row">
+                    <form class="col s12">
+                      <div class="row">
+                        <div class="input-field col s12">
+                          <textarea id="textarea1" class="materialize-textarea"></textarea>
+                          <label for="textarea1">Textarea</label>
+                        </div>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col s12 m4 l3">
+                  <p>You can add an icon prefix to make the form input label even more clear. Just add an icon with the class <code class=" language-markup">prefix</code> before the input and label.</p>                  
+                </div>
+                <div class="col s12 m8 l9">
+                  <div class="row">
+                    <div class="input-field col s12">
+                      <i class="mdi-editor-mode-edit prefix"></i>
+                      <textarea id="icon_prefix2" class="materialize-textarea"></textarea>
+                      <label for="icon_prefix2" class="">Message</label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+
+            <div class="divider"></div>
+            <!--Input Select-->
+            <div id="input-select" class="section">
+              <h4 class="header">Input Select</h4>
+              <div class="row">
+                <div class="col s12 m4 l3">
+                  <p> Select allows user input through specified options. Make sure you wrap it in a <code class=" language-markup">.input-field </code> for proper alignment with other text fields. </p>
+                </div>
+                <div class="col s12 m8 l9">
+                  <div class="input-field col s12">
+                    <label>Materialize Select</label>
+                    <select>
+                      <option value="" disabled selected>Choose your option</option>
+                      <option value="1">Option 1</option>
+                      <option value="2">Option 2</option>
+                      <option value="3">Option 3</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col s12 m4 l3">
+                  <p>You can add the class <code class=" language-markup">browser-default</code> to get the browser default.</p>
+                </div>
+                <div class="col s12 m8 l9">
+                  <label>Browser Select</label>
+                  <select class="browser-default">
+                    <option value="" disabled selected>Choose your option</option>
+                    <option value="1">Option 1</option>
+                    <option value="2">Option 2</option>
+                    <option value="3">Option 3</option>
+                  </select>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col s12 m4 l3">
+                  <p>You can also add <code class=" language-markup">disabled</code> to the select element to make the whole thing disabled. Or if you add <code class=" language-markup">disabled</code> to the options, the individual options will be unselectable.
+                  </p>
+                </div>
+                <div class="col s12 m8 l9">
+                  <label>Materialize Disabled</label>
+                  <select disabled>
+                    <option value="" disabled selected>Choose your option</option>
+                    <option value="1">Option 1</option>
+                    <option value="2">Option 2</option>
+                    <option value="3">Option 3</option>
+                  </select>
+
+                  <label>Browser Disabled</label>
+                  <select class="browser-default" disabled>
+                    <option value="" disabled selected>Choose your option</option>
+                    <option value="1">Option 1</option>
+                    <option value="2">Option 2</option>
+                    <option value="3">Option 3</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+
+            <div class="divider"></div>
+            <!--Radio Buttons-->
+            <div id="input-radio-buttons" class="section">
+              <h4 class="header">Radio Buttons</h4>
+              <div class="row">
+                <div class="col s12 m4 l3">
+                  <p>Radio Buttons are used when the user must make only one selection out of a group of items.</p>
+                  <p>Add radio buttons to a group by adding the name attribute along with the same corresponding value for each of the radio buttons in the group. Create disabled radio buttons by adding the disabled attribute as shown below.</p>
+
+                </div>
+                <div class="col s12 m8 l9">
+                  <form action="#">
+                    <p>
+                      <input name="group1" type="radio" id="test1" />
+                      <label for="test1">Red</label>
+                    </p>
+                    <p>
+                      <input name="group1" type="radio" id="test2" />
+                      <label for="test2">Yellow</label>
+                    </p>
+                    <p>
+                      <input class="with-gap" name="group1" type="radio" id="test3" />
+                      <label for="test3">Green</label>
+                    </p>
+                    <p>
+                      <input name="group1" type="radio" id="test4" disabled="disabled" />
+                      <label for="test4">Brown</label>
+                    </p>
+                  </form>
+                </div>
+              </div>
+            </div>
+
+
+            <div class="divider"></div>
+            <!--Input Checkboxes-->
+            <div id="input-checkboxes" class="section">
+              <h4 class="header">Checkboxes</h4>
+              <div class="row">
+                <div class="col s12 m4 l3">
+                  <p>Checkboxes are used when the user want to make selection out of a group of items.</p>
+                </div>
+                <div class="col s12 m8 l9">
+                  <form action="#">
+                    <p>
+                      <input type="checkbox" id="test6" />
+                      <label for="test5">Red</label>
+                    </p>
+                    <p>
+                      <input type="checkbox" id="test9" checked="checked" />
+                      <label for="test6">Yellow</label>
+                    </p>
+                    <p>
+                      <input type="checkbox" class="filled-in" id="filled-in-box" checked="checked" />
+                      <label for="filled-in-box">Filled in</label>
+                    </p>
+                    <p>
+                      <input type="checkbox" id="test7" checked="checked" disabled="disabled" />
+                      <label for="test7">Green</label>
+                    </p>
+                      <p>
+                        <input type="checkbox" id="test8" disabled="disabled" />
+                        <label for="test8">Brown</label>
+                    </p>
+                  </form>
+                </div>
+              </div>
+            </div>
+
+            <div class="divider"></div>
+            <!--Input Switches-->
+            <div id="input-switches" class="section">
+              <h4 class="header">Switches</h4>
+              <div class="row">
+                <div class="col s12 m4 l3">
+                    <p></p>
+                </div>
+                <div class="col s12 m8 l9">
+                  <!-- Switch -->
+                  <div class="switch">
+                    Enabled : 
+                    <label>
+                      Off
+                      <input type="checkbox">
+                      <span class="lever"></span> On
+                    </label>
+                  </div>
+                  <br>
+                  <!-- Disabled Switch -->
+                  <div class="switch">
+                    Diabled : 
+                    <label>
+                      Off
+                      <input disabled type="checkbox">
+                      <span class="lever"></span> On
+                    </label>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="divider"></div>
+            <!--Input File Input-->
+            <div id="input-file-input" class="section">
+              <h4 class="header">File Input</h4>
+              <div class="row">
+                <div class="col s12 m4 l3">
+                  <p>If you want to style an input button with a path input we provide this structure.</p>
+                </div>
+                <div class="col s12 m8 l9">
+                  <form action="#">
+                    <div class="file-field input-field">
+                      <input class="file-path validate" type="text" />
+                      <div class="btn">
+                        <span>File</span>
+                        <input type="file" />
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+
+
+
+            <div class="divider"></div>
+            <!--Input Range-->
+            <div id="input-range" class="section">
+              <h4 class="header">Range Selector</h4>
+              <div class="row">
+                <div class="col s12 m4 l3">
+                  <p>Add a range slider for values with a wide range. This one is set to be a number between 0 and 100.</p>
+                </div>
+                <div class="col s12 m8 l9">
+                  <form action="#">
+                    <p class="range-field">
+                      <input type="range" id="test5" min="0" max="100" />
+                    </p>
+                  </form>
+                </div>
+              </div>
+            </div>
+
+            <div class="divider"></div>
+            <!--Input Date Picker-->
+            <div id="input-date-picker" class="section">
+              <h4 class="header">Date Picker</h4>
+              <div class="row">
+                <div class="col s12 m4 l3">
+                  <p>We use a modified version of pickadate.js to create a materialized date picker. Test it out below!</p>
+                </div>
+                <div class="col s12 m8 l9">
+                  <input type="date" class="datepicker">
+                </div>
+              </div>
+            </div>
+
+            <div class="divider"></div>
+            <!--Input Character Counter-->
+            <div id="input-character-counter" class="section">
+              <h4 class="header">Character Counter</h4>
+              <div class="row">
+                <div class="col s12 m4 l3">
+                  <p>Use a character counter in fields where a character restriction is in place.</p>
+                </div>
+                <div class="col s12 m8 l9">
+                  <div class="row">
+                    <form class="col s12">
+                      <div class="row">
+                        <div class="input-field col s6">
+                          <input id="input_text" type="text" length="10">
+                          <label for="input_text">Input text</label>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="input-field col s12">
+                          <textarea id="textarea2" class="materialize-textarea" length="120"></textarea>
+                          <label for="textarea1">Textarea</label>
+                        </div>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>        
         </div>
-        <!--end container-->
+    </div>
+  <!--end container-->
 
-      </section>
-      <!-- END CONTENT -->
 
-      <!-- //////////////////////////////////////////////////////////////////////////// -->
-      <!-- START RIGHT SIDEBAR NAV-->
-      <aside id="right-sidebar-nav">
+
+
+  </section>
+  <!-- END CONTENT -->
+
+  <!-- //////////////////////////////////////////////////////////////////////////// -->
+  <!-- START RIGHT SIDEBAR NAV-->
+  <aside id="right-sidebar-nav">
         <ul id="chat-out" class="side-nav rightside-navigation">
             <li class="li-hover">
             <a href="#" data-activates="chat-out" class="chat-close-collapse right"><i class="mdi-navigation-close"></i></a>
@@ -565,10 +816,10 @@
             </li>
         </ul>
       </aside>
-      <!-- LEFT RIGHT SIDEBAR NAV-->
+  <!-- LEFT RIGHT SIDEBAR NAV-->
 
-    </div>
-    <!-- END WRAPPER -->
+  </div>
+  <!-- END WRAPPER -->
 
   </div>
   <!-- END MAIN -->

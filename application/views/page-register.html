@@ -15,7 +15,7 @@
   <meta name="msapplication-tap-highlight" content="no">
   <meta name="description" content="Materialize is a Material Design Admin Template,It's modern, responsive and based on Material Design by Google. ">
   <meta name="keywords" content="materialize, admin template, dashboard template, flat admin template, responsive admin template,">
-  <title>Lock Screen Page | Materialize - Material Design Admin Template</title>
+  <title>Register Page | Materialize - Material Design Admin Template</title>
 
   <!-- Favicons-->
   <link rel="icon" href="images/favicon/favicon-32x32.png" sizes="32x32">
@@ -55,8 +55,22 @@
       <form class="login-form">
         <div class="row">
           <div class="input-field col s12 center">
-            <img src="images/avatar.jpg" alt="" class="circle responsive-img valign profile-image-login">
-            <h4 class="header">John Doe</h4>            
+            <h4>Register</h4>
+            <p class="center">Join to our community now !</p>
+          </div>
+        </div>
+        <div class="row margin">
+          <div class="input-field col s12">
+            <i class="mdi-social-person-outline prefix"></i>
+            <input id="username" type="text">
+            <label for="username" class="center-align">Username</label>
+          </div>
+        </div>
+        <div class="row margin">
+          <div class="input-field col s12">
+            <i class="mdi-communication-email prefix"></i>
+            <input id="email" type="email">
+            <label for="email" class="center-align">Email</label>
           </div>
         </div>
         <div class="row margin">
@@ -65,21 +79,22 @@
             <input id="password" type="password">
             <label for="password">Password</label>
           </div>
-        </div>        
+        </div>
+        <div class="row margin">
+          <div class="input-field col s12">
+            <i class="mdi-action-lock-outline prefix"></i>
+            <input id="password-again" type="password">
+            <label for="password-again">Password again</label>
+          </div>
+        </div>
         <div class="row">
           <div class="input-field col s12">
-            <a href="index.html" class="btn waves-effect waves-light col s12">Login</a>
+            <a href="index.html" class="btn waves-effect waves-light col s12">Register Now</a>
+          </div>
+          <div class="input-field col s12">
+            <p class="margin center medium-small sign-up">Already have an account? <a href="page-login.html">Login</a></p>
           </div>
         </div>
-        <div class="row">          
-          <div class="input-field col s6 m6 l6">
-            <p class="margin medium-small"><a href="page-register.html">Register Now!</a></p>
-          </div>
-          <div class="input-field col s6 m6 l6">
-              <p class="margin right-align medium-small"><a href="page-forgot-password.html">Forgot password ?</a></p>
-          </div>
-        </div>
-
       </form>
     </div>
   </div>

@@ -213,14 +213,14 @@
                                         <div class="modal-content">
                                             <div class="row" style="margin-bottom:5px">
                                                 <div class="col s12">
-                                                    <button id="img" value="0" style="width:50%" class="active btn green left">Without Images</button>
-                                                    <button id="img" value="1" style="width:50%" class="btn grey">With Images</button>
+                                                    <button  value="0" style="width:50%" class="img active btn green left">Without Images</button>
+                                                    <button  value="1" style="width:50%" class="img btn grey">With Images</button>
                                                 </div>
                                             </div>
                                             <div class="row">
                                                 <div class="col s12" style="margin-bottom:15px">
-                                                    <button id="vio" value="0" style="width:50%" class="active btn blue left">Violations Only</button>
-                                                    <button id="vio" value="1" style="width:50%" class="btn grey">Complete</button>
+                                                    <button value="0" style="width:50%" class="active vio btn blue left">Violations Only</button>
+                                                    <button value="1" style="width:50%" class="btn grey vio">Complete</button>
                                                 </div>
                                             </div>
                                             <div class="row">
@@ -228,8 +228,8 @@
                                                     <p>Send Email to Client</p>
                                                 </div>
                                                 <div class="col s6">
-                                                    <button id="email" value="1" style="width:50%" class="btn indigo left">Yes</button>
-                                                    <button id="email" value="0" style="width:50%" class="active btn grey">No</button>
+                                                    <button value="1" style="width:50%" class="active btn indigo email left">Yes</button>
+                                                    <button value="0" style="width:50%" class=" btn email grey">No</button>
                                                 </div>
                                             </div>
                                         </div>

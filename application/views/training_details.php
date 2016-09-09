@@ -201,10 +201,32 @@ var get_workers = function(id) {
         $('#worker_table').html(c.join(""));
 
         $('#worker_table').append("<tr><td colspan='9' class='center'><button class='btn waves-effect waves-light trn' data-trn-key='Add worker' onClick='worker_add();'>Add Worker</button></td></tr>");
+        $('#worker_table').append(`<tr><td colspan='9' class='center'><button class='btn waves-effect waves-light trn' data-trn-key='Add worker' onClick='worker_auto_add(`+ id +`);'>Worker Auto Add</button></td></tr>`);
 
     });
 }
 
+
+
+var worker_auto_add = function (training_id) { 
+    console.log("In function");
+    $.ajax({
+            type: "POST",
+            url: "<?php echo base_url(); ?>index.php/training/auto_add_workers",
+            data: {
+                "training_id": training_id
+            },
+            cache: "false",
+            success: function(data) {
+                console.log("Data :" + data);
+                get_workers(training_id);
+            },
+            error: function(xhr, textStatus, errorThrown){
+            console.log('request failed' + xhr + "  " + textStatus + "  " + errorThrown);
+              }
+        });
+    console.log("Ending function");
+}
 
 var worker_add = function() {
 

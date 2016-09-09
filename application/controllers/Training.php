@@ -38,8 +38,8 @@ class Training extends CI_Controller {
 		);
 		$this->load->view('base');
 		$this->load->view('training_view', $data);
-		$this->load->view('footer');
 		$this->load->view('training_details');
+		$this->load->view('footer');
 	}
 
 	public function create(){
@@ -297,6 +297,47 @@ class Training extends CI_Controller {
 		echo "</pre>";
 	}
 
+	public function auto_add_workers(){
+		auth_restrict($this, 6);
+		auth_restrict($this, 5);
+		auth_restrict($this, 3);
+		auth_restrict($this, 2);
+
+		$training_id =  $_POST['training_id'];
+		$training = $this->crud->get('trainings','id',$training_id);
+		$level = $training[0]->level;
+		$total  = $training[0]->workers;
+		$actual =  count($this->crud->get('trainings_workers','id_training',$training_id));
+
+		$db = $this->load->database('default', TRUE);
+	
+		$remaining = $total - $actual;
+
+		if($remaining > 0){
+			$db->select('*');
+			$db->from('workers');
+			$db->where('training_level', $level);
+			$db->where('language', $training[0]->language);
+			$db->limit($remaining);
+			$result = $db->get()->result();
+			foreach ($result as $res) {
+					$data = array(
+			'id_worker' => $res->id,
+			'id_training' => $training_id
+			);
+
+			$this->crud->insert('trainings_workers', $data);	
+			$data = array( 
+				'training_level' => $level + 1,
+				);
+			$this->crud->update('workers', 'id', $res->id, $data);
+			}
+			echo "Success";
+		}
+
+
+
+	}
 
 	public function get_facility($id)
 	{
